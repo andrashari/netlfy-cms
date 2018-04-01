@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import moment from 'moment'
 
 import { insertOrder } from '../../mock'
 
@@ -8,6 +9,9 @@ const FormItem = Form.Item;
 const RangePicker = DatePicker.RangePicker;
 
 class BookingForm extends Component {
+  state = {
+    today: [moment(new Date()), moment(new Date()).add(1,'days')]
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -40,15 +44,24 @@ class BookingForm extends Component {
           {...formItemLayout}
           label="Booking dates"
         >
-          {getFieldDecorator('interval')(
-            <RangePicker />
+          {getFieldDecorator('interval', {
+            rules: [
+              { required: true, message: 'Please select your interval!' },
+            ],
+          })(
+            <RangePicker
+            />
           )}
         </FormItem>
         <FormItem
           {...formItemLayout}
           label="Please select Van"
         >
-          {getFieldDecorator('van')(
+          {getFieldDecorator('van', {
+            rules: [
+              { required: true, message: 'Please select your van!' },
+            ],
+          })(
             <Select
               placeholder="Select a Van"
             >

@@ -31,6 +31,7 @@ class ModalLogin extends Component {
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
+          footer={null}
         >
           <LoginForm />
         </Modal>

@@ -1,14 +1,8 @@
-import {
-    StitchClientFactory
-} from 'mongodb-stitch';
+import { stitchClientPromiseWebsite } from './utils/DB'
 
-const appId = 'alfreskobookingadmin-vwutk';
-const stitchClientPromise = StitchClientFactory.create(appId);
-
-// Google Auth
 // Orders
 export function insertOrder(order) {
-    stitchClientPromise.then(stitchClient => {
+    stitchClientPromiseWebsite.then(stitchClient => {
         const db = stitchClient.service('mongodb', 'mongodb-atlas').db('Orders');
         stitchClient
             .login()

@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+
+import { logInWithGoogle, logInWithFacebook } from '../../utils/Auth'
 const FormItem = Form.Item;
 
 class LoginForm extends Component {
@@ -39,6 +41,12 @@ class LoginForm extends Component {
           <a className="login-form-forgot" href="" style={{float: 'right'}}>Forgot password</a>
           <Button type="primary" htmlType="submit" className="login-form-button" style={{width: '100%'}}>
             Log in
+          </Button>
+          <Button type="secondary" className="login-form-button" style={{width: '100%'}} onClick={logInWithFacebook}>
+            Log in with Facebook
+          </Button>
+          <Button type="secondary" className="login-form-button" style={{width: '100%'}} onClick={logInWithGoogle}>
+            Log in with Google
           </Button>
           Or <a href="">register now!</a>
         </FormItem>
