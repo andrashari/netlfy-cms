@@ -5,6 +5,7 @@ import {
 const appId = 'alfreskobookingadmin-vwutk';
 const stitchClientPromise = StitchClientFactory.create(appId);
 
+// Google Auth
 // Orders
 export function insertOrder(order) {
     stitchClientPromise.then(stitchClient => {

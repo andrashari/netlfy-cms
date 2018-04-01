@@ -11,7 +11,7 @@ export default class IndexPage extends React.Component {
     return (
       <section className="section">
         <div className="container">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+            <h1 className="has-text-weight-bold is-size-2">Booking Test</h1>
             <BookingForm />
         </div>
       </section>
