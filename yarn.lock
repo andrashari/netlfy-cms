@@ -1627,7 +1627,7 @@ bser@^2.0.0:
   dependencies:
     node-int64 "^0.4.0"
 
-"bson@github:mongodb/js-bson#2.0.0":
+bson@mongodb/js-bson#2.0.0:
   version "2.0.4"
   resolved "https://codeload.github.com/mongodb/js-bson/tar.gz/78d0c9f2aa77925f9a01a6a2a2ed1d664df948c6"
 
