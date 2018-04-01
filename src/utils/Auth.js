@@ -19,7 +19,7 @@ export function insertUser(user) {
     })*/
 }
 
-export async function logInWithFacebook() {
+export function logInWithFacebook() {
     console.log("logInWithFacebook");
     return stitchClientPromiseWebsite.then(client => {
         insertUser(client.authenticate("facebook"))
