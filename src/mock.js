@@ -6,7 +6,7 @@ const appId = 'alfreskobookingadmin-vwutk';
 const stitchClientPromise = StitchClientFactory.create(appId);
 
 // Orders
-export async function insertOrder(order) {
+export function insertOrder(order) {
     stitchClientPromise.then(stitchClient => {
         const db = stitchClient.service('mongodb', 'mongodb-atlas').db('Orders');
         stitchClient
