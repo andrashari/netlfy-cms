@@ -1,4 +1,6 @@
-import { stitchClientPromiseWebsite } from './DB'
+import {
+    stitchClientPromiseWebsite
+} from './DB'
 
 // TODO
 export function insertUser(user) {
@@ -19,18 +21,33 @@ export function insertUser(user) {
     })*/
 }
 
+// Register with email/password
+export function registerEmail(email, password) {
+    console.log("registerEmail");
+    return stitchClientPromiseWebsite.then(client => {
+        client.register(email, password)
+            .then(() => {
+                console.log("Successfully sent account confirmation email!");
+                /* code to direct user to check their email */
+            })
+            .catch(err => {
+                console.log("Error registering new user:", err);
+            });
+    })
+}
+
 export function logInWithFacebook() {
     console.log("logInWithFacebook");
     return stitchClientPromiseWebsite.then(client => {
         insertUser(client.authenticate("facebook"))
-      })
+    })
 }
 
 export function logInWithGoogle() {
     console.log("logInWithGoogle");
     return stitchClientPromiseWebsite.then(client => {
         client.authenticate("google");
-      })
+    })
 }
 
 // Logout

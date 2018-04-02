@@ -8725,6 +8725,13 @@ react-onclickoutside@^6.5.0:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
 
+react-password-strength@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-password-strength/-/react-password-strength-2.3.1.tgz#a88721e72e5377fd28989dd666aaea060779b142"
+  dependencies:
+    prop-types "^15.6.0"
+    zxcvbn "^4.3.0"
+
 react-portal@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-portal/-/react-portal-3.2.0.tgz#4224e19b2b05d5cbe730a7ba0e34ec7585de0043"
@@ -11825,3 +11832,7 @@ yurnalist@^0.2.1:
 zwitch@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.2.tgz#9b059541bfa844799fe2d903bde609de2503a041"
+
+zxcvbn@^4.3.0:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/zxcvbn/-/zxcvbn-4.4.2.tgz#28ec17cf09743edcab056ddd8b1b06262cc73c30"

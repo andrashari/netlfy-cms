@@ -21,7 +21,8 @@
     "mongodb-stitch": "^3.0.7",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-password-strength": "^2.3.1"
   },
   "keywords": [
     "gatsby"
