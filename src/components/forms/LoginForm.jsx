@@ -88,7 +88,7 @@ class LoginForm extends Component {
                                         min: 6, message: 'Password length must be between 6 an 128 characters',
                                     },
                                     {
-                                        min: 128, message: 'Password length must be between 6 an 128 characters',
+                                        max: 128, message: 'Password length must be between 6 an 128 characters',
                                     }
                                 ],
                             })(

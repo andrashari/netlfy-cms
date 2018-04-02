@@ -1,5 +1,5 @@
 backend:
-  name: bitbucket-gateway
+  name: github-gateway
   branch: master
 
 media_folder: static/img
