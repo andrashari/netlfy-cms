@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Icon, Input, Button, Checkbox, Tabs } from 'antd';
 
-import ReactPasswordStrength from 'react-password-strength'
-
 import { registerEmail, logInWithGoogle, logInWithFacebook } from '../../utils/Auth'
 
 const TabPane = Tabs.TabPane;
@@ -80,7 +78,7 @@ class LoginForm extends Component {
                             )}
                         </FormItem>
                         <FormItem>
-                            {getFieldDecorator('password', /*{
+                            {getFieldDecorator('password', {
                                 rules: [
                                     {
                                         type: 'string', message: 'The input is not valid password!',
@@ -93,14 +91,8 @@ class LoginForm extends Component {
                                         max: 128, message: 'Password length must be between 6 an 128 characters',
                                     }
                                 ],
-                            }*/)(
-                                <ReactPasswordStrength
-  className="customClass"
-  minLength={5}
-  minScore={2}
-  scoreWords={['weak', 'okay', 'good', 'strong', 'stronger']}
-  inputProps={{ name: "password_input", autoComplete: "off", className: "form-control" }}
-/>
+                            })(
+                                <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="Password" />
                             )}
                         </FormItem>
                         <FormItem>
