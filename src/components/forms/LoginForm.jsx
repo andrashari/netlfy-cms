@@ -36,7 +36,7 @@ class LoginForm extends Component {
                         <FormItem>
                             {getFieldDecorator('password', {
                                 rules: [{
-                                    type: 'password', message: 'The input is not valid password!',
+                                    type: 'string', message: 'The input is not valid password!',
                                 }, {
                                     required: true, message: 'Please input your password!',
                                 }],
@@ -88,7 +88,7 @@ class LoginForm extends Component {
                                         min: 6, message: 'Password length must be between 6 an 128 characters',
                                     },
                                     {
-                                        max: 128, message: 'Password length must be between 6 an 128 characters',
+                                        min: 128, message: 'Password length must be between 6 an 128 characters',
                                     }
                                 ],
                             })(
