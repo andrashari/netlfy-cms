@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import Content, { HTMLContent } from '../components/Content'
@@ -59,7 +58,7 @@ Faq.propTypes = {
 export default Faq
 
 export const pageQuery = graphql`
-  query FaqID($id: String!) {
+  query FaqByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html

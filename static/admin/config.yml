@@ -48,9 +48,8 @@ collections:
     label: "Faq"
     folder: "src/customPostTypes/faqs"
     create: true
-    slug: "{{slug}}"
+    slug: "{{question}}"
     fields:
-      - {label: "Title(not showing on the website, only for identification of FAQa items)", name: "title", widget: "string"}
       - {label: "Question", name: "question", widget: "markdown"}
       - {label: "Answer", name: "answer", widget: "markdown"}
 
