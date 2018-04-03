@@ -6,7 +6,6 @@ import Content, { HTMLContent } from '../components/Content'
 
 export const FaqTemplate = ({
   helmet,
-  title,
   question,
   answer,
 }) => {
@@ -17,9 +16,6 @@ export const FaqTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
             <p>{question}</p>
             <p>{answer}</p>
           </div>
@@ -31,7 +27,6 @@ export const FaqTemplate = ({
 
 FaqTemplate.propTypes = {
   helmet: PropTypes.instanceOf(Helmet),
-  title: PropTypes.string,
   question: PropTypes.string,
   answer: PropTypes.string,
 }
@@ -41,8 +36,7 @@ const Faq = ({ data }) => {
 
   return (
     <FaqTemplate
-      helmet={<Helmet title={`${faq.frontmatter.title} | Faq`} />}
-      title={faq.frontmatter.title}
+      helmet={<Helmet title={`${faq.frontmatter.question} | Faq`} />}
       question={faq.frontmatter.question}
       answer={faq.frontmatter.answer}
     />
@@ -57,13 +51,10 @@ Faq.propTypes = {
 
 export default Faq
 
-export const pageQuery = graphql`
-  query FaqByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
+export const faqQuery = graphql`
+  query FaqByQuestion {
+    markdownRemark(frontmatter: {question: {eq: "hgfh"}}) {
       frontmatter {
-        title
         question
         answer
       }
