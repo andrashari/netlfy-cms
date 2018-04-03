@@ -46,7 +46,7 @@ collections:
   
   - name: "faq"
     label: "Faq"
-    folder: "src/customPostTypes/faqs"
+    folder: "src/pages/faqs"
     create: true
     slug: "{{question}}"
     fields:
@@ -55,7 +55,7 @@ collections:
 
   - name: "kitchenSink" # all the things in one entry, for documentation and quick testing
     label: "Kitchen Sink"
-    folder: "src/customPostTypes/sink"
+    folder: "src/pages/sink"
     create: true
     fields:
       - label: "Related Post"

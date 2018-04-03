@@ -4,9 +4,9 @@ import { FaqTemplate } from '../../templates/faq'
 
 const FaqPreview = ({ entry, widgetFor }) => (
   <FaqTemplate
-    description={entry.getIn(['data', 'description'])}
-    tags={entry.getIn(['data', 'tags'])}
     title={entry.getIn(['data', 'title'])}
+    question={entry.getIn(['data', 'question'])}
+    answer={entry.getIn(['data', 'answer'])}
   />
 )
 

@@ -41,7 +41,7 @@ const Faq = ({ data }) => {
 
   return (
     <FaqTemplate
-      helmet={<Helmet title={`${faq.frontmatter.title} | Blog`} />}
+      helmet={<Helmet title={`${faq.frontmatter.title} | Faq`} />}
       title={faq.frontmatter.title}
       question={faq.frontmatter.question}
       answer={faq.frontmatter.answer}
