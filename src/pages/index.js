@@ -9,6 +9,7 @@ import BookingForm from '../components/forms/BookingForm'
 import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
 
 import FaqList from '../components/sections/FaqList'
+import TestimonialList, { testimonialFragment } from '../components/sections/TestimonialList'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -31,6 +32,12 @@ export default class IndexPage extends React.Component {
             <FaqList data={faqs} /> 
           </div>
         </section>
+
+        <section className="section">
+          <div className="container">
+            <TestimonialList data={testimonial} /> 
+          </div>
+        </section>
       </div>
     )
   }
@@ -47,5 +54,6 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
 query pageQuery {
   ...faqFragment
+  ...testimonialFragment
 }
 `;

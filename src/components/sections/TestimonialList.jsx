@@ -4,17 +4,14 @@ import PropTypes from 'prop-types'
 import Testimonial from '../../templates/testimonial'
 
 export default class TestimonialList extends Component {
-    state = {
-
-    }
-
     render() {
         const { data } = this.props
 
-        return data.map(({ node: faq }) => (
+        return data.map(({ node: testimonial }) => (
             <div>
-                <p>{faq.frontmatter.question}</p>
-                <p>{faq.frontmatter.answer}</p>
+                <img src={testimonial.frontmatter.imageSource} alt=""/>
+                <p>{testimonial.frontmatter.name}</p>
+                <p>{testimonial.frontmatter.quote}</p>
             </div>
         ))
     }
@@ -28,16 +25,17 @@ TestimonialList.propTypes = {
     }),
 }
 
-export const faqFragment = graphql`
-    fragment faqFragment on RootQueryType {
+export const testimonialFragment = graphql`
+    fragment testimonialFragment on RootQueryType {
         allMarkdownRemark {
             edges {
-            node {
-                frontmatter {
-                question
-                answer
+                node {
+                    frontmatter {
+                        imageSource
+                        name
+                        quote
+                    }
                 }
-            }
             }
         }
     }

@@ -28,12 +28,12 @@ export const faqFragment = graphql`
     fragment faqFragment on RootQueryType {
         allMarkdownRemark {
             edges {
-            node {
-                frontmatter {
-                question
-                answer
+                node {
+                    frontmatter {
+                        question
+                        answer
+                    }
                 }
-            }
             }
         }
     }
