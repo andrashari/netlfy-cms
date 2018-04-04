@@ -16,8 +16,9 @@ export const TestimonialTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <p>{question}</p>
-            <p>{answer}</p>
+            <img src={imageSource} alt={null} title={null} />
+            <p>{name}</p>
+            <p>{quote}</p>
           </div>
         </div>
       </div>
@@ -25,28 +26,29 @@ export const TestimonialTemplate = ({
   )
 }
 
-FaqTemplate.propTypes = {
+TestimonialTemplate.propTypes = {
   helmet: PropTypes.instanceOf(Helmet),
   question: PropTypes.string,
   answer: PropTypes.string,
 }
 
-const Faq = ({ data }) => {
-  const { markdownRemark: faq } = data
+const Testimonial = ({ data }) => {
+  const { markdownRemark: testimonial } = data
 
   return (
-    <FaqTemplate
-      helmet={<Helmet title={`${faq.frontmatter.question} | Faq`} />}
-      question={faq.frontmatter.question}
-      answer={faq.frontmatter.answer}
+    <TestimonialTemplate
+      helmet={<Helmet title={`${testimonial.frontmatter.name} | Testimonial`} />}
+      name={testimonial.frontmatter.name}
+      quote={testimonial.frontmatter.quote}
+      imageSource={testimonial.frontmatter.imageSource}
     />
   )
 }
 
-Faq.propTypes = {
+Testimonial.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default Faq
+export default Testimonial
