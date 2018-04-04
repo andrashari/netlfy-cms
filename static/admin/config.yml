@@ -51,6 +51,7 @@ collections:
     slug: "{{question}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq"}
+      - {label: "Title", name: "title", widget: "hidden"}
       - {label: "Question", name: "question", widget: "markdown"}
       - {label: "Answer", name: "answer", widget: "markdown"}
 
