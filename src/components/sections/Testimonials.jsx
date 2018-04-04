@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import Faq from '../../templates/faq'
+import Testimonial from '../../templates/testimonial'
 
-export default class FaqList extends Component {
+export default class TestimonialList extends Component {
+    state = {
+
+    }
+
     render() {
         const { data } = this.props
 
@@ -16,7 +20,7 @@ export default class FaqList extends Component {
     }
 }
 
-FaqList.propTypes = {
+TestimonialList.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,

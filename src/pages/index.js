@@ -12,6 +12,8 @@ import FaqList from '../components/sections/FaqList'
 
 export default class IndexPage extends React.Component {
   render() {
+    const { data } = this.props
+    const { edges: faqs } = data.allMarkdownRemark
     return (
       <div>
         <section className="section">
@@ -26,10 +28,24 @@ export default class IndexPage extends React.Component {
         
         <section className="section">
           <div className="container">
-
+            <FaqList data={faqs} /> 
           </div>
         </section>
       </div>
     )
   }
 }
+
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
+
+export const pageQuery = graphql`
+query pageQuery {
+  ...faqFragment
+}
+`;
