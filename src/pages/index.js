@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 import 'antd/dist/antd.css';
+import { Button } from 'antd'
 
 import BookingForm from '../components/forms/BookingForm'
-
-import { Button } from 'antd'
 import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
+
+import FaqList from '../components/sections/FaqList'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -25,7 +26,7 @@ export default class IndexPage extends React.Component {
         
         <section className="section">
           <div className="container">
-            
+
           </div>
         </section>
       </div>

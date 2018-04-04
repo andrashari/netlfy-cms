@@ -50,14 +50,3 @@ Faq.propTypes = {
 }
 
 export default Faq
-
-export const faqQuery = graphql`
-  query FaqByQuestion {
-    markdownRemark(frontmatter: {question: {eq: "hgfh"}}) {
-      frontmatter {
-        question
-        answer
-      }
-    }
-  }
-`
