@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import AboutUs from '../../templates/aboutus'
+import Team from '../../templates/team'
 
-export default class AboutUsList extends Component {
+export default class TeamList extends Component {
     render() {
         const { data } = this.props
 
-        return data.filter(({ node: aboutus }) => {
-            const {name, role, imageSource, introduction, email, phone} = aboutus.frontmatter;
+        return data.filter(({ node: team }) => {
+            const {name, role, imageSource, introduction, email, phone} = team.frontmatter;
             return name && role && imageSource && introduction && email && phone
-        }).map(({ node: aboutus }) => (
-            <AboutUs aboutus={aboutus} />
+        }).map(({ node: team }) => (
+            <Team team={team} />
         ))
     }
 }
 
-AboutUsList.propTypes = {
+TeamList.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,

@@ -10,7 +10,7 @@ import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
 
 import FaqList from '../components/sections/FaqList'
 import TestimonialList from '../components/sections/TestimonialList'
-import AboutUsList from '../components/sections/AboutUsList'
+import TeamList from '../components/sections/TeamList'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -44,8 +44,8 @@ export default class IndexPage extends React.Component {
 
         <section className="section">
           <div className="container">
-          <h2 className="has-text-weight-bold is-size-1">AboutUsList</h2>
-            <AboutUsList data={result} /> 
+          <h2 className="has-text-weight-bold is-size-1">TeamList</h2>
+            <TeamList data={result} /> 
           </div>
         </section>
 

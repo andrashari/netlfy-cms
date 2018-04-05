@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-export const AboutUsTemplate = ({
+export const TeamTemplate = ({
   helmet,
   name,
   role,
@@ -32,7 +32,7 @@ export const AboutUsTemplate = ({
   )
 }
 
-AboutUsTemplate.propTypes = {
+TeamTemplate.propTypes = {
   helmet: PropTypes.instanceOf(Helmet),
   name: PropTypes.string,
   role: PropTypes.string,
@@ -42,22 +42,22 @@ AboutUsTemplate.propTypes = {
   phone: PropTypes.string,
 }
 
-const AboutUs = ({ aboutus }) => {
+const Team = ({ team }) => {
   return (
-    <AboutUsTemplate
-      helmet={<Helmet title={`${aboutus.frontmatter.name} | Faq`} />}
-      name={aboutus.frontmatter.name}
-      role={aboutus.frontmatter.role}
-      imageSource={aboutus.frontmatter.imageSource}
-      introduction={aboutus.frontmatter.introduction}
-      email={aboutus.frontmatter.email}
-      phone={aboutus.frontmatter.phone}
+    <TeamTemplate
+      helmet={<Helmet title={`${team.frontmatter.name} | Team`} />}
+      name={team.frontmatter.name}
+      role={team.frontmatter.role}
+      imageSource={team.frontmatter.imageSource}
+      introduction={team.frontmatter.introduction}
+      email={team.frontmatter.email}
+      phone={team.frontmatter.phone}
     />
   )
 }
 
-AboutUs.propTypes = {
-  aboutus: PropTypes.object
+Team.propTypes = {
+  team: PropTypes.object
 }
 
-export default AboutUs
+export default Team

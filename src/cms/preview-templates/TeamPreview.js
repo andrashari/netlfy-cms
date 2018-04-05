@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { AboutUsTemplate } from '../../templates/aboutus'
+import { TeamTemplate } from '../../templates/team'
 
-const AboutUsPreview = ({ entry, widgetFor }) => (
-  <AboutUsTemplate
+const TeamPreview = ({ entry, widgetFor }) => (
+  <TeamTemplate
     title={entry.getIn(['data', 'name'])}
     name={entry.getIn(['data', 'name'])}
     role={entry.getIn(['data', 'role'])}
@@ -14,11 +14,11 @@ const AboutUsPreview = ({ entry, widgetFor }) => (
   />
 )
 
-AboutUsPreview.propTypes = {
+TeamPreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default AboutUsPreview
+export default TeamPreview
