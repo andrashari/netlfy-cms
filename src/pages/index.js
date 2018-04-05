@@ -9,10 +9,12 @@ import BookingForm from '../components/forms/BookingForm'
 import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
 
 import FaqList from '../components/sections/FaqList'
+import TestimonialList from '../components/sections/TestimonialList'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
+    console.log(this.props);
     const { edges: faqs } = data.allMarkdownRemark
     return (
       <div>
@@ -31,6 +33,14 @@ export default class IndexPage extends React.Component {
             <FaqList data={faqs} /> 
           </div>
         </section>
+
+        <section className="section">
+          <div className="container">
+            <TestimonialList data={faqs} /> 
+          </div>
+        </section>
+
+        
       </div>
     )
   }
@@ -45,8 +55,9 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-query pageQuery {
-  ...testimonialFragment
-}
+  query pageQuery {
+    ...faqFragment
+    ...testimonialFragment
+  }
 `;
 //...faqFragment

@@ -6,6 +6,7 @@ import Testimonial from '../../templates/testimonial'
 export default class TestimonialList extends Component {
     render() {
         const { data } = this.props
+        console.log(this.props);
 
         return data.map(({ node: testimonial }) => (
             <div>
