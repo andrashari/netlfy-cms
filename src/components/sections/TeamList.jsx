@@ -8,8 +8,7 @@ export default class TeamList extends Component {
         const { data } = this.props
 
         return data.filter(({ node: team }) => {
-            const {name, role, imageSource, introduction, email, phone} = team.frontmatter;
-            return name && role && imageSource && introduction && email && phone
+            return team.frontmatter.name && team.frontmatter.role && team.frontmatter.imageSource && team.frontmatter.introduction && team.frontmatter.email && team.frontmatter.phone
         }).map(({ node: team }) => (
             <Team team={team} />
         ))
