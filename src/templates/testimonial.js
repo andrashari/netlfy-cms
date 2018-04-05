@@ -32,9 +32,7 @@ TestimonialTemplate.propTypes = {
   answer: PropTypes.string,
 }
 
-const Testimonial = ({ data }) => {
-  const { markdownRemark: testimonial } = data
-
+const Testimonial = ({ testimonial }) => {
   return (
     <TestimonialTemplate
       helmet={<Helmet title={`${testimonial.frontmatter.name} | Testimonial`} />}
@@ -46,9 +44,7 @@ const Testimonial = ({ data }) => {
 }
 
 Testimonial.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+  testimonial: PropTypes.object
 }
 
 export default Testimonial

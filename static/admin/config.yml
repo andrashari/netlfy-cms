@@ -65,7 +65,22 @@ collections:
       - {label: "Title", name: "title", widget: "hidden"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Quote", name: "question", widget: "string"}
-      - {label: "Image", name: "imageSource", widget: "image"}      
+      - {label: "Image", name: "imageSource", widget: "image"}
+      
+  - name: "aboutus"
+    label: "aboutus"
+    folder: "src/pages/customPosTypes/aboutus"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutus"}
+      - {label: "Title", name: "title", widget: "hidden"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Role", name: "role", widget: "string", optional: true}
+      - {label: "Image", name: "imageSource", widget: "image"}
+      - {label: "Introduction", name: "introduction", widget: "text"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Phone", name: "phone", widget: "string"}
 
   - name: "kitchenSink" # all the things in one entry, for documentation and quick testing
     label: "Kitchen Sink"

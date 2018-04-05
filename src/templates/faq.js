@@ -29,9 +29,7 @@ FaqTemplate.propTypes = {
   answer: PropTypes.string,
 }
 
-const Faq = ({ data }) => {
-  const { markdownRemark: faq } = data
-
+const Faq = ({ faq }) => {
   return (
     <FaqTemplate
       helmet={<Helmet title={`${faq.frontmatter.question} | Faq`} />}
@@ -42,9 +40,7 @@ const Faq = ({ data }) => {
 }
 
 Faq.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+  faq: PropTypes.object
 }
 
 export default Faq

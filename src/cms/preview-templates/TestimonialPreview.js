@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { TestimonialTemplate } from '../../templates/testimonial'
 
 const TestimonialPreview = ({ entry, widgetFor }) => (
-  <FaqTemplate
-    title={entry.getIn(['data', 'title'])}
-    question={entry.getIn(['data', 'question'])}
-    answer={entry.getIn(['data', 'answer'])}
+  <TestimonialTemplate
+    title={entry.getIn(['data', 'name'])}
+    name={entry.getIn(['data', 'name'])}
+    quote={entry.getIn(['data', 'quote'])}
+    imageSource={entry.getIn(['data', 'imageSource'])}
   />
 )
 

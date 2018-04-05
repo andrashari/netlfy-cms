@@ -7,12 +7,10 @@ export default class FaqList extends Component {
     render() {
         const { data } = this.props
         return data.filter(({ node: faq }) => {
-            return faq.frontmatter.question || faq.frontmatter.answer
+            const {question, answer} = faq.frontmatter
+            return question && answer
         }).map(({ node: faq }) => (
-            <div>
-                <p>{faq.frontmatter.question}</p>
-                <p>{faq.frontmatter.answer}</p>
-            </div>
+            <Faq faq={faq} />
         ))
     }
 }

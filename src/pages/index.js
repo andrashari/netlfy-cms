@@ -10,12 +10,13 @@ import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
 
 import FaqList from '../components/sections/FaqList'
 import TestimonialList from '../components/sections/TestimonialList'
+import AboutUsList from '../components/sections/AboutUsList'
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     console.log(this.props);
-    const { edges: faqs } = data.allMarkdownRemark
+    const { edges: result } = data.allMarkdownRemark
     return (
       <div>
         <section className="section">
@@ -30,13 +31,22 @@ export default class IndexPage extends React.Component {
         
         <section className="section">
           <div className="container">
-            <FaqList data={faqs} /> 
+            <h2 className="has-text-weight-bold is-size-1">FaqList</h2>
+            <FaqList data={result} /> 
           </div>
         </section>
 
         <section className="section">
           <div className="container">
-            <TestimonialList data={faqs} /> 
+          <h2 className="has-text-weight-bold is-size-1">TestimonialList</h2>
+            <TestimonialList data={result} /> 
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+          <h2 className="has-text-weight-bold is-size-1">AboutUsList</h2>
+            <AboutUsList data={result} /> 
           </div>
         </section>
 
@@ -58,6 +68,6 @@ export const pageQuery = graphql`
   query pageQuery {
     ...faqFragment
     ...testimonialFragment
+    ...aboutUsFragment
   }
 `;
-//...faqFragment

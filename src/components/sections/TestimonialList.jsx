@@ -6,16 +6,12 @@ import Testimonial from '../../templates/testimonial'
 export default class TestimonialList extends Component {
     render() {
         const { data } = this.props
-        console.log(this.props);
 
         return data.filter(({ node: testimonial }) => {
-            return testimonial.frontmatter.imageSource || testimonial.frontmatter.name || testimonial.frontmatter.quote
+            const {imageSource, name, quote} = testimonial.frontmatter
+            return imageSource && name && quote
         }).map(({ node: testimonial }) => (
-            <div>
-                <img src={testimonial.frontmatter.imageSource} alt="" />
-                <p>{testimonial.frontmatter.name}</p>
-                <p>{testimonial.frontmatter.quote}</p>
-            </div>
+            <Testimonial testimonial={testimonial} />
         ))
     }
 }
