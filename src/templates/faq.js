@@ -21,8 +21,7 @@ export const FaqTemplate = ({
 }
 
 FaqTemplate.propTypes = {
-  question: PropTypes.string,
-  answer: PropTypes.string,
+  faq: PropTypes.object
 }
 
 const Faq = ({ faq }) => {
