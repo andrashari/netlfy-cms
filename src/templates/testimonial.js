@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
 
 export const TestimonialTemplate = ({
-  helmet,
   name,
   quote,
   imageSource
@@ -12,7 +9,6 @@ export const TestimonialTemplate = ({
 
   return (
     <section className="section">
-      {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -27,7 +23,6 @@ export const TestimonialTemplate = ({
 }
 
 TestimonialTemplate.propTypes = {
-  helmet: PropTypes.instanceOf(Helmet),
   question: PropTypes.string,
   answer: PropTypes.string,
 }
@@ -35,7 +30,6 @@ TestimonialTemplate.propTypes = {
 const Testimonial = ({ testimonial }) => {
   return (
     <TestimonialTemplate
-      helmet={<Helmet title={`${testimonial.frontmatter.name} | Testimonial`} />}
       name={testimonial.frontmatter.name}
       quote={testimonial.frontmatter.quote}
       imageSource={testimonial.frontmatter.imageSource}
