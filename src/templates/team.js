@@ -30,12 +30,7 @@ export const TeamTemplate = ({
 }
 
 TeamTemplate.propTypes = {
-  name: PropTypes.string,
-  role: PropTypes.string,
-  imageSource: PropTypes.string,
-  introduction: PropTypes.string,
-  email: PropTypes.string,
-  phone: PropTypes.string,
+  team: PropTypes.object
 }
 
 const Team = ({ team }) => {

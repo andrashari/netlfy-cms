@@ -8,7 +8,7 @@ export default class TestimonialList extends Component {
         const { data } = this.props
 
         return data.filter(({ node: testimonial }) => {
-            return testimonial.frontmatter.imageSource && testimonial.frontmattername && testimonial.frontmatterquote
+            return testimonial.frontmatter.imageSource && testimonial.frontmatter.name && testimonial.frontmatter.quote
         }).map(({ node: testimonial }) => (
             <Testimonial testimonial={testimonial} />
         ))
