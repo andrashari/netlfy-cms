@@ -8,9 +8,11 @@ export default class TestimonialList extends Component {
         const { data } = this.props
         console.log(this.props);
 
-        return data.map(({ node: testimonial }) => (
+        return data.filter(({ node: testimonial }) => {
+            return testimonial.frontmatter.imageSource || testimonial.frontmatter.name || testimonial.frontmatter.quote
+        }).map(({ node: testimonial }) => (
             <div>
-                <img src={testimonial.frontmatter.imageSource} alt=""/>
+                <img src={testimonial.frontmatter.imageSource} alt="" />
                 <p>{testimonial.frontmatter.name}</p>
                 <p>{testimonial.frontmatter.quote}</p>
             </div>

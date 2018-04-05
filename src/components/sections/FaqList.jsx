@@ -6,8 +6,9 @@ import Faq from '../../templates/faq'
 export default class FaqList extends Component {
     render() {
         const { data } = this.props
-
-        return data.map(({ node: faq }) => (
+        return data.filter(({ node: faq }) => {
+            return faq.frontmatter.question || faq.frontmatter.answer
+        }).map(({ node: faq }) => (
             <div>
                 <p>{faq.frontmatter.question}</p>
                 <p>{faq.frontmatter.answer}</p>
