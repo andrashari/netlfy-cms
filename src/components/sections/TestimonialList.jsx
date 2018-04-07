@@ -9,8 +9,8 @@ export default class TestimonialList extends Component {
 
         return data.filter(({ node: testimonial }) => {
             return testimonial.frontmatter.imageSource && testimonial.frontmatter.name && testimonial.frontmatter.quote
-        }).map(({ node: testimonial }) => (
-            <Testimonial testimonial={testimonial} />
+        }).map(({ node: testimonial }, index) => (
+            <Testimonial testimonial={testimonial} key={index} />
         ))
     }
 }

@@ -9,8 +9,8 @@ export default class TeamList extends Component {
 
         return data.filter(({ node: team }) => {
             return team.frontmatter.name && team.frontmatter.role && team.frontmatter.imageSource && team.frontmatter.introduction && team.frontmatter.email && team.frontmatter.phone
-        }).map(({ node: team }) => (
-            <Team team={team} />
+        }).map(({ node: team }, index) => (
+            <Team team={team} key={index} />
         ))
     }
 }
