@@ -82,6 +82,16 @@ collections:
       - {label: "Email", name: "email", widget: "string"}
       - {label: "Phone", name: "phone", widget: "string"}
 
+  - name: "video"
+    label: "video"
+    folder: "src/pages/customPosTypes/video"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "video"}
+      - {label: "Title", name: "title", widget: "hidden"}
+      - {label: "Video Link", name: "videoUrl", widget: "string"}
+
   - name: "kitchenSink" # all the things in one entry, for documentation and quick testing
     label: "Kitchen Sink"
     folder: "src/pages/sink"

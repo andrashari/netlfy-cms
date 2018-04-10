@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
@@ -11,8 +11,9 @@ import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
 import FaqList from '../components/sections/FaqList'
 import TestimonialList from '../components/sections/TestimonialList'
 import TeamList from '../components/sections/TeamList'
+import VideoSection from '../components/sections/VideoSection'
 
-export default class IndexPage extends React.Component {
+export default class IndexPage extends Component {
   render() {
     const { data } = this.props
     const { edges: result } = data.allMarkdownRemark
@@ -49,7 +50,13 @@ export default class IndexPage extends React.Component {
           </div>
         </section>
 
-        
+        <section className="section">
+          <div className="container">
+          <h2 className="has-text-weight-bold is-size-1">Video</h2>
+            <VideoSection data={result} /> 
+          </div>
+        </section>
+
       </div>
     )
   }
@@ -68,5 +75,6 @@ export const pageQuery = graphql`
     ...faqFragment
     ...testimonialFragment
     ...aboutUsFragment
+    ...videoFragment
   }
 `;
