@@ -86,11 +86,22 @@ collections:
     label: "video"
     folder: "src/pages/customPosTypes/video"
     create: true
-    slug: "{{name}}"
+    slug: "{{videoUrl}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "video"}
       - {label: "Title", name: "title", widget: "hidden"}
       - {label: "Video Link", name: "videoUrl", widget: "string"}
+      - {label: "Video Poster", name: "poster", widget: "string"}
+
+  - name: "instagram"
+    label: "instagram"
+    folder: "src/pages/customPosTypes/instagram"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "instagram"}
+      - {label: "Title", name: "title", widget: "hidden"}
+      - {label: "Instagram Profile Link", name: "instagramUrl", widget: "string"}
 
   - name: "kitchenSink" # all the things in one entry, for documentation and quick testing
     label: "Kitchen Sink"

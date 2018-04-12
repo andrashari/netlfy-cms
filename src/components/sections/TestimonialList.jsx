@@ -7,9 +7,9 @@ export default class TestimonialList extends Component {
     render() {
         const { data } = this.props
 
-        return data.filter(({ node: testimonial }) => {
+        return data.filter(({ node:testimonial }) => {
             return testimonial.frontmatter.imageSource && testimonial.frontmatter.name && testimonial.frontmatter.quote
-        }).map(({ node: testimonial }, index) => (
+        }).map(({ node:testimonial }, index) => (
             <Testimonial testimonial={testimonial} key={index} />
         ))
     }

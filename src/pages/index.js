@@ -5,6 +5,8 @@ import Link from 'gatsby-link'
 import 'antd/dist/antd.css';
 import { Button } from 'antd'
 
+import '../components/styles/style.css';
+
 import BookingForm from '../components/forms/BookingForm'
 import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
 
@@ -12,6 +14,7 @@ import FaqList from '../components/sections/FaqList'
 import TestimonialList from '../components/sections/TestimonialList'
 import TeamList from '../components/sections/TeamList'
 import VideoSection from '../components/sections/VideoSection'
+import InstagramSection from '../components/sections/InstagramSection'
 
 export default class IndexPage extends Component {
   render() {
@@ -57,6 +60,13 @@ export default class IndexPage extends Component {
           </div>
         </section>
 
+        <section className="section">
+          <div className="container">
+          <h2 className="has-text-weight-bold is-size-1">Instagram</h2>
+            <InstagramSection data={result} /> 
+          </div>
+        </section>
+
       </div>
     )
   }
@@ -76,5 +86,6 @@ export const pageQuery = graphql`
     ...testimonialFragment
     ...aboutUsFragment
     ...videoFragment
+    ...instagramFragment
   }
 `;
