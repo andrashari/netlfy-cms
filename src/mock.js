@@ -17,7 +17,7 @@ export function insertOrder(order) {
     })
 }
 
-export async function fetchVans() {
+export function fetchVans() {
     return fetch("https://webhooks.mongodb-stitch.com/api/client/v2.0/app/alfreskobookingadmin-vwutk/service/VansAPI/incoming_webhook/fetchVans?secret=secret", {
         method: 'GET'
     }).then(res => res.json());
