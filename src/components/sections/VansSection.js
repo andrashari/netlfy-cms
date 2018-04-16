@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import 'regenerator-runtime/runtime'
 
 import { BarLoader } from 'react-spinners'
 
