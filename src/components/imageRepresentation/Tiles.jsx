@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import 'regenerator-runtime/runtime'
+
 export class Tiles extends Component {
 
     state = {
@@ -33,6 +35,6 @@ export class Tiles extends Component {
 }
 
 
-Tiles.PropTypes = {
+Tiles.propTypes = {
     type: PropTypes.string
 }
