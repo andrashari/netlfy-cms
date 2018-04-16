@@ -1,6 +1,6 @@
 import {
     stitchClientPromiseWebsite
-} from './DB'
+} from './Db'
 
 // TODO
 export function insertUser(user) {
