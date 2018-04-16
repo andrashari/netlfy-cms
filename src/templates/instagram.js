@@ -10,7 +10,7 @@ export class InstagramTemplate extends Component {
   render() {
     return (
       <div>
-        <Tiles type={"instagram"} />
+        {/* <Tiles type={"instagram"} /> */}
         <InstagramEmbed
           url='https://instagr.am/p/Zw9o4/'
           maxWidth={320}

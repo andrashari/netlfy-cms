@@ -10,7 +10,7 @@ import '../components/styles/style.css';
 import BookingForm from '../components/forms/BookingForm'
 import { isAuthenticated, logOut, currentUser } from '../utils/Auth'
 
-import { insertVans } from '../utils/Db'
+//import { insertVans } from '../utils/Db'
 
 import VansSection from '../components/sections/VansSection'
 import FaqList from '../components/sections/FaqList'
@@ -40,7 +40,7 @@ export default class IndexPage extends Component {
               <Button type="primary" onClick={isAuthenticated}>Check Auth</Button>
               <Button type="primary" onClick={logOut}>logOut</Button>
               <Button type="primary" onClick={currentUser}>currentUser</Button>
-              <Button type="primary" onClick={insertVans}>insertVans</Button>
+              {/*<Button type="primary" onClick={insertVans}>insertVans</Button>*/}
           </div>
         </section>
         
