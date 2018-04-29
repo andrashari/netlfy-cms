@@ -1,24 +1,39 @@
 const _ = require('lodash')
 const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
+const {
+  createFilePath
+} = require('gatsby-source-filesystem')
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({
+  boundActionCreators,
+  graphql
+}) => {
+  const {
+    createPage
+  } = boundActionCreators
 
   return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
+    query pageQuery {
+      allMarkdownRemark {
         edges {
-          node {
-            id
-            fields {
-              slug
+            node {
+                frontmatter {
+                    faqQuestion
+                    faqAnswer
+                    testimonialImageSource
+                    testimonialName
+                    testimonialQuote
+                    aboutUsName
+                    aboutUsRole
+                    aboutUsImageSource
+                    aboutUsIntroduction
+                    aboutUsEmail
+                    aboutUsPhone
+                    videoUrl
+                    videoPoster
+                    instagramUrl
+                }
             }
-            frontmatter {
-              tags
-              templateKey
-            }
-          }
         }
       }
     }
@@ -28,7 +43,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    /*const posts = result.data.allMarkdownRemark.edges
 
     posts.forEach(edge => {
       const id = edge.node.id
@@ -67,15 +82,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           tag,
         },
       })
-    })
+    })*/
   })
 }
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators
+exports.onCreateNode = ({
+  node,
+  boundActionCreators,
+  getNode
+}) => {
+  const {
+    createNodeField
+  } = boundActionCreators
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({
+      node,
+      getNode
+    })
     createNodeField({
       name: `slug`,
       node,
