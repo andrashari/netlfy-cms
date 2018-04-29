@@ -11,7 +11,7 @@ export class VideoTemplate extends Component {
     return (
       <Player
       playsInline
-      poster={this.props.poster}
+      videoPoster={this.props.videoPoster}
       src={this.props.videoUrl}
     />
     )
@@ -26,7 +26,7 @@ const Video = ({ video }) => {
   return (
     <VideoTemplate
       videoUrl={video.frontmatter.videoUrl}
-      poster={video.frontmatter.poster}
+      videoPoster={video.frontmatter.videoPoster}
     />
   )
 }

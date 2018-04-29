@@ -8,7 +8,7 @@ export default class TestimonialList extends Component {
         const { data } = this.props
 
         return data.filter(({ node:testimonial }) => {
-            return testimonial.frontmatter.imageSource && testimonial.frontmatter.name && testimonial.frontmatter.quote
+            return testimonial.frontmatter.testimonialImageSource && testimonial.frontmatter.testimonialName && testimonial.frontmatter.testimonialQuote
         }).map(({ node:testimonial }, index) => (
             <Testimonial testimonial={testimonial} key={index} />
         ))
@@ -29,9 +29,9 @@ export const testimonialFragment = graphql`
             edges {
                 node {
                     frontmatter {
-                        imageSource
-                        name
-                        quote
+                        testimonialImageSource
+                        testimonialName
+                        testimonialQuote
                     }
                 }
             }

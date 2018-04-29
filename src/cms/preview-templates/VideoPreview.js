@@ -5,7 +5,7 @@ import { VideoPreview } from '../../templates/video'
 const VideoPreview = ({ entry, widgetFor }) => (
   <VideoTemplate
     src={entry.getIn(['data', 'videoUrl'])}
-    poster={entry.getIn(['data', 'poster'])}
+    videoPoster={entry.getIn(['data', 'videoPoster'])}
   />
 )
 

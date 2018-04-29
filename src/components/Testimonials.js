@@ -6,7 +6,7 @@ const Testimonials = ({ testimonials }) => (
     {testimonials.map(testimonial => (
       <article className="message">
         <div className="message-body">
-          {testimonial.quote}
+          {testimonial.testimonialQuote}
           <br />
           <cite> – {testimonial.author}</cite>
         </div>
@@ -18,7 +18,7 @@ const Testimonials = ({ testimonials }) => (
 Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(
     PropTypes.shape({
-      quote: PropTypes.string,
+      testimonialQuote: PropTypes.string,
       author: PropTypes.string,
     })
   ),

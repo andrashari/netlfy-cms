@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const TestimonialTemplate = ({
-  name,
-  quote,
-  imageSource
+  testimonialName,
+  testimonialQuote,
+  testimonialImageSource
 }) => {
 
   return (
@@ -12,9 +12,9 @@ export const TestimonialTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <img src={imageSource} alt={null} title={null} />
-            <p>{name}</p>
-            <p>{quote}</p>
+            <img src={testimonialImageSource} alt={null} title={null} />
+            <p>{testimonialName}</p>
+            <p>{testimonialQuote}</p>
           </div>
         </div>
       </div>
@@ -23,16 +23,17 @@ export const TestimonialTemplate = ({
 }
 
 TestimonialTemplate.propTypes = {
-  question: PropTypes.string,
-  answer: PropTypes.string,
+  testimonialName: PropTypes.string,
+  testimonialQuote: PropTypes.string,
+  testimonialImageSource: PropTypes.string,
 }
 
 const Testimonial = ({ testimonial }) => {
   return (
     <TestimonialTemplate
-      name={testimonial.frontmatter.name}
-      quote={testimonial.frontmatter.quote}
-      imageSource={testimonial.frontmatter.imageSource}
+      testimonialName={testimonial.frontmatter.testimonialName}
+      testimonialQuote={testimonial.frontmatter.testimonialQuote}
+      testimonialImageSource={testimonial.frontmatter.testimonialImageSource}
     />
   )
 }

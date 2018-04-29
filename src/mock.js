@@ -1,4 +1,4 @@
-import { stitchClientPromiseWebsite, stitchClientPromiseAdmin } from './utils/Db'
+import { stitchClientPromiseWebsite, stitchClientPromiseAdmin } from './components/utils/Db'
 
 // Orders
 export function insertOrder(order) {

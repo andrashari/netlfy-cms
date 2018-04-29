@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Form, Icon, Input, Button, Checkbox, Tabs } from 'antd';
 
-import { registerEmail, logInWithGoogle, logInWithFacebook } from '../../utils/Auth'
+import { registerEmail, logInWithGoogle, logInWithFacebook } from '../utils/Auth'
 
 const TabPane = Tabs.TabPane;
 const FormItem = Form.Item;

@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TeamTemplate } from '../../templates/team'
+import { TeamTemplate } from '../../templates/aboutUs'
 
 const TeamPreview = ({ entry, widgetFor }) => (
   <TeamTemplate
     title={entry.getIn(['data', 'name'])}
     name={entry.getIn(['data', 'name'])}
-    role={entry.getIn(['data', 'role'])}
-    imageSource={entry.getIn(['data', 'imageSource'])}
-    introduction={entry.getIn(['data', 'introduction'])}
-    email={entry.getIn(['data', 'email'])}
-    phone={entry.getIn(['data', 'phone'])}
+    teamRole={entry.getIn(['data', 'teamRole'])}
+    teamImageSource={entry.getIn(['data', 'teamImageSource'])}
+    teamIntroduction={entry.getIn(['data', 'teamIntroduction'])}
+    teamEmail={entry.getIn(['data', 'teamEmail'])}
+    teamPhone={entry.getIn(['data', 'teamPhone'])}
   />
 )
 

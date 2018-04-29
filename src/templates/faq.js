@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const FaqTemplate = ({
-  question,
-  answer,
+  faqQuestion,
+  faqAnswer,
 }) => {
 
   return (
@@ -11,8 +11,8 @@ export const FaqTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <p>{question}</p>
-            <p>{answer}</p>
+            <p>{faqQuestion}</p>
+            <p>{faqAnswer}</p>
           </div>
         </div>
       </div>
@@ -21,14 +21,15 @@ export const FaqTemplate = ({
 }
 
 FaqTemplate.propTypes = {
-  faq: PropTypes.object
+  faqQuestion: PropTypes.string,
+  faqAnswer: PropTypes.string
 }
 
 const Faq = ({ faq }) => {
   return (
     <FaqTemplate
-      question={faq.frontmatter.question}
-      answer={faq.frontmatter.answer}
+      faqQuestion={faq.frontmatter.faqQuestion}
+      faqAnswer={faq.frontmatter.faqAnswer}
     />
   )
 }

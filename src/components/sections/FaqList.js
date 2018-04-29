@@ -2,13 +2,16 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Faq from '../../templates/faq'
+import { Input } from 'antd';
 
 export default class FaqList extends Component {
     render() {
         const { data } = this.props
+        
         return data.filter(({ node: faq }) => {
-            return faq.frontmatter.question && faq.frontmatter.answer
-        }).map(({ node: faq }, index) => (
+            return faq.frontmatter.faqQuestion && faq.frontmatter.faqAnswer
+        })
+        .map(({ node: faq }, index) => (
             <Faq faq={faq} key={index} />
         ))
     }
@@ -28,8 +31,8 @@ export const faqFragment = graphql`
             edges {
                 node {
                     frontmatter {
-                        question
-                        answer
+                        faqQuestion
+                        faqAnswer
                     }
                 }
             }

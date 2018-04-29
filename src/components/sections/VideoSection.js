@@ -7,7 +7,7 @@ export default class VideoSection extends Component {
     render() {
         const { data } = this.props
         return data.filter(({ node: video }) => {
-            return video.frontmatter.videoUrl && video.frontmatter.poster
+            return video.frontmatter.videoUrl && video.frontmatter.videoPoster
         }).map(({ node: video }, index) => (
             <Video video={video} key={index} />
         ))
@@ -29,7 +29,7 @@ export const videoFragment = graphql`
                 node {
                     frontmatter {
                         videoUrl
-                        poster
+                        videoPoster
                     }
                 }
             }

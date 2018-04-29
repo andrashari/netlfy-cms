@@ -1,7 +1,7 @@
 ---
 templateKey: faq
-title: bfgdh
-question: hgfh
-answer: gfcdf
+faqTitle: bfgdghththdhz5z56z
+faqQuestion: hgfh
+faqAnswer: gfcdf
 ---
 

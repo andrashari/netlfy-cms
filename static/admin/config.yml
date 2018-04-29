@@ -52,8 +52,8 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq"}
       - {label: "Title", name: "title", widget: "hidden"}
-      - {label: "Question", name: "question", widget: "string"}
-      - {label: "Answer", name: "answer", widget: "string"}
+      - {label: "Question", name: "faqQuestion", widget: "string"}
+      - {label: "Answer", name: "faqAnswer", widget: "string"}
 
   - name: "testimonial"
     label: "Testimonials"
@@ -63,27 +63,27 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial"}
       - {label: "Title", name: "title", widget: "hidden"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Quote", name: "question", widget: "string"}
-      - {label: "Image", name: "imageSource", widget: "image"}
+      - {label: "Name", name: "testimonialName", widget: "string"}
+      - {label: "Quote", name: "testimonialQuestion", widget: "string"}
+      - {label: "Image", name: "testimonialImageSource", widget: "image"}
       
-  - name: "aboutus"
-    label: "aboutus"
-    folder: "src/pages/customPosTypes/aboutus"
+  - name: "aboutUs"
+    label: "About Us"
+    folder: "src/pages/customPosTypes/aboutUs"
     create: true
     slug: "{{name}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutus"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutUs"}
       - {label: "Title", name: "title", widget: "hidden"}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Role", name: "role", widget: "string", optional: true}
-      - {label: "Image", name: "imageSource", widget: "image"}
-      - {label: "Introduction", name: "introduction", widget: "text"}
-      - {label: "Email", name: "email", widget: "string"}
-      - {label: "Phone", name: "phone", widget: "string"}
+      - {label: "Name", name: "aboutUsName", widget: "string"}
+      - {label: "Role", name: "aboutUsRole", widget: "string", optional: true}
+      - {label: "Image", name: "aboutUsImageSource", widget: "image"}
+      - {label: "Introduction", name: "aboutUsIntroduction", widget: "text"}
+      - {label: "Email", name: "aboutUsEmail", widget: "string"}
+      - {label: "Phone", name: "aboutUsPhone", widget: "string"}
 
   - name: "video"
-    label: "video"
+    label: "Video"
     folder: "src/pages/customPosTypes/video"
     create: true
     slug: "{{videoUrl}}"
@@ -91,10 +91,10 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "video"}
       - {label: "Title", name: "title", widget: "hidden"}
       - {label: "Video Link", name: "videoUrl", widget: "string"}
-      - {label: "Video Poster", name: "poster", widget: "string"}
+      - {label: "Video Poster", name: "videoPoster", widget: "string"}
 
   - name: "instagram"
-    label: "instagram"
+    label: "Instagram"
     folder: "src/pages/customPosTypes/instagram"
     create: true
     slug: "{{name}}"

@@ -6,8 +6,8 @@ const TestimonialPreview = ({ entry, widgetFor }) => (
   <TestimonialTemplate
     title={entry.getIn(['data', 'name'])}
     name={entry.getIn(['data', 'name'])}
-    quote={entry.getIn(['data', 'quote'])}
-    imageSource={entry.getIn(['data', 'imageSource'])}
+    testimonialQuote={entry.getIn(['data', 'testimonialQuote'])}
+    testimonialImageSource={entry.getIn(['data', 'testimonialImageSource'])}
   />
 )
 
