@@ -17,7 +17,7 @@ exports.createPages = ({
       allMarkdownRemark {
         edges {
             node {
-                frontmatter {
+                frontmatter 
                     faqQuestion
                     faqAnswer
                     testimonialImageSource
