@@ -16,24 +16,24 @@ exports.createPages = ({
     query pageQuery {
       allMarkdownRemark {
         edges {
-            node {
-                frontmatter 
-                    faqQuestion
-                    faqAnswer
-                    testimonialImageSource
-                    testimonialName
-                    testimonialQuote
-                    aboutUsName
-                    aboutUsRole
-                    aboutUsImageSource
-                    aboutUsIntroduction
-                    aboutUsEmail
-                    aboutUsPhone
-                    videoUrl
-                    videoPoster
-                    instagramUrl
-                }
-            }
+          node {
+            frontmatter{
+              faqQuestion
+              faqAnswer
+              testimonialImageSource
+              testimonialName
+              testimonialQuote
+              aboutUsName
+              aboutUsRole
+              aboutUsImageSource
+              aboutUsIntroduction
+              aboutUsEmail
+              aboutUsPhone
+              videoUrl
+              videoPoster
+              instagramUrl
+            } 
+          }
         }
       }
     }

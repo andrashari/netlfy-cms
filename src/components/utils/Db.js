@@ -15,13 +15,13 @@ const vans =
     {
       "name": "VW T4",
       "thumbnail": "https://placehold.it/300x400",
-      "image": [
+      "images": [
          "https://placehold.it/300x100",
          "https://placehold.it/300x101",
          "https://placehold.it/300x102"
       ],
       "description": "description1",
-      "travels": "2 people",
+      "travels": "2",
       "basicSpecs": [
          "VOLKSWAGEN TRANSPORTER T4",
          "2400 cc, 55 kW",
@@ -50,7 +50,7 @@ const vans =
          "https://placehold.it/300x105"
       ],
       "description": "description2",
-      "travels": "2 people",
+      "travels": "2",
       "basicSpecs": [
          "Citroen Nemo",
          "missing CC, 51 kW",
