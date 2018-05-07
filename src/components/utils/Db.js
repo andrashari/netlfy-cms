@@ -44,7 +44,7 @@ const vans =
     {
       "name": "Nemo",
       "thumbnail": "https://placehold.it/300x400",
-      "image": [
+      "images": [
          "https://placehold.it/300x103",
          "https://placehold.it/300x104",
          "https://placehold.it/300x105"
