@@ -7,8 +7,9 @@ import { Button } from 'antd'
 
 import '../components/styles/style.css';
 
-import BookingForm from '../components/forms/BookingForm'
 import { isAuthenticated, logOut, currentUser } from '../components/utils/Auth'
+
+import BookingForm from '../components/forms/BookingForm'
 
 import { insertVans } from '../components/utils/Db'
 
@@ -28,19 +29,19 @@ export default class IndexPage extends Component {
 
         <section className="section">
           <div className="container">
-            <h2 className="has-text-weight-bold is-size-1">VansSection</h2>
-            <VansSection /> 
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container">
               <h1 className="has-text-weight-bold is-size-2">Booking Test</h1>
               <BookingForm />
               <Button type="primary" onClick={isAuthenticated}>Check Auth</Button>
               <Button type="primary" onClick={logOut}>logOut</Button>
               <Button type="primary" onClick={currentUser}>currentUser</Button>
               <Button type="primary" onClick={insertVans}>insertVans</Button>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <h2 className="has-text-weight-bold is-size-1">VansSection</h2>
+            <VansSection /> 
           </div>
         </section>
         
