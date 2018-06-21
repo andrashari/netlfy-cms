@@ -48,7 +48,7 @@ collections:
     label: "Faqs"
     folder: "src/pages/customPostTypes/faqs"
     create: true
-    slug: "{{question}}"
+    slug: "{{faqQuestion}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "faq"}
       - {label: "Title", name: "title", widget: "hidden"}
@@ -59,7 +59,7 @@ collections:
     label: "Testimonials"
     folder: "src/pages/customPostTypes/testimonials"
     create: true
-    slug: "{{name}}"
+    slug: "{{testimonialName}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "testimonial"}
       - {label: "Title", name: "title", widget: "hidden"}
@@ -71,7 +71,7 @@ collections:
     label: "About Us"
     folder: "src/pages/customPostTypes/aboutUs"
     create: true
-    slug: "{{name}}"
+    slug: "{{aboutUsName}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutUs"}
       - {label: "Title", name: "title", widget: "hidden"}
@@ -85,7 +85,6 @@ collections:
   - name: "video"
     label: "Video"
     folder: "src/pages/customPostTypes/video"
-    create: true
     slug: "{{videoUrl}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "video"}
@@ -96,8 +95,7 @@ collections:
   - name: "instagram"
     label: "Instagram"
     folder: "src/pages/customPostTypes/instagram"
-    create: true
-    slug: "{{name}}"
+    slug: "{{instagramUrl}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "instagram"}
       - {label: "Title", name: "title", widget: "hidden"}
