@@ -1,5 +1,5 @@
 ---
 templateKey: instagram
-instagramUrl: 'https://instagr.am/p/Zw9o4/fdfdfdf'
+instagramUrl: 'https://instagr.am/p/Zw9o4/'
 ---
 
