@@ -46,7 +46,7 @@ collections:
   
   - name: "faq"
     label: "Faqs"
-    folder: "src/pages/customPosTypes/faqs"
+    folder: "src/pages/customPostTypes/faqs"
     create: true
     slug: "{{question}}"
     fields:
@@ -57,7 +57,7 @@ collections:
 
   - name: "testimonial"
     label: "Testimonials"
-    folder: "src/pages/customPosTypes/testimonials"
+    folder: "src/pages/customPostTypes/testimonials"
     create: true
     slug: "{{name}}"
     fields:
@@ -69,7 +69,7 @@ collections:
       
   - name: "aboutUs"
     label: "About Us"
-    folder: "src/pages/customPosTypes/aboutUs"
+    folder: "src/pages/customPostTypes/aboutUs"
     create: true
     slug: "{{name}}"
     fields:
@@ -84,7 +84,7 @@ collections:
 
   - name: "video"
     label: "Video"
-    folder: "src/pages/customPosTypes/video"
+    folder: "src/pages/customPostTypes/video"
     create: true
     slug: "{{videoUrl}}"
     fields:
@@ -95,7 +95,7 @@ collections:
 
   - name: "instagram"
     label: "Instagram"
-    folder: "src/pages/customPosTypes/instagram"
+    folder: "src/pages/customPostTypes/instagram"
     create: true
     slug: "{{name}}"
     fields:
