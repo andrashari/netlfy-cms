@@ -8,4 +8,7 @@ const menu = [
 
 const menuHelper = item => item.toLowerCase().split(' ').join('-').split('&').join('and');
 
-export default {menu, menuHelper}
+export {
+    menu,
+    menuHelper
+}

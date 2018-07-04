@@ -1,5 +1,5 @@
-const layout = {
-    container : {
+const kaki = {
+    container: {
         //display: 'flex',
         flexFlow: 'row wrap',
         justifyContent: 'center',
@@ -21,4 +21,4 @@ const layout = {
 
 }
 
-export default layout
+export default kaki

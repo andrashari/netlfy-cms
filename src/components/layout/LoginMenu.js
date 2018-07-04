@@ -84,6 +84,7 @@ export default class LoginMenu extends Component {
                     <Modal onClick={() => this.closeMenu()} />
                 </div>
             </Menu>
+
         );
     }
 }

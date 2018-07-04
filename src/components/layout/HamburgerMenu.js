@@ -8,7 +8,7 @@ import { push as Menu } from "react-burger-menu";
 
 import fonts from "../../assets/theme/fonts";
 
-import {menu, menuHelper} from '../../pages/config'
+import {menu, menuHelper} from '../../config'
 
 export default class HamburgerMenu extends Component {
     state = {
@@ -63,7 +63,7 @@ export default class HamburgerMenu extends Component {
         },
         menuOpen: false
     }
-    
+
     handleStateChange(state) {
         this.setState({ menuOpen: state.isOpen });
     }
