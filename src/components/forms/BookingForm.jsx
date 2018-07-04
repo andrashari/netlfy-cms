@@ -4,6 +4,14 @@ import moment from 'moment'
 import { insertOrder } from '../../mock'
 
 import { Form, DatePicker, Select, Button } from 'antd';
+// TODO index.js:499 You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
+import 'antd/lib/form/style/css';
+import 'antd/lib/date-picker/style/css';
+import 'antd/lib/select/style/css';
+import 'antd/lib/button/style/css';
+
+import ui from "../../assets/theme/ui";
+
 const Option = Select.Option; 'antd';
 const FormItem = Form.Item;
 const RangePicker = DatePicker.RangePicker;
@@ -38,7 +46,7 @@ class BookingForm extends Component {
         sm: { span: 16 },
       },
     };
-    return (
+    return (        
       <Form onSubmit={this.handleSubmit}>
         <FormItem
           {...formItemLayout}
@@ -76,7 +84,7 @@ class BookingForm extends Component {
             sm: { span: 16, offset: 8 },
           }}
         >
-          <Button type="primary" htmlType="submit">Submit</Button>
+          <Button type="primary" htmlType="submit" style={ui.button}>Submit</Button>
         </FormItem>
       </Form>
     );

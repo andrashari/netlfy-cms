@@ -1,4 +1,4 @@
-@import ~bulma/sass/utilities/initial-variables
+@import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
 $kaldi-red: #FD461E
@@ -7,48 +7,48 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 
-html
-    box-sizing: border-box
+$break-touch: 1024px
 
-*, *:before, *:after
-    box-sizing: inherit
-
-body
-    margin: 0;
-    padding: 0;
-    font-size: 12px
+h1
+  font-size: 
 
 .content .taglist
-    list-style: none
-    margin-bottom: 0
-    margin-left: 0
-    margin-right: 1.5rem
-    margin-top: 1.5rem
-    display: flex
-    flex-wrap: wrap
-    justify-content: left
-    align-items: center
-
-    li
-        padding: 0 2rem 1rem 0
-        margin-bottom: 1.5rem
-        margin-top: 0
+  list-style: none
+  margin-bottom: 0
+  margin-left: 0
+  margin-right: 1.5rem
+  margin-top: 1.5rem
+  display: flex
+  flex-wrap: wrap
+  justify-content: left
+  align-items: center
+  li
+    padding: 0 2rem 1rem 0
+    margin-bottom: 1.5rem
+    margin-top: 0
 
 // Helper Classes
 .full-width-image-container
-    width: 100vw
-    height: 400px
-    position: relative
-    left: 50%
-    right: 50%
-    margin: 5em -50vw
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
+  width: 100vw
+  height: 400px
+  position: relative
+  left: 50%
+  right: 50%
+  margin: 5em -50vw
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
 
 .margin-top-0
-    margin-top: 0 !important
+  margin-top: 0 !important
 
-@import ~bulma
+.navbar-brand
+  justify-content: center
+
+.width--100
+  @media screen and (max-width: $break-touch)
+    max-width: 100%!important
+
+@import "~bulma"

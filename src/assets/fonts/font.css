@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./leagueSpartan/leaguespartan-bold.eot');/* IE9 Compat Modes */
+    src: url('./leagueSpartan/leaguespartan-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./leagueSpartan/leaguespartan-bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./leagueSpartan/leaguespartan-bold.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./leagueSpartan/leaguespartan-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./leagueSpartan/leaguespartan-bold.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'BrandonGrotesque';
+    src: url("./brandonGrotesque/Brandon_reg.otf") format("opentype");
+    /*src: url('./brandonGrotesque/Brandon_reg.eot');/* IE9 Compat Modes */
+    /*src: url('./brandonGrotesque/Brandon_reg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    /*url('./brandonGrotesque/Brandon_reg.woff2') format('woff2'), /* Super Modern Browsers */
+    /*url('./brandonGrotesque/Brandon_reg.woff') format('woff'), /* Pretty Modern Browsers */
+    /*url('./brandonGrotesque/Brandon_reg.ttf') format('truetype'), /* Safari, Android, iOS */
+    /*url('./brandonGrotesque/Brandon_reg.svg#svgFontName') format('svg');
+    /* Legacy iOS */
+}

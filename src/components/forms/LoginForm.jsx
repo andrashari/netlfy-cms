@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
 import { Form, Icon, Input, Button, Checkbox, Tabs } from 'antd';
+import 'antd/lib/form/style/css';
+import 'antd/lib/icon/style/css';
+import 'antd/lib/input/style/css';
+import 'antd/lib/button/style/css';
+import 'antd/lib/checkbox/style/css';
+import 'antd/lib/tabs/style/css';
+
+import ui from "../../assets/theme/ui";
 
 import { registerEmail, logInWithGoogle, logInWithFacebook } from '../utils/Auth'
 
@@ -52,7 +60,7 @@ class LoginForm extends Component {
                                 <Checkbox>Remember me</Checkbox>
                             )}
                             <a className="login-form-forgot" href="" style={{ float: 'right' }}>Forgot password</a>
-                            <Button type="primary" htmlType="submit" className="login-form-button" style={{ width: '100%' }}>
+                            <Button type="primary" htmlType="submit" className="login-form-button" style={{...{ width: '100%' }, ...ui.button}} >
                                 Log in
                             </Button>
                             {/*<Button type="secondary" className="login-form-button" style={{ width: '100%' }} onClick={logInWithFacebook}>
@@ -96,7 +104,7 @@ class LoginForm extends Component {
                             )}
                         </FormItem>
                         <FormItem>
-                            <Button type="primary" htmlType="submit" className="login-form-button" style={{ width: '100%' }}>
+                            <Button type="primary" htmlType="submit" className="login-form-button" style={{...{ width: '100%' }, ...ui.button}} >
                                 Sign Up
                             </Button>
                             {/*<Button type="secondary" className="login-form-button" style={{ width: '100%' }} onClick={logInWithFacebook}>
