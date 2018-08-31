@@ -21,7 +21,7 @@ const fonts = {
     burgerMenuFont: {
         ...{
             fontFamily: fontFamilyCustom,
-            fontSize: '8vw',
+            fontSize: '6vw',
             lineHeight: '2',
             color: colors.white
         }, ... {

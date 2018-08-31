@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { Component } from 'react';
+
+export class VideoTemplate extends Component {
+
+    render() {
+        return (
+            <p>Hello world</p>
+        )
+    }
+}
+
+/*import React from 'react'
 import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/Content'
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const ContactPageTemplate = ({ title, content, contentComponent }) => {
     const PageContent = contentComponent || Content
 
     return (
@@ -23,29 +34,33 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     )
 }
 
-AboutPageTemplate.propTypes = {
+ContactPageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
     content: PropTypes.string,
     contentComponent: PropTypes.func,
 }
 
-const AboutPage = (/*{ data }*/) => {
-    //const { markdownRemark: post } = data
+const ContactPage = ({ data }) => {
+    const { markdownRemark: post } = data
 
-    return (null
-
+    return (
+        <ContactPageTemplate
+            contentComponent={HTMLContent}
+            title={post.frontmatter.title}
+            content={post.html}
+        />
     )
 }
 
-AboutPage.propTypes = {
+ContactPage.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default ContactPage
 
-export const aboutPageQuery = graphql`
-  query AboutPage {
-    markdownRemark {
+export const contactPageQuery = graphql`
+  query ContactPage($path: String!) {
+    markdownRemark(path: { eq: $path }) {
       html
       frontmatter {
         title
@@ -53,3 +68,4 @@ export const aboutPageQuery = graphql`
     }
   }
 `
+*/

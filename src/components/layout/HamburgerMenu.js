@@ -8,7 +8,7 @@ import { push as Menu } from "react-burger-menu";
 
 import fonts from "../../assets/theme/fonts";
 
-import {menu, menuHelper} from '../../config'
+import { menu, menuHelper } from '../../config'
 
 export default class HamburgerMenu extends Component {
     state = {
@@ -80,10 +80,11 @@ export default class HamburgerMenu extends Component {
                 isOpen={this.state.menuOpen}
                 onStateChange={state => this.handleStateChange(state)}
             >
-                {menu.map(item => <Link
+                {menu.map((item, index) => <Link
                     className="menu-item"
                     to={`/${menuHelper(item)}`}
                     onClick={() => this.closeMenu()}
+                    key={index}
                 >
                     {item}
                 </Link>)}

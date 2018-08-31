@@ -1,41 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { Collapse } from 'antd';
+import 'antd/lib/collapse/style/css';
+const Panel = Collapse.Panel;
+
 export const FaqTemplate = ({
-  faqQuestion,
-  faqAnswer,
+    faqQuestion,
+    faqAnswer,
 }) => {
 
-  return (
-    <section className="section">
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <p>{faqQuestion}</p>
-            <p>{faqAnswer}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+    return (
+        <Collapse accordion>
+            <Panel header={faqQuestion} key={faqAnswer}>
+                {faqAnswer}
+            </Panel>
+        </Collapse>
+    )
 }
 
 FaqTemplate.propTypes = {
-  faqQuestion: PropTypes.string,
-  faqAnswer: PropTypes.string
+    faqQuestion: PropTypes.string,
+    faqAnswer: PropTypes.string
 }
 
 const Faq = ({ faq }) => {
-  return (
-    <FaqTemplate
-      faqQuestion={faq.frontmatter.faqQuestion}
-      faqAnswer={faq.frontmatter.faqAnswer}
-    />
-  )
+    return (
+        <FaqTemplate
+            faqQuestion={faq.frontmatter.faqQuestion}
+            faqAnswer={faq.frontmatter.faqAnswer}
+        />
+    )
 }
 
 Faq.propTypes = {
-  faq: PropTypes.object
+    faq: PropTypes.object
 }
 
 export default Faq
