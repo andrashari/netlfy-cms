@@ -14,7 +14,7 @@ export const FaqTemplate = ({
         <Collapse accordion>
             <Panel header={faqQuestion} key={faqAnswer}>
                 {faqAnswer}
-            </Panel>
+            </Panel>f
         </Collapse>
     )
 }
