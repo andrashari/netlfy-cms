@@ -23,12 +23,12 @@ exports.createPages = ({
                     testimonialImageSource
                     testimonialName
                     testimonialQuote
-                    aboutUsName
-                    aboutUsRole
-                    aboutUsImageSource
-                    aboutUsIntroduction
-                    aboutUsEmail
-                    aboutUsPhone
+                    teamName
+                    teamRole
+                    teamImageSource
+                    teamIntroduction
+                    teamEmail
+                    teamPhone
                     videoUrl
                     videoPoster
                     instagramUrl

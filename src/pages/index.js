@@ -14,7 +14,7 @@ import { insertVans } from "../components/utils/Db";
 import VansSection from "../components/sections/VansSection";
 import FaqList from "../components/sections/FaqList";
 import TestimonialList from "../components/sections/TestimonialList";
-import AboutUsList from "../components/sections/AboutUsList";
+import TeamList from "../components/sections/TeamList";
 import VideoSection from "../components/sections/VideoSection";
 import InstagramSection from "../components/sections/InstagramSection";
 
@@ -45,7 +45,7 @@ export default class IndexPage extends Component {
 
                 <section className="section">
                     <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">FaqList</h2>
+                        <h2 className="has-text-weight-bold is-size-1">Q & A</h2>
                         <FaqList data={result} />
                     </div>
                 </section>
@@ -59,8 +59,8 @@ export default class IndexPage extends Component {
 
                 <section className="section">
                     <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">AboutUsList</h2>
-                        <AboutUsList data={result} />
+                        <h2 className="has-text-weight-bold is-size-1">Meet our crew</h2>
+                        <TeamList data={result} />
                     </div>
                 </section>
 
@@ -102,12 +102,12 @@ export const pageQuery = graphql`
                     testimonialImageSource
                     testimonialName
                     testimonialQuote
-                    aboutUsName
-                    aboutUsRole
-                    aboutUsImageSource
-                    aboutUsIntroduction
-                    aboutUsEmail
-                    aboutUsPhone
+                    teamName
+                    teamRole
+                    teamImageSource
+                    teamIntroduction
+                    teamEmail
+                    teamPhone
                     videoUrl
                     videoPoster
                     instagramUrl

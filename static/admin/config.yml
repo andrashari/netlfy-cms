@@ -81,20 +81,20 @@ collections:
       - {label: "Quote", name: "testimonialQuestion", widget: "string"}
       - {label: "Image", name: "testimonialImageSource", widget: "image"}
 
-  - name: "aboutUs"
+  - name: "team"
     label: "About Us"
-    folder: "src/pages/customPostTypes/aboutUs"
+    folder: "src/pages/customPostTypes/team"
     create: true
-    slug: "{{aboutUsName}}"
+    slug: "{{teamName}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "aboutUs"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "team"}
       - {label: "Title", name: "title", widget: "hidden"}
-      - {label: "Name", name: "aboutUsName", widget: "string"}
-      - {label: "Role", name: "aboutUsRole", widget: "string", optional: true}
-      - {label: "Image", name: "aboutUsImageSource", widget: "image"}
-      - {label: "Introduction", name: "aboutUsIntroduction", widget: "text"}
-      - {label: "Email", name: "aboutUsEmail", widget: "string"}
-      - {label: "Phone", name: "aboutUsPhone", widget: "string"}
+      - {label: "Name", name: "teamName", widget: "string"}
+      - {label: "Role", name: "teamRole", widget: "string", optional: true}
+      - {label: "Image", name: "teamImageSource", widget: "image"}
+      - {label: "Introduction", name: "teamIntroduction", widget: "text"}
+      - {label: "Email", name: "teamEmail", widget: "string"}
+      - {label: "Phone", name: "teamPhone", widget: "string"}
 
   - name: "video"
     label: "Video"
