@@ -2,7 +2,7 @@
 templateKey: aboutUs
 aboutUsName: bfgdghththdh
 aboutUsRole: bfgdghththdh
-aboutUsImageSource: bfgdghththdh
+aboutUsImageSource: /img/chemex.jpg
 aboutUsIntroduction: bfgdghththdh
 aboutUsEmail: bfgdghththdh
 aboutUsPhone: bfgdghththdh
