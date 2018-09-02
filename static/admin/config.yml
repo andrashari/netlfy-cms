@@ -82,7 +82,7 @@ collections:
       - {label: "Image", name: "testimonialImageSource", widget: "image"}
 
   - name: "team"
-    label: "About Us"
+    label: "Team"
     folder: "src/pages/customPostTypes/team"
     create: true
     slug: "{{teamName}}"
