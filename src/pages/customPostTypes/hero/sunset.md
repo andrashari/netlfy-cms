@@ -1,5 +1,5 @@
 ---
 templateKey: hero
-heroUrl: /img/chemex.jpg
+heroUrl: /img/sunsetherowide.jpg
 ---
 
