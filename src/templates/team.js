@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const TeamTemplate = ({
-    teamname,
+    teamName,
     teamRole,
     teamImageSource,
     teamIntroduction,
@@ -16,7 +16,7 @@ export const TeamTemplate = ({
             <div className="container content">
                 <div className="columns">
                     <div className="column is-10 is-offset-1">
-                        <p>{teamname}</p>
+                        <p>{teamName}</p>
                         <p>{teamRole}</p>
                         <img src={teamImageSource} />
                         <p>{teamIntroduction}</p>
@@ -30,7 +30,7 @@ export const TeamTemplate = ({
 }
 
 TeamTemplate.propTypes = {
-    teamname: PropTypes.string,
+    teamName: PropTypes.string,
     teamRole: PropTypes.string,
     teamImageSource: PropTypes.string,
     teamIntroduction: PropTypes.string,

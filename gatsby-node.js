@@ -18,17 +18,18 @@ exports.createPages = ({
         edges {
             node {
                 frontmatter {
-                    faqQuestion
-                    faqAnswer
-                    testimonialImageSource
-                    testimonialName
-                    testimonialQuote
+                    heroUrl
                     teamName
                     teamRole
                     teamImageSource
                     teamIntroduction
                     teamEmail
                     teamPhone
+                    testimonialImageSource
+                    testimonialName
+                    testimonialQuote
+                    faqQuestion
+                    faqAnswer
                     videoUrl
                     videoPoster
                     instagramUrl

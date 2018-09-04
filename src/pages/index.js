@@ -11,6 +11,7 @@ import BookingForm from "../components/forms/BookingForm";
 
 import { insertVans } from "../components/utils/Db";
 
+import HeroSection from "../components/sections/HeroSection";
 import VansSection from "../components/sections/VansSection";
 import FaqList from "../components/sections/FaqList";
 import TestimonialList from "../components/sections/TestimonialList";
@@ -24,6 +25,7 @@ export default class IndexPage extends Component {
         const { edges: result } = data.allMarkdownRemark
         return (
             <div>
+                <HeroSection data={result} />
 
                 <section className="section">
                     <div className="container">
@@ -77,7 +79,6 @@ export default class IndexPage extends Component {
                         <InstagramSection data={result} />
                     </div>
                 </section>
-
             </div>
         )
     }
@@ -93,27 +94,28 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
     query pageQuery {
-      allMarkdownRemark {
-        edges {
-            node {
-                frontmatter {
-                    faqQuestion
-                    faqAnswer
-                    testimonialImageSource
-                    testimonialName
-                    testimonialQuote
-                    teamName
-                    teamRole
-                    teamImageSource
-                    teamIntroduction
-                    teamEmail
-                    teamPhone
-                    videoUrl
-                    videoPoster
-                    instagramUrl
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        heroUrl
+                        faqQuestion
+                        faqAnswer
+                        testimonialImageSource
+                        testimonialName
+                        testimonialQuote
+                        teamName
+                        teamRole
+                        teamImageSource
+                        teamIntroduction
+                        teamEmail
+                        teamPhone
+                        videoUrl
+                        videoPoster
+                        instagramUrl
+                    }
                 }
             }
         }
-      }
     }
   `;

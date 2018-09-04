@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import Team from '../../templates/Team'
+import Team from '../../templates/team'
 
 export default class TeamList extends Component {
     render() {
