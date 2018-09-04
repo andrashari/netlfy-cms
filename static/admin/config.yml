@@ -64,6 +64,7 @@ collections:
     slug: "{{heroUrl}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "hero"}
+      - {label: "Title", name: "title", widget: "hidden"}
       - {label: "Image", name: "heroUrl", widget: "image"}
 
   - name: "faq"
