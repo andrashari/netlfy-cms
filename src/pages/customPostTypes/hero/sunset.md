@@ -1,5 +1,5 @@
 ---
 templateKey: hero
-heroUrl: http://andrashari.com/test/sunsetHeroNarrow.jpg
+heroUrl: /img/sunsetherowide.jpg
 ---
 
