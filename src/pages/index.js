@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 
 import "../assets/fonts/font.css";
+import "../assets/theme/style.css";
 import { Button } from "antd";
 
 import { isAuthenticated, logOut, currentUser } from "../components/utils/Auth";
@@ -11,6 +12,8 @@ import BookingForm from "../components/forms/BookingForm";
 
 import { insertVans } from "../components/utils/Db";
 
+import Heading from '../components/Heading'
+
 import HeroSection from "../components/sections/HeroSection";
 import VansSection from "../components/sections/VansSection";
 import FaqList from "../components/sections/FaqList";
@@ -18,6 +21,8 @@ import TestimonialList from "../components/sections/TestimonialList";
 import TeamList from "../components/sections/TeamList";
 import VideoSection from "../components/sections/VideoSection";
 import InstagramSection from "../components/sections/InstagramSection";
+
+import Tiles from "../components/imageRepresentation/Tiles"
 
 export default class IndexPage extends Component {
     render() {
@@ -29,7 +34,7 @@ export default class IndexPage extends Component {
 
                 <section className="section">
                     <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">VansSection</h2>
+                        <Heading content={"Cielito Lindo"} type={"h2"} />
                         <VansSection />
                     </div>
                 </section>

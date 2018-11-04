@@ -4,23 +4,26 @@ const fontFamilyAirbnb = '"LeagueSpartan", Lato, "Lucida Grande", Tahoma, -apple
 const baseFontSize = 14;
 const bigFontSize = 40;
 
-const fontFamilyCustom = '"LeagueSpartan", Lato, "Lucida Grande", Tahoma, Sans-Serif'
+const fontFamilyCustom = '"LeagueSpartan", Lato, "Lucida Grande", Tahoma, Sans-Serif';
+
+const amaticSC = "'Amatic SC', cursive";
+const montserrat = "'Montserrat', cursive";
 
 const fonts = {
     menuFont: {
-        fontFamily: fontFamilyCustom,
+        fontFamily: montserrat,
         fontSize: baseFontSize,
-        color: colors.darkGrey,
+        color: colors.secondary,
         padding: '2%'
     },
     menuFontActive: {
-        //fontFamily: fontFamilyAirbnb,
-        //fontSize: baseFontSize,
+        fontFamily: montserrat,
+        fontSize: baseFontSize,
         color: colors.primary
     },
     burgerMenuFont: {
         ...{
-            fontFamily: fontFamilyCustom,
+            fontFamily: montserrat,
             fontSize: '6vw',
             lineHeight: '2',
             color: colors.white
@@ -32,11 +35,20 @@ const fonts = {
         fontSize: '15px',
         letterSpacing: '0.7px',
         fontWeight: '500',
-        fontFamily: fontFamilyCustom,
+        fontFamily: montserrat,
         lineHeight: '2.3',
     },
     headerFont: {
-        fontWeight: '300',
+        fontFamily: amaticSC,
+        fontWeight: '500',
+        fontSize: '60px',
+        color: colors.secondary,
+        textAlign: 'center',
+    },
+    bodyText: {
+        fontFamily: montserrat,
+        fontSize: '12px',
+        color: colors.darkGrey,
     }
 }
 

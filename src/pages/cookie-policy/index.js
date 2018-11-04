@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import Heading from './../../components/Heading';
 
-export default class PrivacyPolicy extends Component {
+export default class CookiePolicy extends Component {
 
     render() {
         return (
-            <Heading content={"Privacy Policy"} type={"h1"} style={"normal"} />
+            <Heading content={"Cookie Policy"} type={"h1"} style={"normal"} />
         )
     }
 }

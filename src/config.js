@@ -1,14 +1,14 @@
 const menu = [
-    'Camper Vans',
-    'Trip Ideas',
+    'Campers',
+    'About Us',
+    'Travel Tips',
+    'Inspiration',
     'Terms & Conditions',
-    'Blog',
     'Contact',
 ]
 
 const footerMenu = [
     'Terms & Conditions',
-    'Cancellation Policy',
     'Privacy Policy',
     'Cookie Policy',
     'Contact',

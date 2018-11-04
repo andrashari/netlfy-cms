@@ -5,6 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "antd": "^3.3.3",
+    "axios": "^0.18.0",
     "babel-plugin-styled-components": "^1.5.1",
     "bulma": "^0.6.0",
     "gatsby": "^1.9.213",
@@ -27,6 +28,7 @@
     "react": "^16.2.0",
     "react-burger-menu": "^2.5.2",
     "react-helmet": "^5.2.0",
+    "react-images": "^0.5.19",
     "react-instafeed": "^0.4.0",
     "react-instagram-embed": "^1.3.4",
     "react-password-strength": "^2.3.1",

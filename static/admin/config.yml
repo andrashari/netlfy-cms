@@ -6,11 +6,11 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: "inspiration"
+    label: "Inspiration posts"
+    folder: "src/pages/inspiration"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
@@ -68,7 +68,7 @@ collections:
       - {label: "Image", name: "heroUrl", widget: "image"}
 
   - name: "faq"
-    label: "Faqs"
+    label: "Faqs(later usage)"
     folder: "src/pages/customPostTypes/faqs"
     create: true
     slug: "{{faqQuestion}}"

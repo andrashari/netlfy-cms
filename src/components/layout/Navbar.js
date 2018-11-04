@@ -10,7 +10,6 @@ import HamburgerMenu from "./HamburgerMenu";
 import Menu from "./Menu";
 
 import Modal from "../login/Modal";
-import kaki from "../../assets/theme/layout";
 
 export default class Navbar extends Component {
     render() {

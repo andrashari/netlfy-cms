@@ -1,4 +1,4 @@
-const kaki = {
+const layout = {
     container: {
         //display: 'flex',
         flexFlow: 'row wrap',
@@ -6,6 +6,7 @@ const kaki = {
         alignItems: 'center',
         flexGrow: '1',
         maxWidth: '80%',
+        margin: 'auto'
     },
     center: {
         alignItems: 'center',
@@ -17,8 +18,12 @@ const kaki = {
         marginLeft: {
             marginLeft: '2vw'
         }
+    },
+    flexbox: {
+        display: 'flex',
+        flexWrap: 'wrap'
     }
 
 }
 
-export default kaki
+export default layout

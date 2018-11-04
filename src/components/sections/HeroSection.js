@@ -6,8 +6,6 @@ import Hero from '../../templates/hero'
 export default class HeroSection extends Component {
     render() {
         const { data } = this.props
-        console.log(data);
-
         return data.filter(({ node: hero }) => {
             return hero.frontmatter.heroUrl
         }).map(({ node: hero }, index) => (

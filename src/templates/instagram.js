@@ -3,37 +3,37 @@ import PropTypes from 'prop-types'
 
 import InstagramEmbed from 'react-instagram-embed'
 
-import { Tiles } from '../components/imageRepresentation/Tiles'
+import Tiles from '../components/imageRepresentation/Tiles'
 
-export class InstagramTemplate extends Component {
+export const InstagramTemplate = ({
+    instagramUrl
+}) => {
 
-  render() {
     return (
-      <div>
-        {/* <Tiles type={"instagram"} /> */}
-        <InstagramEmbed
-          url='https://instagr.am/p/Zw9o4/'
-          maxWidth={320}
-        />
-      </div>
+        <div>
+            <InstagramEmbed
+                url='https://instagr.am/p/Zw9o4/'
+                maxWidth={320}
+            />
+            <Tiles instagramUrl={instagramUrl} />
+        </div>
     )
-  }
 }
 
 InstagramTemplate.propTypes = {
-  instagram: PropTypes.object,
+    instagramUrl: PropTypes.string,
 }
 
 const Instagram = ({ instagram }) => {
-  return (
-    <InstagramTemplate
-      instagramUrl={instagram.frontmatter.instagramUrl}
-    />
-  )
+    return (
+        <InstagramTemplate
+            instagramUrl={instagram.frontmatter.instagramUrl}
+        />
+    )
 }
 
 Instagram.propTypes = {
-  instagram: PropTypes.object
+    instagram: PropTypes.object
 }
 
 export default Instagram

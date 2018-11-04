@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
-
 export const HeroTemplate = ({
     heroUrl
 }) => {
@@ -17,17 +15,9 @@ export const HeroTemplate = ({
 
     return (
         <div>
-            <section style={style.background} class="banner page-banner home-page-banner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12 banner-text pull-left">
-                            <div class="valign">
-                                <h2>Hello camper van fans!</h2>
-                                <p>Explore untouched nature of Slovenia, Croatia, Italy and rest of Europe, with our retro camper vans. Eat some burek and have some fun!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section style={style.background} >
+                <h2>Hello camper van fans!</h2>
+                <p>Explore untouched nature of Slovenia, Croatia, Italy and rest of Europe, with our retro camper vans. Eat some burek and have some fun!</p>
             </section>
         </div>
     )
