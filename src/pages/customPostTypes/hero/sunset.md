@@ -1,5 +1,5 @@
 ---
 templateKey: hero
-heroUrl: /img/sunsetherowide.jpg
+heroUrl: /img/home-page-hero.jpg
 ---
 
