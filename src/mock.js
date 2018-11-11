@@ -17,16 +17,16 @@ export function insertOrder(order) {
     })
 }
 
-export function fetchVans() {
-    return fetch("https://webhooks.mongodb-stitch.com/api/client/v2.0/app/alfreskobookingadmin-vwutk/service/VansAPI/incoming_webhook/fetchVans?secret=secret", {
+export function fetchCampers() {
+    return fetch("https://webhooks.mongodb-stitch.com/api/client/v2.0/app/alfreskobookingadmin-vwutk/service/CampersAPI/incoming_webhook/fetchCampers?secret=secret", {
         method: 'GET'
     }).then(res => res.json());
     /*stitchClientPromiseAdmin.then(stitchClient => {
-        const db = stitchClient.service('mongodb', 'mongodb-atlas').db('Vans');
+        const db = stitchClient.service('mongodb', 'mongodb-atlas').db('Campers');
         stitchClient
             .login()
             .then(() =>
-                db.collection("Vans")
+                db.collection("Campers")
                 .find()
             )
             .then(res => console.log(res))

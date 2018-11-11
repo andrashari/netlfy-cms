@@ -17,7 +17,7 @@ export default class TravelTips extends Component {
 
                 <Heading content={"Destinations"} type={"h2"} />
                 <p>
-                    We think, Budapest has such a unique location; whichever direction you choose to go, you will find something interesting to see, live and experiment! You have mountains and many lakes around, the Adriatic Sea is in a comfortably reachable distance when on a road trip, but Ionian, Aegean and Black Sea are not impossible either.  Dream big, take a van and just follow your heart!
+                    We think, Budapest has such a unique location; whichever direction you choose to go, you will find something interesting to see, live and experiment! You have mountains and many lakes around, the Adriatic Sea is in a comfortably reachable distance when on a road trip, but Ionian, Aegean and Black Sea are not impossible either.  Dream big, take a camper and just follow your heart!
                     Just to give you an idea, we have marked a few interesting places to visit around us; trekking, mountain climbing, rafting, animal watching, wine-tasting, windsurf, sun bathing, horse-riding and many more! Interested?
                 </p>
 
@@ -26,20 +26,20 @@ export default class TravelTips extends Component {
 
                 <Heading content={"Parking"} type={"h3"} />
                 <p>
-                    When you are traveling with a campervan, you will carry some valuables that will stay inside when you park and leave the vehicle for any reason. Probably your stuff is more expensive than the price of few hours in a watched parking. Never leave your belongings in sight and make sure that the car is properly closed.
+                    When you are traveling with a campercamper, you will carry some valuables that will stay inside when you park and leave the vehicle for any reason. Probably your stuff is more expensive than the price of few hours in a watched parking. Never leave your belongings in sight and make sure that the car is properly closed.
                 </p>
                 <p>
-                    Always park the van carefully. Make sure that parking is allowed where you intend to park. If you are not sure, ask somebody or look for another place; better safe than sorry.
+                    Always park the camper carefully. Make sure that parking is allowed where you intend to park. If you are not sure, ask somebody or look for another place; better safe than sorry.
                 </p>
 
                 <Heading content={"Planning the route"} type={"h3"} />
                 <p>
-                    Probably the greatest advantage of a road trip is your freedom. Liberty to choose which way to go, what see, how long to stay there and where to head next. Still, as you have a given time, it is useful to plan your route a bit and know the best spots around, places where you can spend the night and distances. The mobile phone is an excellent tool on the go. Below you can find a bunch of <b>helpful Apps</b> that can be used even without Internet access.
+                    Probably the greatest adcampertage of a road trip is your freedom. Liberty to choose which way to go, what see, how long to stay there and where to head next. Still, as you have a given time, it is useful to plan your route a bit and know the best spots around, places where you can spend the night and distances. The mobile phone is an excellent tool on the go. Below you can find a bunch of <b>helpful Apps</b> that can be used even without Internet access.
                 </p>
 
                 <Heading content={"Night time"} type={"h3"} />
                 <p>
-                    It is with you to choose whether you would like to have more commodities and spend the night in a watched camping, or you would like to have more privacy and decide to spend the night in the wild. Both have their advantages, so we personally like to combine both. When you are in a camping, you can go to discover the surroundings by feet or bicycle with the peace of mind that the van and your belongings are safe. In a camping, you can have a nice shower, comfortably wash your clothes and hang them to dry at the camping pitch. You can also have some social life and meet other campers. While camping places provide you comfort, spending the night in the nature has something different to offer to you. It is more private and over all adventurous. It is something we definitely think everyone should try once in a lifetime.
+                    It is with you to choose whether you would like to have more commodities and spend the night in a watched camping, or you would like to have more privacy and decide to spend the night in the wild. Both have their adcampertages, so we personally like to combine both. When you are in a camping, you can go to discover the surroundings by feet or bicycle with the peace of mind that the camper and your belongings are safe. In a camping, you can have a nice shower, comfortably wash your clothes and hang them to dry at the camping pitch. You can also have some social life and meet other campers. While camping places provide you comfort, spending the night in the nature has something different to offer to you. It is more private and over all adventurous. It is something we definitely think everyone should try once in a lifetime.
                 </p>
                 <p>
                     Whether you chose to stay overnight in a camping or in the nature, please, follow the rules. Our basic rules are respect and common sense! Always respect the nature and others!
@@ -49,13 +49,13 @@ export default class TravelTips extends Component {
                 </span>
                 <ul>
                     <li>
-                        Check weather forecast in advance
+                        Check weather forecast in adcamperce
                     </li>
                     <li>
                         Provision yourself with enough water and food
                     </li>
                     <li>
-                        Make sure that you run enough with the van so the battery is fully charged to provide you electricity for the light and refrigerator
+                        Make sure that you run enough with the camper so the battery is fully charged to provide you electricity for the light and refrigerator
                     </li>
                     <li>
                         Always carry a flashlight, a (pocket)knife and matches or a lighter
@@ -89,7 +89,7 @@ export default class TravelTips extends Component {
                         Drive at the optimal speed in order to not to burn fuel in excess
                     </li>
                     <li>
-                        Walk and cycle around to visit the surroundings and keep the van for longer distances
+                        Walk and cycle around to visit the surroundings and keep the camper for longer distances
                     </li>
                 </ul>
 
@@ -108,7 +108,7 @@ export default class TravelTips extends Component {
                         Try to reduce your waste by using the containers and the textile bags we provide you.
                     </li>
                     <li>
-                        Spot the places where you can refill the van’s water tank for example at mountain springs or public fountains. This way you not just reduce single-use plastics but also save your money.
+                        Spot the places where you can refill the camper’s water tank for example at mountain springs or public fountains. This way you not just reduce single-use plastics but also save your money.
                     </li>
                 </ul>
 
@@ -124,11 +124,11 @@ export default class TravelTips extends Component {
 
                 <Heading content={"Use biodegradable products!"} type={"h4"} />
                 <p>
-                    We use biodegradable products to clean our vans and to wash the textiles (bed clothes, tea towels, towels), we will also provide you biodegradable dishwashing liquid and surface cleaner. If you bring biodegradable soap, shampoo and detergents with you, you can enjoy even greater freedom.
+                    We use biodegradable products to clean our campers and to wash the textiles (bed clothes, tea towels, towels), we will also provide you biodegradable dishwashing liquid and surface cleaner. If you bring biodegradable soap, shampoo and detergents with you, you can enjoy even greater freedom.
                 </p>
 
                 <Heading content={"Choose local products!"} type={"h4"} />
-                <span>Buying food from local farmers has only advantages</span>
+                <span>Buying food from local farmers has only adcampertages</span>
                 <ul>
                     <li>
                         Food will be fresh
@@ -140,7 +140,7 @@ export default class TravelTips extends Component {
                         By buying local, you save the environment from the pollution that is caused by the transportation of food from one point of the continent to the other.
                     </li>
                     <li>
-                        Less packaging! You can bring your own container, plate, bowl, textile bag from the van and reuse them time after time.
+                        Less packaging! You can bring your own container, plate, bowl, textile bag from the camper and reuse them time after time.
                     </li>
                     <li>
                         You are more likely to get bio food

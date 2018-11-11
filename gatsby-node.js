@@ -1,3 +1,6 @@
+const axios = require('axios');
+const crypto = require('crypto');
+
 const _ = require('lodash')
 const path = require('path')
 const {
@@ -104,3 +107,69 @@ exports.onCreateNode = ({
         })
     }
 }
+
+exports.sourceNodes = async ({ boundActionCreators }) => {
+    const { createNode } = boundActionCreators;
+
+    // fetch raw data from the randomuser api
+    const fetchCampers = () => axios.get(`https://webhooks.mongodb-stitch.com/api/client/v2.0/app/alfreskobookingadmin-vwutk/service/CampersAPI/incoming_webhook/fetchCampers?secret=secret`);
+
+    // await for results
+    const res = await fetchCampers();
+
+    // map into these results and create nodes
+    res.data.map((camper, i) => {
+        // Create your node object
+        const camperNode = {
+            // Required fields
+            id: `${i}`,
+            parent: `__SOURCE__`,
+            internal: {
+                type: `Camper`, // name of the graphQL query --> allCamper {}
+                // contentDigest will be added just after
+                // but it is required
+            },
+            children: [],
+
+            // Other fields that you want to query with graphQl
+            name: camper.name,
+            thumbnail: camper.thumbnail,
+            images: camper.images,
+            description: camper.description,
+            drives: camper.drives,
+            sleeps: camper.sleeps,
+            basicSpecs: camper.basicSpecs,
+            included: camper.included,
+            extras: camper.extras,
+            // etc...
+        }
+
+        // Get content digest of node. (Required field)
+        const contentDigest = crypto
+            .createHash(`md5`)
+            .update(JSON.stringify(camperNode))
+            .digest(`hex`);
+        // add it to userNode
+        camperNode.internal.contentDigest = contentDigest;
+
+        // Create node with the gatsby createNode() API
+        createNode(camperNode);
+    });
+
+    return;
+}
+
+/*exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+    if (stage === "build-html") {
+      actions.setWebpackConfig({
+        module: {
+          rules: [
+            {
+              test: /bad-module/,
+              use: loaders.null(),
+            },
+          ],
+        },
+      })
+    }
+  }*/

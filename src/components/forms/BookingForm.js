@@ -65,18 +65,18 @@ class BookingForm extends Component {
                 {/*
                     <FormItem
                         {...formItemLayout}
-                        label="Please select Van"
+                        label="Please select Camper"
                     >
-                        {getFieldDecorator('van', {
+                        {getFieldDecorator('camper', {
                             rules: [
-                                { required: true, message: 'Please select your van!' },
+                                { required: true, message: 'Please select your camper!' },
                             ],
                         })(
                             <Select
-                                placeholder="Select a Van"
+                                placeholder="Select a Camper"
                             >
-                                <Option value="van1">Happy Van</Option>
-                                <Option value="van2">Sad Van</Option>
+                                <Option value="camper1">Happy Camper</Option>
+                                <Option value="camper2">Sad Camper</Option>
                             </Select>
                         )}
                     </FormItem>

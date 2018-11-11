@@ -21,15 +21,15 @@ export default class Tiles extends Component {
         }
     }
 
-    async instagramPhotos() {
+    instagramPhotos() {
         // It will contain our photos' links
         const res = []
 
         try {
-            const userInfoSource = await axios.get('https://www.instagram.com/danilo_polani/')
+            const userInfoSource = axios.get('https://www.instagram.com/danilo_polani/')
 
             // userInfoSource.data contains the HTML from Axios
-            const jsonObject = await userInfoSource.data.match(/<script type="text\/javascript">window\._sharedData = (.*)<\/script>/)[1].slice(0, -1)
+            const jsonObject = userInfoSource.data.match(/<script type="text\/javascript">window\._sharedData = (.*)<\/script>/)[1].slice(0, -1)
 
             const userInfo = JSON.parse(jsonObject)
             // Retrieve only the first 10 results
@@ -52,11 +52,11 @@ export default class Tiles extends Component {
         return res
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         // fetchImages
         const { instagramUrl } = this.props;
-        const images = await this.instagramPhotos(instagramUrl);
-        await this.setState({ isLoading: false, images: images })
+        const images = this.instagramPhotos(instagramUrl);
+        this.setState({ isLoading: false, images: images })
     }
 
     render() {

@@ -10,12 +10,12 @@ import { isAuthenticated, logOut, currentUser } from "../components/utils/Auth";
 
 import BookingForm from "../components/forms/BookingForm";
 
-import { insertVans } from "../components/utils/Db";
+import { resetCampers } from "../components/utils/Db";
 
 import Heading from '../components/Heading'
 
 import HeroSection from "../components/sections/HeroSection";
-import VansSection from "../components/sections/VansSection";
+import CampersSection from "../components/sections/CampersSection";
 import FaqList from "../components/sections/FaqList";
 import TestimonialList from "../components/sections/TestimonialList";
 import TeamList from "../components/sections/TeamList";
@@ -35,7 +35,7 @@ export default class IndexPage extends Component {
                 <section className="section">
                     <div className="container">
                         <Heading content={"Cielito Lindo"} type={"h2"} />
-                        <VansSection />
+                        <CampersSection />
                     </div>
                 </section>
 
@@ -46,7 +46,7 @@ export default class IndexPage extends Component {
                         <Button type="primary" onClick={isAuthenticated}>Check Auth</Button>
                         <Button type="primary" onClick={logOut}>logOut</Button>
                         <Button type="primary" onClick={currentUser}>currentUser</Button>
-                        <Button type="primary" onClick={insertVans}>insertVans</Button>
+                        <Button type="primary" onClick={resetCampers}>resetCampers</Button>
                     </div>
                 </section>
 

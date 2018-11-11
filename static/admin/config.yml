@@ -6,9 +6,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "inspiration"
-    label: "Inspiration posts"
-    folder: "src/pages/inspiration"
+  - name: "blog"
+    label: "blog posts"
+    folder: "src/pages/blog"
     create: true
     slug: "{{slug}}"
     fields:

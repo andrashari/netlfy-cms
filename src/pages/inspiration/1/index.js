@@ -38,7 +38,7 @@ export default class InspirationPost extends Component {
                         fotografía suya”. Y de pronto Beatriz de Moura ve asomar lo que parecía un retrato de la joven Duras, de la
                         época en que sucede esa tremenda historia de amor. “Su cara se iluminó. La foto era de aquella cara suya, era
                         ella verdaderamente, una niña atenta y temerosa del mundo. '¿Está dispuesta a poner su cara en la portada?',
-                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo levantar para que fuéramos a la calle a comer”.
+                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo lecampertar para que fuéramos a la calle a comer”.
                     </p>
                     <p>
                         La escena en la que se establece la portada es casi tan emocionante como aquel regalo de Gabo. Estaban Toni
@@ -47,7 +47,7 @@ export default class InspirationPost extends Component {
                         fotografía suya”. Y de pronto Beatriz de Moura ve asomar lo que parecía un retrato de la joven Duras, de la
                         época en que sucede esa tremenda historia de amor. “Su cara se iluminó. La foto era de aquella cara suya, era
                         ella verdaderamente, una niña atenta y temerosa del mundo. '¿Está dispuesta a poner su cara en la portada?',
-                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo levantar para que fuéramos a la calle a comer”.
+                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo lecampertar para que fuéramos a la calle a comer”.
                     </p>
                     <p>
                         La escena en la que se establece la portada es casi tan emocionante como aquel regalo de Gabo. Estaban Toni
@@ -56,12 +56,12 @@ export default class InspirationPost extends Component {
                         fotografía suya”. Y de pronto Beatriz de Moura ve asomar lo que parecía un retrato de la joven Duras, de la
                         época en que sucede esa tremenda historia de amor. “Su cara se iluminó. La foto era de aquella cara suya, era
                         ella verdaderamente, una niña atenta y temerosa del mundo. '¿Está dispuesta a poner su cara en la portada?',
-                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo levantar para que fuéramos a la calle a comer”.
+                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo lecampertar para que fuéramos a la calle a comer”.
                         “Era un libro duramente autobiográfico, requería una
                         fotografía suya”. Y de pronto Beatriz de Moura ve asomar lo que parecía un retrato de la joven Duras, de la
                         época en que sucede esa tremenda historia de amor. “Su cara se iluminó. La foto era de aquella cara suya, era
                         ella verdaderamente, una niña atenta y temerosa del mundo. '¿Está dispuesta a poner su cara en la portada?',
-                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo levantar para que fuéramos a la calle a comer”.
+                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo lecampertar para que fuéramos a la calle a comer”.
                     </p>
 
                     <img src="https://placehold.it/640x480" alt="" style={this.style.image} />
@@ -73,7 +73,7 @@ export default class InspirationPost extends Component {
                         fotografía suya”. Y de pronto Beatriz de Moura ve asomar lo que parecía un retrato de la joven Duras, de la
                         época en que sucede esa tremenda historia de amor. “Su cara se iluminó. La foto era de aquella cara suya, era
                         ella verdaderamente, una niña atenta y temerosa del mundo. '¿Está dispuesta a poner su cara en la portada?',
-                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo levantar para que fuéramos a la calle a comer”.
+                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo lecampertar para que fuéramos a la calle a comer”.
                     </p>
 
                     <p>
@@ -83,7 +83,7 @@ export default class InspirationPost extends Component {
                         fotografía suya”. Y de pronto Beatriz de Moura ve asomar lo que parecía un retrato de la joven Duras, de la
                         época en que sucede esa tremenda historia de amor. “Su cara se iluminó. La foto era de aquella cara suya, era
                         ella verdaderamente, una niña atenta y temerosa del mundo. '¿Está dispuesta a poner su cara en la portada?',
-                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo levantar para que fuéramos a la calle a comer”.
+                        le dije. '¿Y la de quién si no?', me dijo. Y entonces nos hizo lecampertar para que fuéramos a la calle a comer”.
                     </p>
                 </div>
             </div >

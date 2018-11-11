@@ -16,8 +16,7 @@ export const HeroTemplate = ({
     return (
         <div>
             <section style={style.background} >
-                <h2>Hello camper van fans!</h2>
-                <p>Explore untouched nature of Slovenia, Croatia, Italy and rest of Europe, with our retro camper vans. Eat some burek and have some fun!</p>
+
             </section>
         </div>
     )
