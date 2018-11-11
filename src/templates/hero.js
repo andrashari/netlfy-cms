@@ -14,7 +14,10 @@ export const HeroTemplate = ({
     }
 
     return (
-        <p>chiujsdh</p>
+        <div>
+            <section style={style.background} >
+            </section>
+        </div>
     )
 }
 
