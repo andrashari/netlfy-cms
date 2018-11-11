@@ -16,7 +16,6 @@ export const HeroTemplate = ({
     return (
         <div>
             <section style={style.background} >
-
             </section>
         </div>
     )
