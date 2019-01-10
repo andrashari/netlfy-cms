@@ -4,7 +4,7 @@ import {
     Modal, Form, Icon, Select, Input, Button, Row, Col
 } from 'antd';
 
-import { sendMessage } from '../../mock'
+import { sendMessage } from '../../pages/mock/mock'
 
 const { TextArea } = Input;
 const { Option } = Select;
