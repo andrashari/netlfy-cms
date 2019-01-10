@@ -15,6 +15,22 @@ exports.createPages = ({
         createPage
     } = boundActionCreators
 
+    /*
+        teamName
+        teamRole
+        teamImageSource
+        teamIntroduction
+        teamEmail
+        teamPhone
+        testimonialImageSource
+        testimonialName
+        testimonialQuote
+        faqQuestion
+        faqAnswer
+        videoUrl
+        videoPoster
+        instagramUrl
+    */
     return graphql(`
     query pageQuery {
       allMarkdownRemark {
@@ -22,19 +38,6 @@ exports.createPages = ({
             node {
                 frontmatter {
                     heroUrl
-                    teamName
-                    teamRole
-                    teamImageSource
-                    teamIntroduction
-                    teamEmail
-                    teamPhone
-                    testimonialImageSource
-                    testimonialName
-                    testimonialQuote
-                    faqQuestion
-                    faqAnswer
-                    videoUrl
-                    videoPoster
                     instagramUrl
                 }
             }

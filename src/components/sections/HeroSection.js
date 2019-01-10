@@ -6,11 +6,13 @@ import Hero from '../../templates/hero'
 export default class HeroSection extends Component {
     render() {
         const { data } = this.props
-        return data.filter(({ node: hero }) => {
+        // GraphQL later
+        /*return data.filter(({ node: hero }) => {
             return hero.frontmatter.heroUrl
         }).map(({ node: hero }, index) => (
             <Hero hero={hero} key={index} />
-        ))
+        ))*/
+        return <Hero hero={data} key={1} />
     }
 }
 

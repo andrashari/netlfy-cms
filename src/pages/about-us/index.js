@@ -5,7 +5,7 @@ import colors from '../../assets/theme/colors';
 import Heading from '../../components/Heading'
 import HeroImage from "../../components/imageRepresentation/HeroImage";
 
-export default class VideoTemplate extends Component {
+export default class AboutPage extends Component {
 
     render() {
         return (

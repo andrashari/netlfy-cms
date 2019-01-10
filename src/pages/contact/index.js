@@ -1,13 +1,44 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
-export default class VideoTemplate extends Component {
+import Section from '../../components/layout/Section'
 
+import InstagramSection from "../../components/Sections/InstagramSection";
+
+export default class ContactPage extends Component {
     render() {
         return (
             <div>
-                <h2>Not a phone person?</h2>
-                <p>If you just lost the phone, or sold it (we understand you), please leave a message here:</p>
+                <h2>Contact Us!</h2>
+                <Section>
+
+                </Section>
             </div>
         )
     }
 }
+
+//Later
+//<InstagramSection
+
+/*ContactPage.propTypes = {
+    data: PropTypes.shape({
+        allMarkdownRemark: PropTypes.shape({
+            edges: PropTypes.array,
+        }),
+    }),
+}
+
+export const pageQuery = graphql`
+    query pageQuery {
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        instagramUrl
+                    }
+                }
+            }
+        }
+    }
+  `;*/

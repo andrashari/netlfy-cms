@@ -20,21 +20,22 @@ import HeroSection from "../components/Sections/HeroSection";
 import { TitleImageIcon } from '../components/svgs/images';
 
 import CampersSection from "../components/Sections/CampersSection";
+/*
 import FaqList from "../components/Sections/FaqList";
 import TestimonialList from "../components/Sections/TestimonialList";
 import TeamList from "../components/Sections/TeamList";
 import VideoSection from "../components/Sections/VideoSection";
-import InstagramSection from "../components/Sections/InstagramSection";
+*/
 
 export default class IndexPage extends Component {
     render() {
-        const { data } = this.props
-        const { edges: result } = data.allMarkdownRemark
+        //const { data } = this.props
+        //const { edges: result } = data.allMarkdownRemark
         return (
             <div>
-                <HeroSection data={result} />
+                <HeroSection data={{url: '/img/home-page-hero.jpg'}} />
 
-                <Section style={{ marginTop: '3rem' }} >
+                <Section style={{ marginTop: '4rem', paddingBottom: '3rem' }} >
                     <TitleImageIcon />
                 </Section>
 
@@ -42,6 +43,7 @@ export default class IndexPage extends Component {
                     <CampersSection />
                 </Section>
 
+                {/*
                 <Section>
                     <h1 className="has-text-weight-bold is-size-2">Booking Test</h1>
                     <BookingForm />
@@ -65,16 +67,12 @@ export default class IndexPage extends Component {
                     <h2 className="has-text-weight-bold is-size-1">Meet our crew</h2>
                     <TeamList data={result} />
                 </Section>
-
                 <Section>
                     <h2 className="has-text-weight-bold is-size-1">Video</h2>
                     <VideoSection data={result} />
                 </Section>
-
-                <Section>
-                    <h2 className="has-text-weight-bold is-size-1">Instagram</h2>
-                    <InstagramSection data={result} />
-                </Section>
+                */
+                }
             </div >
         )
     }
@@ -88,30 +86,16 @@ IndexPage.propTypes = {
     }),
 }
 
-export const pageQuery = graphql`
+/*export const pageQuery = graphql`
     query pageQuery {
         allMarkdownRemark {
             edges {
                 node {
                     frontmatter {
                         heroUrl
-                        faqQuestion
-                        faqAnswer
-                        testimonialImageSource
-                        testimonialName
-                        testimonialQuote
-                        teamName
-                        teamRole
-                        teamImageSource
-                        teamIntroduction
-                        teamEmail
-                        teamPhone
-                        videoUrl
-                        videoPoster
-                        instagramUrl
                     }
                 }
             }
         }
     }
-  `;
+  `;*/

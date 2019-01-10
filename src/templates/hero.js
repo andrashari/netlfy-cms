@@ -28,7 +28,9 @@ HeroTemplate.propTypes = {
 const Hero = ({ hero }) => {
     return (
         <HeroTemplate
-            heroUrl={hero.frontmatter.heroUrl}
+            //GrapQL later
+            //heroUrl={hero.frontmatter.heroUrl}
+            heroUrl={hero.url}
         />
     )
 }
