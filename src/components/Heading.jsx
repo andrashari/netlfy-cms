@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import fonts from '../assets/theme/fonts';
 
-const Heading = ({ content, type, }) => {
+const Heading = ({ content, type, location }) => {
     const Tag = `${type}`
     let fontStyle = null;
 
@@ -12,20 +12,28 @@ const Heading = ({ content, type, }) => {
             break;
 
         case 'h2':
-            fontStyle = { ...fonts.headerFont, ...{ fontSize: '40px' } }
+            fontStyle = { ...fonts.headerFont, ...{ fontSize: '60px' } }
             break;
 
         case 'h3':
-            fontStyle = { ...fonts.headerFont, ...{ fontSize: '30px' } }
+            fontStyle = { ...fonts.headerFont, ...{ fontSize: '50px' } }
+            break;
+
+        case 'h4':
+            fontStyle = {
+                ...fonts.menuFont, ...{ fontSize: '20px', textAlign: 'left', padding: 0 }
+            }
             break;
 
         default:
             break;
     }
 
-    if (type == 'h1') {
+    location == 'sectionTitle' ? fontStyle = fonts.headerFont : null;
+
+    if (type == 'h1' || location == 'sectionTitle') {
         return (
-            <div style={{ maxWidth: '30%', margin: '40px auto' }}>
+            <div style={{ maxWidth: '30%', margin: 'auto', padding: '20px 0' }}>
                 <Tag style={fontStyle}>
                     <hr className="hr-text" data-content={content}></hr>
                 </Tag >
@@ -34,7 +42,7 @@ const Heading = ({ content, type, }) => {
     }
     else {
         return (
-            <div style={{ maxWidth: '30%', margin: '40px auto' }}>
+            <div style={location == "info" ? { textAlign: 'center' } : { textAlign: 'center', margin: 'auto', padding: '20px 0' }}>
                 <Tag style={fontStyle}>{content}</Tag >
             </div>
         );

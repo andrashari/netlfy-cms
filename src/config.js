@@ -1,5 +1,5 @@
 const menu = [
-    'Campers',
+    //'Campers',
     'About Us',
     'Travel Tips',
     'Inspiration',

@@ -11,19 +11,20 @@ export const ListWithImage = ({
             clear: 'both',
             width: '150px',
             height: '150px',
-            margin: '0 50px'
+            margin: '25px 50px',
         },
         paragraph: {
             minHeight: '200px',
-            margin: '50px auto'
+            padding: '50px 0',
         }
     }
 
     return (
         <div>
+            <img src={imageUrl} alt={altText} style={style.image} />
             <p style={style.paragraph}>
-                <img src={imageUrl} alt={altText} style={style.image} />
-                <a href={brandUrl}>{brandName}</a>{text}
+                <a target="_blank" href={brandUrl}>{brandName}</a>
+                {text}
             </p>
 
         </div>

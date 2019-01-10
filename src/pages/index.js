@@ -5,6 +5,7 @@ import Link from "gatsby-link";
 import "../assets/fonts/font.css";
 import "../assets/theme/style.css";
 import { Button } from "antd";
+import colors from './../assets/theme/colors';
 
 import { isAuthenticated, logOut, currentUser } from "../components/utils/Auth";
 
@@ -13,16 +14,17 @@ import BookingForm from "../components/forms/BookingForm";
 import { resetCampers } from "../components/utils/Db";
 
 import Heading from '../components/Heading'
+import Section from '../components/layout/Section'
 
-import HeroSection from "../components/sections/HeroSection";
-import CampersSection from "../components/sections/CampersSection";
-import FaqList from "../components/sections/FaqList";
-import TestimonialList from "../components/sections/TestimonialList";
-import TeamList from "../components/sections/TeamList";
-import VideoSection from "../components/sections/VideoSection";
-import InstagramSection from "../components/sections/InstagramSection";
+import HeroSection from "../components/Sections/HeroSection";
+import { TitleImageIcon } from '../components/svgs/images';
 
-import Tiles from "../components/imageRepresentation/Tiles"
+import CampersSection from "../components/Sections/CampersSection";
+import FaqList from "../components/Sections/FaqList";
+import TestimonialList from "../components/Sections/TestimonialList";
+import TeamList from "../components/Sections/TeamList";
+import VideoSection from "../components/Sections/VideoSection";
+import InstagramSection from "../components/Sections/InstagramSection";
 
 export default class IndexPage extends Component {
     render() {
@@ -32,59 +34,48 @@ export default class IndexPage extends Component {
             <div>
                 <HeroSection data={result} />
 
-                <section className="section">
-                    <div className="container">
-                        <Heading content={"Cielito Lindo"} type={"h2"} />
-                        <CampersSection />
-                    </div>
-                </section>
+                <Section style={{ marginTop: '3rem' }} >
+                    <TitleImageIcon />
+                </Section>
 
-                <section className="section">
-                    <div className="container">
-                        <h1 className="has-text-weight-bold is-size-2">Booking Test</h1>
-                        <BookingForm />
-                        <Button type="primary" onClick={isAuthenticated}>Check Auth</Button>
-                        <Button type="primary" onClick={logOut}>logOut</Button>
-                        <Button type="primary" onClick={currentUser}>currentUser</Button>
-                        <Button type="primary" onClick={resetCampers}>resetCampers</Button>
-                    </div>
-                </section>
+                <Section style={{ background: colors.lightGrey }}>
+                    <CampersSection />
+                </Section>
 
-                <section className="section">
-                    <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">Q & A</h2>
-                        <FaqList data={result} />
-                    </div>
-                </section>
+                <Section>
+                    <h1 className="has-text-weight-bold is-size-2">Booking Test</h1>
+                    <BookingForm />
+                    <Button type="primary" onClick={isAuthenticated}>Check Auth</Button>
+                    <Button type="primary" onClick={logOut}>logOut</Button>
+                    <Button type="primary" onClick={currentUser}>currentUser</Button>
+                    <Button type="primary" onClick={resetCampers}>resetCampers</Button>
+                </Section>
 
-                <section className="section">
-                    <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">TestimonialList</h2>
-                        <TestimonialList data={result} />
-                    </div>
-                </section>
+                <Section>
+                    <h2 className="has-text-weight-bold is-size-1">Q & A</h2>
+                    <FaqList data={result} />
+                </Section>
 
-                <section className="section">
-                    <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">Meet our crew</h2>
-                        <TeamList data={result} />
-                    </div>
-                </section>
+                <Section>
+                    <h2 className="has-text-weight-bold is-size-1">TestimonialList</h2>
+                    <TestimonialList data={result} />
+                </Section>
 
-                <section className="section">
-                    <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">Video</h2>
-                        <VideoSection data={result} />
-                    </div>
-                </section>
+                <Section>
+                    <h2 className="has-text-weight-bold is-size-1">Meet our crew</h2>
+                    <TeamList data={result} />
+                </Section>
 
-                <section className="section">
-                    <div className="container">
-                        <h2 className="has-text-weight-bold is-size-1">Instagram</h2>
-                        <InstagramSection data={result} />
-                    </div>
-                </section>
-            </div>
+                <Section>
+                    <h2 className="has-text-weight-bold is-size-1">Video</h2>
+                    <VideoSection data={result} />
+                </Section>
+
+                <Section>
+                    <h2 className="has-text-weight-bold is-size-1">Instagram</h2>
+                    <InstagramSection data={result} />
+                </Section>
+            </div >
         )
     }
 }

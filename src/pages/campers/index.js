@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class VideoTemplate extends Component {
+class Hello extends Component {
+    state = {};
 
     render() {
         return (
-            <p>Hello world</p>
-        )
+            <div></div>
+        );
     }
 }
+
+export default Hello;

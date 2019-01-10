@@ -64,6 +64,7 @@ hr {
     color: #b5a750;
     text-align: center;
     height: 1.5em;
+    margin: 0;
 }
 
 .hr-text:before {

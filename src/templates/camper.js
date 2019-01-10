@@ -1,11 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Heading from '../components/Heading';
+import HorizontalList from './../components/layout/HorizontalList';
+import ListItem from '../components/layout/ListItem'
+
+import { DriveIcon, SleepIcon } from './../components/svgs/icons';
+
+import fonts from './../assets/theme/fonts';
+import { convertToKebabCase } from './../components/utils/utils';
 
 const style = {
     card: {
-        border: '1px solid black',
-        padding: 0
+        padding: 0,
+        background: '#fff'
     },
     image: {
         width: '100%',
@@ -15,23 +23,39 @@ const style = {
         justifyContent: 'space-between',
 
     },
+    iconContainer: {
+        width: '25%',
+        display: 'inherit',
+        justifyContent: 'space-between'
+    },
     camperName: {
         fontSize: '20px'
     },
     description: {
         fontSize: '12px'
+    },
+    readMore: {
+        ...fonts.headerFont,
+        ...{
+            fontSize: '40px',
+            letterSpacing: -1,
+            height: '122px',
+            lineHeight: '122px',
+            color: 'rgba(0, 0, 0, .85)',
+            fontWeight: 700,
+        }
     }
 }
 
 const renderIcons = (type, number) => {
-    let html = ''
+    let html = []
 
     for (let i = 0; i < number; i++) {
         if (type == 'drives') {
-            html += `<li>drives</li>`
+            html.push(<li style={{ display: 'inline', padding: '3px' }} ><DriveIcon size={40} /></li>)
         }
         else if (type == 'sleeps') {
-            html += `<li>sleeps</li>`
+            html.push(<li style={{ display: 'inline', padding: '3px' }} ><SleepIcon size={40} /></li>)
         }
     }
 
@@ -47,33 +71,36 @@ export const CamperTemplate = ({
 }) => {
 
     return (
-        <section className="section">
-            <div className="container content">
-                <div className="columns">
-                    <div className="column is-10 is-offset-1" style={style.card}>
-                        <img src={thumbnail} style={style.image} />
-                        <div style={{ display: 'flex', padding: '20px' }}>
-                            <div style={{ ...style.info, ...{ width: '40%' } }} >
-                                <h4 style={style.camperName}>{name}</h4>
-                                <p style={style.description}>{description}</p>
+        <ListItem>
+            <Heading content={name} type={"h2"} location={"sectionTitle"} />
+            <div className="columns">
+                <div className="column is-10 is-offset-1" style={style.card}>
+                    <img src={thumbnail} style={style.image} />
+                    <div style={{ display: 'flex', padding: '20px 50px', justifyContent: 'space-between' }}>
+                        <div style={{ ...style.info, ...{ width: '40%', maxWidth: '218px' } }} >
+                            <h4 style={style.camperName}>{name}</h4>
+                            <p style={style.description}>{description}</p>
+                        </div>
+
+                        <div style={style.iconContainer}>
+                            <div style={style.info}>
+                                <Heading content={"DRIVES"} type={"h4"} location={"info"} ></Heading>
+                                <HorizontalList>{renderIcons('drives', drives.$numberInt)}</HorizontalList>
                             </div>
 
                             <div style={style.info}>
-                                <ul>{renderIcons('drives', drives.$numberInt)}</ul>
+                                <Heading content={"SLEEPS"} type={"h4"} location={"info"} ></Heading>
+                                <HorizontalList>{renderIcons('sleeps', sleeps.$numberInt)}</HorizontalList>
                             </div>
+                        </div>
 
-                            <div style={style.info}>
-                                <ul>{renderIcons('sleeps', sleeps.$numberInt)}</ul>
-                            </div>
-
-                            <div style={style.info}>
-                                <span><a href="#">Read more</a></span>
-                            </div>
+                        <div style={style.info}>
+                            <span><a href={`/campers/${convertToKebabCase(name)}`} style={style.readMore}>Read more</a></span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </ListItem>
     )
 }
 

@@ -12,13 +12,12 @@ const montserrat = "'Montserrat', cursive";
 const fonts = {
     menuFont: {
         fontFamily: montserrat,
-        fontSize: baseFontSize,
+        fontSize: baseFontSize * 1.15,
         color: colors.secondary,
-        padding: '2%'
+        padding: '0 2%',
+        lineHeight: '52px'
     },
     menuFontActive: {
-        fontFamily: montserrat,
-        fontSize: baseFontSize,
         color: colors.primary
     },
     burgerMenuFont: {
@@ -32,7 +31,7 @@ const fonts = {
         }
     },
     buttonFont: {
-        fontSize: '15px',
+        fontSize: '16px',
         letterSpacing: '0.7px',
         fontWeight: '500',
         fontFamily: montserrat,
@@ -41,9 +40,10 @@ const fonts = {
     headerFont: {
         fontFamily: amaticSC,
         fontWeight: '500',
-        fontSize: '60px',
+        fontSize: '70px',
         color: colors.secondary,
         textAlign: 'center',
+        margin: 0,
     },
     bodyText: {
         fontFamily: montserrat,

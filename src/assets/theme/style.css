@@ -1,3 +1,12 @@
 .container:hover .overlay {
     opacity: 1;
 }
+
+b {
+    color: #000000
+}
+
+ul {
+    padding-left: 40px;
+    list-style: circle;
+}

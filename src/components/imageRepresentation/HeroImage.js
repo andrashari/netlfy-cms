@@ -14,10 +14,10 @@ export const HeroImage = ({
     }
 
     return (
-        <div>
+        <div style={{ paddingBottom: '40px' }}>
             <section style={style.background} >
             </section>
-        </div>
+        </div >
     )
 }
 

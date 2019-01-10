@@ -18,7 +18,7 @@ module.exports = {
                 // Setting a color is optional.
                 color: `tomato`,
                 // Disable the loading spinner.
-                //showSpinner: true,
+                showSpinner: false,
             },
         },
         {
