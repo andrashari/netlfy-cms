@@ -16,10 +16,10 @@ import { resetCampers } from "../components/utils/Db";
 import Heading from '../components/Heading'
 import Section from '../components/layout/Section'
 
-import HeroSection from "../components/Sections/HeroSection";
+//import HeroSection from "../components/Sections/HeroSection";
 import { TitleImageIcon } from '../components/svgs/images';
 
-import CampersSection from "../components/Sections/CampersSection";
+//import CampersSection from "../components/Sections/CampersSection";
 /*
 import FaqList from "../components/Sections/FaqList";
 import TestimonialList from "../components/Sections/TestimonialList";
@@ -33,17 +33,19 @@ export default class IndexPage extends Component {
         //const { edges: result } = data.allMarkdownRemark
         return (
             <div>
-                <HeroSection data={{url: '/img/home-page-hero.jpg'}} />
+
 
                 <Section style={{ marginTop: '4rem', paddingBottom: '3rem' }} >
                     <TitleImageIcon />
                 </Section>
 
                 <Section style={{ background: colors.lightGrey }}>
-                    <CampersSection />
+
                 </Section>
 
                 {/*
+                <CampersSection />
+                <HeroSection data={{url: '/img/home-page-hero.jpg'}} />
                 <Section>
                     <h1 className="has-text-weight-bold is-size-2">Booking Test</h1>
                     <BookingForm />

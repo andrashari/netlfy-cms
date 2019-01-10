@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Section from '../../components/layout/Section'
 
-import InstagramSection from "../../components/Sections/InstagramSection";
+//import InstagramSection from "../../components/Sections/InstagramSection";
 
 export default class ContactPage extends Component {
     render() {
