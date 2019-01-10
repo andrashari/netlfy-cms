@@ -1,3 +1,9 @@
+const esc = encodeURIComponent;
+
+export function objToParams(obj) {
+    return `?${Object.keys(obj).map(key => `${esc(key)}=${esc(obj[key])}`).join('&')}`;
+}
+
 export function convertToKebabCase(string) {
     return string.replace(/\s+/g, '-').toLowerCase();
 }

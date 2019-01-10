@@ -6,12 +6,18 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         'gatsby-plugin-sass',
         'gatsby-plugin-styled-components',
+        //TODO typography
         /*{
             resolve: `gatsby-plugin-typography`,
             options: {
                 pathToConfigModule: `src/assets/theme/typography.js`,
             },
         },*/
+        /*{
+            resolve: `gatsby-plugin-create-client-paths`,
+            options: { prefixes: [`/contact/*`] },
+        },*/
+        //TODO nprogress
         {
             resolve: `gatsby-plugin-nprogress`,
             options: {
