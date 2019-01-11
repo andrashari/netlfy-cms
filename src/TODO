@@ -10,3 +10,5 @@
 5.: Gather CSS into one place (theme.js, ant-design, overriden ant-design, bulma, style.css[maybe more than one place])
 
 6.: Add CMS functions to add different gallery types
+
+7.: Gatsby.node config
