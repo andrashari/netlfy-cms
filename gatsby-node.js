@@ -25,6 +25,7 @@ exports.createPages = ({
 
             // Update the page.
             createPage(page)
+
         }
     }
     /*

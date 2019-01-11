@@ -1,0 +1,12 @@
+//TODO
+1.: Add graph ql queries for show
+
+2.: Add mock to excluded paths in order to be able to loead async functions
+
+3.: Add CMS pages, templates
+
+4.: Add proptypes everywhere
+
+5.: Gather CSS into one place (theme.js, ant-design, overriden ant-design, bulma, style.css[maybe more than one place])
+
+6.: Add CMS functions to add different gallery types

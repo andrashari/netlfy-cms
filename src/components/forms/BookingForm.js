@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import moment from 'moment'
 
-import { insertOrder } from '../../pages/mock/mock'
+import { insertOrder } from '../../mock'
 
 import { Form, DatePicker, Select, Button } from 'antd';
 // TODO index.js:499 You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.

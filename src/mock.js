@@ -1,6 +1,6 @@
-import { stitchClientPromiseWebsite, stitchClientPromiseAdmin } from '../../components/utils/Db'
+import { stitchClientPromiseWebsite, stitchClientPromiseAdmin } from './components/utils/Db'
 
-import { objToParams } from '../../components/utils/utils'
+import { objToParams } from './components/utils/utils'
 
 // Contacts
 export function sendMessage(message) {
