@@ -17,10 +17,10 @@ import Layout from "../components/layout"
 import Heading from '../components/Heading'
 import Section from '../components/layout/Section'
 
-import HeroSection from "../components/Sections/HeroSection";
+import HeroSection from "../components/sections/HeroSection";
 import { TitleImageIcon } from '../components/svgs/images';
 
-import CampersSection from "../components/Sections/CampersSection";
+import CampersSection from "../components/sections/CampersSection";
 
 export default class IndexPage extends Component {
     render() {

@@ -6,7 +6,7 @@ import Heading from '../../components/Heading'
 import Section from '../../components/layout/Section'
 
 import ContactForm from "../../components/forms/ContactForm";
-//import InstagramSection from "../../components/Sections/InstagramSection";
+//import InstagramSection from "../../components/sections/InstagramSection";
 
 export default class ContactPage extends Component {
     render() {
