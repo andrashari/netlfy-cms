@@ -16,10 +16,10 @@ export default class HeroSection extends Component {
     }
 }
 
-HeroSection.propTypes = {
+/*HeroSection.propTypes = {
     data: PropTypes.shape({
         allMarkdownRemark: PropTypes.shape({
             edges: PropTypes.array,
         }),
     }),
-}
+}*/

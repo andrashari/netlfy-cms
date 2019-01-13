@@ -30,7 +30,7 @@ export default class IndexPage extends Component {
         return (
             <Layout>
 
-                <HeroSection data={{ url: '/img/home-page-hero.jpg' }} />
+                <HeroSection data={{ url: 'img/home-page-hero.jpg' }} />
 
                 <Section style={{ marginTop: '4rem', paddingBottom: '3rem' }} >
                     <TitleImageIcon />

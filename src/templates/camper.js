@@ -85,12 +85,12 @@ export const CamperTemplate = ({
                         <div style={style.iconContainer}>
                             <div style={style.info}>
                                 <Heading content={"DRIVES"} type={"h4"} location={"info"} ></Heading>
-                                <HorizontalList>{renderIcons('drives', drives.$numberInt)}</HorizontalList>
+                                <HorizontalList>{renderIcons('drives', drives._numberInt)}</HorizontalList>
                             </div>
 
                             <div style={style.info}>
                                 <Heading content={"SLEEPS"} type={"h4"} location={"info"} ></Heading>
-                                <HorizontalList>{renderIcons('sleeps', sleeps.$numberInt)}</HorizontalList>
+                                <HorizontalList>{renderIcons('sleeps', sleeps._numberInt)}</HorizontalList>
                             </div>
                         </div>
 
@@ -108,7 +108,8 @@ CamperTemplate.propTypes = {
     camper: PropTypes.object
 }
 
-const Camper = ({ camper }) => {
+const Camper = ({ data }) => {
+    const { node: camper } = data;
     return (
         <CamperTemplate
             name={camper.name}
@@ -116,9 +117,6 @@ const Camper = ({ camper }) => {
             description={camper.description}
             drives={camper.drives}
             sleeps={camper.sleeps}
-            basicSpecs={camper.basicSpecs}
-            included={camper.included}
-            extras={camper.extras}
         />
     )
 }
