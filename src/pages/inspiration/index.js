@@ -4,6 +4,7 @@ import colors from '../../assets/theme/colors';
 import layout from './../../assets/theme/layout';
 
 import Heading from '../../components/Heading'
+import Layout from '../../components/layout'
 import HeroImage from "../../components/imageRepresentation/HeroImage";
 import { ImageGridItem } from './../../components/imageRepresentation/ImageGridItem';
 
@@ -11,6 +12,7 @@ export default class Inspiration extends Component {
 
     render() {
         return (
+            <Layout>
             <div style={{ background: colors.lightGrey }}>
                 <HeroImage heroUrl={"/img/inspiration.jpg"} />
                 <Heading content={"Inspiration"} type={"h1"} />
@@ -48,6 +50,7 @@ export default class Inspiration extends Component {
                     ></ImageGridItem>
                 </div>
             </div>
+            </Layout>
         )
     }
 }

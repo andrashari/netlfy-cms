@@ -21,18 +21,3 @@ VideoSection.propTypes = {
         }),
     }),
 }
-
-export const videoFragment = graphql`
-    fragment videoFragment on RootQueryType {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        videoUrl
-                        videoPoster
-                    }
-                }
-            }
-        }
-    }
-`;

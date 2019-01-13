@@ -1,50 +1,25 @@
 module.exports = {
     siteMetadata: {
         title: 'Alfresko Campers',
+        description: 'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
     },
     plugins: [
         'gatsby-plugin-react-helmet',
-        'gatsby-plugin-sass',
-        'gatsby-plugin-styled-components',
-        //TODO typography
-        /*{
-            resolve: `gatsby-plugin-typography`,
-            options: {
-                pathToConfigModule: `src/assets/theme/typography.js`,
-            },
-        },*/
-        /*{
-            resolve: `gatsby-plugin-create-client-paths`,
-            options: { prefixes: [`/contact/*`] },
-        },*/
         {
-            resolve: `gatsby-transformer-remark`,
+            resolve: `gatsby-plugin-sass`,
             options: {
-                plugins: [
-                    // gatsby-remark-relative-images must
-                    // go before gatsby-remark-images
-                    {
-                        resolve: `gatsby-remark-relative-images`,
-                    },
-                    {
-                        resolve: `gatsby-remark-images`,
-                        options: {
-                            // It's important to specify the maxWidth (in pixels) of
-                            // the content container as this plugin uses this as the
-                            // base for generating different widths of each image.
-                            maxWidth: 590,
-                        },
-                    },
+                precision: 8,
+                includePaths: [
+                    require('path').resolve(__dirname, 'node_modules')
                 ],
             },
-        //TODO nprogress
+        },
         {
-            resolve: `gatsby-plugin-nprogress`,
+            // keep as first gatsby-source-filesystem plugin for gatsby image support
+            resolve: 'gatsby-source-filesystem',
             options: {
-                // Setting a color is optional.
-                color: `tomato`,
-                // Disable the loading spinner.
-                showSpinner: false,
+                path: `${__dirname}/static/img`,
+                name: 'uploads',
             },
         },
         {
@@ -54,26 +29,48 @@ module.exports = {
                 name: 'pages',
             },
         },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                path: `${__dirname}/src/assets/img`,
-                name: 'images',
-            },
-        },
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-transformer-remark',
             options: {
-                plugins: [],
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-relative-images',
+                        options: {
+                            name: 'uploads',
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            // It's important to specify the maxWidth (in pixels) of
+                            // the content container as this plugin uses this as the
+                            // base for generating different widths of each image.
+                            maxWidth: 2048,
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-copy-linked-files',
+                        options: {
+                            destinationDir: 'static',
+                        }
+                    }
+                ],
             },
         },
         {
-            resolve: 'gatsby-plugin-netlify-cms',
+            resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+            options: {
+                develop: true,            // Activates purging in npm run develop
+                purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
+            },
+        }, // must be after other CSS plugins
+        {
+            resolve: 'gatsby-plugin-netlify',
             options: {
                 modulePath: `${__dirname}/src/cms/cms.js`,
             },
-        },
+        }, // make sure to keep it last in the array
     ],
 }

@@ -1,42 +1,55 @@
+const axios = require('axios');
+const crypto = require('crypto');
 const _ = require('lodash')
 const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const {
+    createFilePath
+} = require('gatsby-source-filesystem')
 
-exports.createPages = ({ actions, graphql }) => {
-    const { createPage } = actions
+exports.createPages = ({
+    actions,
+    graphql
+}) => {
+    const {
+        createPage
+    } = actions
+    // Implement the Gatsby API “onCreatePage”. This is
+    // called after every page is created.
+    exports.onCreatePage = async ({ page }) => {
+        // page.matchPath is a special key that's used for matching pages
+        // only on the client.
+        if (page.path.match(/^\/contact/)) {
+            page.matchPath = "/contact/*"
 
-    return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-              templateKey
-            }
-          }
+            // Update the page.
+            createPage(page)
+
         }
-      }
+        else {
+            if (page.path.match(/^\/campers/)) {
+                page.matchPath = "/campers/*"
+
+                // Update the page.
+                createPage(page)
+
+            }
+        }
     }
-  `).then(result => {
-        if (result.errors) {
-            result.errors.forEach(e => console.error(e.toString()))
-            return Promise.reject(result.errors)
-        }
-    })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-    const { createNodeField } = actions
-    fmImagesToRelative(node) // convert image paths for gatsby images
-
+exports.onCreateNode = ({
+    node,
+    actions,
+    getNode
+}) => {
+    const {
+        createNodeField
+    } = actions
     if (node.internal.type === `MarkdownRemark`) {
-        const value = createFilePath({ node, getNode })
+        const value = createFilePath({
+            node,
+            getNode
+        })
         createNodeField({
             name: `slug`,
             node,
@@ -45,8 +58,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
 }
 
-exports.sourceNodes = async ({ boundActionCreators }) => {
-    const { createNode } = boundActionCreators;
+exports.sourceNodes = async ({ actions }) => {
+    const { createNode } = actions;
 
     // fetch raw data from the randomuser api
     const fetchCampers = () => axios.get(`https://webhooks.mongodb-stitch.com/api/client/v2.0/app/alfreskobookingadmin-vwutk/service/CampersAPI/incoming_webhook/fetchCampers?secret=secret`);

@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 
 import { push as Menu } from "react-burger-menu";
 import Modal from "../login/Modal";

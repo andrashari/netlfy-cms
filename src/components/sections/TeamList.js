@@ -22,22 +22,3 @@ TeamList.propTypes = {
         }),
     }),
 }
-
-export const teamFragment = graphql`
-    fragment teamFragment on RootQueryType {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        teamName
-                        teamRole
-                        teamImageSource
-                        teamIntroduction
-                        teamEmail
-                        teamPhone
-                    }
-                }
-            }
-        }
-    }
-`;

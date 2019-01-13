@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
+import { Link } from "gatsby";
 
 import "../assets/fonts/font.css";
 import "../assets/theme/style.css";
@@ -13,6 +13,7 @@ import BookingForm from "../components/forms/BookingForm";
 
 import { resetCampers } from "../components/utils/Db";
 
+import Layout from "../components/layout"
 import Heading from '../components/Heading'
 import Section from '../components/layout/Section'
 
@@ -23,10 +24,11 @@ import CampersSection from "../components/Sections/CampersSection";
 
 export default class IndexPage extends Component {
     render() {
+        const { location } = this.props;
         //const { data } = this.props
         //const { edges: result } = data.allMarkdownRemark
         return (
-            <div>
+            <Layout>
 
                 <HeroSection data={{ url: '/img/home-page-hero.jpg' }} />
 
@@ -49,7 +51,7 @@ export default class IndexPage extends Component {
                     </Section>
                 */
                 }
-            </div >
+            </Layout>
         )
     }
 }

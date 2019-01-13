@@ -29,7 +29,7 @@ class ModalLogin extends Component {
     render() {
         return (
             <div>
-                <Button type="primary" onClick={this.showModal} style={ui.button}>Open</Button>
+                {/*<Button type="primary" onClick={this.showModal} style={ui.button}>Open</Button>*/}
                 <Modal
                     title="Please Sign Up or Log In"
                     visible={this.state.visible}

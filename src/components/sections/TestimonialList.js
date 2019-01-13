@@ -22,19 +22,3 @@ TestimonialList.propTypes = {
         }),
     }),
 }
-
-export const testimonialFragment = graphql`
-    fragment testimonialFragment on RootQueryType {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        testimonialImageSource
-                        testimonialName
-                        testimonialQuote
-                    }
-                }
-            }
-        }
-    }
-`;

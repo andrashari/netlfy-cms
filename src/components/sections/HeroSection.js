@@ -23,17 +23,3 @@ HeroSection.propTypes = {
         }),
     }),
 }
-
-export const heroFragment = graphql`
-    fragment heroFragment on RootQueryType {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        heroUrl
-                    }
-                }
-            }
-        }
-    }
-`;

@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import { StaticQuery, graphql } from 'gatsby'
+
 import BookingForm from '../../../components/forms/BookingForm';
+import Layout from "../../../components/layout"
 import Heading from '../../../components/Heading';
 import Gallery from '../../../components/imageRepresentation/Gallery';
 import {
@@ -50,7 +54,7 @@ export const CamperPageTemplate = ({
     ]
 
     return (
-        <section className="section">
+        <Layout className="section">
             <div className="container content">
                 <div className="columns">
                     <div className="column is-8">
@@ -92,7 +96,7 @@ export const CamperPageTemplate = ({
                     </div>
                 </div>
             </div>
-        </section>
+        </Layout>
     )
 }
 
@@ -147,55 +151,35 @@ export const CamperPageWithoutLocation = ({ data }) => {
     }),
 }*/
 
-export default CamperPageWithoutLocation
 
-export const camperQuery = graphql`
-    query camperQuery {
-        allCamper {
-            edges {
-                node {
-                    name
-                    thumbnail
-                    images
-                    description
-                    drives {
-                        _numberInt
+//(id: {eq: $id })
+export default () => (
+    <StaticQuery
+        query={graphql`
+            query CamperQuery {
+                allCamper {
+                    edges {
+                        node {
+                            name
+                            thumbnail
+                            images
+                            description
+                                drives {
+                                    _numberInt
+                                }
+                            sleeps {
+                                _numberInt
+                            }
+                            basicSpecs
+                            included
+                            extras
+                        }
                     }
-                    sleeps {
-                        _numberInt
-                    }
-                    basicSpecs
-                    included
-                    extras
                 }
             }
-        }
-    }
-
-`
-
-/*
-export const camperQuery = graphql`
-    query camperQuery($id: String!) {
-                allCamper(id: {eq: $id }) {
-                edges {
-            node {
-                name
-                    thumbnail
-            images
-            description
-                    drives {
-                _numberInt
-            }
-            sleeps {
-                _numberInt
-            }
-            basicSpecs
-            included
-            extras
-        }
-    }
-}
-}
-
-`*/
+        `}
+        render={data => (
+            <CamperPageWithoutLocation data={data} />
+        )}
+    />
+)

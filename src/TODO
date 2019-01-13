@@ -1,4 +1,13 @@
 //TODO
+
+!!!
+Check Migration
+https://www.gatsbyjs.org/docs/migrating-from-v1-to-v2/
+
+a, Layout component on all pages
+b, Replacing a layout’s query with StaticQuery:
+c, location props: https://spectrum.chat/gatsby-js/general/this-props-location-in-gatsby-v2~9d834942-678c-4ff4-80fd-5a84bc2acdea
+
 1.: Add graph ql queries for show
 
 2.: Add mock to excluded paths in order to be able to loead async functions
@@ -12,3 +21,31 @@
 6.: Add CMS functions to add different gallery types
 
 7.: Gatsby.node config
+
+8.: ne a full antd-t huzza be
+
+9.: Check dev dependencies meg production dependencies
+
+10.: Change double quotes to single quote in import expressions
+
+/*{
+            //TODO Typography.js
+            resolve: `gatsby-plugin-typography`,
+            options: {
+                pathToConfigModule: `src/assets/theme/typography.js`,
+            },
+        },*/
+
+        /*{
+            resolve: `gatsby-plugin-create-client-paths`,
+            options: { prefixes: [`/contact/*`] },
+        },*/
+        {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+                // Setting a color is optional.
+                color: `tomato`,
+                // Disable the loading spinner.
+                showSpinner: false,
+            },
+        },

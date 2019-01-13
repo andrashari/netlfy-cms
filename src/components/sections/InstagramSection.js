@@ -21,17 +21,3 @@ InstagramSection.propTypes = {
         }),
     }),
 }
-
-export const instagramFragment = graphql`
-    fragment instagramFragment on RootQueryType {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        instagramUrl
-                    }
-                }
-            }
-        }
-    }
-`;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from "prop-types";
 
+import Layout from "../../components/layout"
+import Heading from '../../components/Heading'
 import Section from '../../components/layout/Section'
 
 import ContactForm from "../../components/forms/ContactForm";
@@ -9,12 +11,12 @@ import ContactForm from "../../components/forms/ContactForm";
 export default class ContactPage extends Component {
     render() {
         return (
-            <div>
-                <h2>Contact Us!</h2>
+            <Layout location={this.props.location} >
+                <Heading content={"Contact Us"} type={"h1"} />
                 <Section>
                     <ContactForm />
                 </Section>
-            </div>
+            </Layout>
         )
     }
 }

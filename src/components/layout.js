@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import './all.sass'
@@ -12,17 +11,17 @@ import { TypographyStyle } from 'react-typography'
 // where you define your theme.
 //import typography from '../assets/theme/typography'
 
-const TemplateWrapper = ({ children }) => (
-    <div>
+
+//import { withRouter } from 'react-router'
+
+const Layout = ({ children, location }) => (
+  <div>
         <Helmet title="Home | Gatsby + Netlify CMS" />
-        <Navbar />
-        <div>{children()}</div>
+        <Navbar/>
+            {children}
         <Footer />
-    </div>
+  </div>
 )
 
-TemplateWrapper.propTypes = {
-    children: PropTypes.func,
-}
-
-export default TemplateWrapper
+//export default withRouter(Layout)
+export default Layout

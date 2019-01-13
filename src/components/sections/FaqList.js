@@ -7,7 +7,7 @@ import { Input } from 'antd';
 export default class FaqList extends Component {
     render() {
         const { data } = this.props
-        
+
         return data.filter(({ node: faq }) => {
             return faq.frontmatter.faqQuestion && faq.frontmatter.faqAnswer
         })
@@ -24,18 +24,3 @@ FaqList.propTypes = {
         }),
     }),
 }
-
-export const faqFragment = graphql`
-    fragment faqFragment on RootQueryType {
-        allMarkdownRemark {
-            edges {
-                node {
-                    frontmatter {
-                        faqQuestion
-                        faqAnswer
-                    }
-                }
-            }
-        }
-    }
-`;

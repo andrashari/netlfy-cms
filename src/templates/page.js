@@ -50,14 +50,3 @@ Page.propTypes = {
 }
 
 export default Page
-
-export const pageQuery = graphql`
-  query Page($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        title
-      }
-    }
-  }
-`
