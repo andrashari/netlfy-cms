@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
-import "../assets/fonts/font.css";
-import "../assets/theme/style.css";
 import { Button } from "antd";
 import colors from './../assets/theme/colors';
 

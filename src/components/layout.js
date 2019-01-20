@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import './all.sass'
+import '../assets/all.sass'
 
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'

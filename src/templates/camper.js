@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { StaticQuery, graphql } from 'gatsby'
+
 import Heading from '../components/Heading';
 import HorizontalList from './../components/layout/HorizontalList';
 import ListItem from '../components/layout/ListItem'
 
-import { DriveIcon, SleepIcon } from './../components/svgs/icons';
+import { AcIcon } from './../components/svgs/AcIcon';
 
 import fonts from './../assets/theme/fonts';
 import { convertToKebabCase } from './../components/utils/utils';
@@ -51,11 +53,11 @@ const renderIcons = (type, number) => {
     let html = []
 
     for (let i = 0; i < number; i++) {
-        if (type == 'drives') {
-            html.push(<li style={{ display: 'inline', padding: '3px' }} ><DriveIcon size={40} /></li>)
+        if (type == 'travels') {
+            html.push(<li style={{ display: 'inline', padding: '3px' }} ><AcIcon type={type} style={{ height: 40 }} /></li>)
         }
         else if (type == 'sleeps') {
-            html.push(<li style={{ display: 'inline', padding: '3px' }} ><SleepIcon size={40} /></li>)
+            html.push(<li style={{ display: 'inline', padding: '3px' }} ><AcIcon type={type} size={40} /></li>)
         }
     }
 
@@ -66,16 +68,19 @@ export const CamperTemplate = ({
     name,
     thumbnail,
     description,
-    drives,
+    travels,
     sleeps,
 }) => {
-
+    //{`img/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
     return (
         <ListItem>
             <Heading content={name} type={"h2"} location={"sectionTitle"} />
             <div className="columns">
                 <div className="column is-10 is-offset-1" style={style.card}>
-                    <img src={thumbnail} style={style.image} />
+                    <img
+                        src={`img/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
+                        style={style.image}
+                    />
                     <div style={{ display: 'flex', padding: '20px 50px', justifyContent: 'space-between' }}>
                         <div style={{ ...style.info, ...{ width: '40%', maxWidth: '218px' } }} >
                             <h4 style={style.camperName}>{name}</h4>
@@ -84,13 +89,13 @@ export const CamperTemplate = ({
 
                         <div style={style.iconContainer}>
                             <div style={style.info}>
-                                <Heading content={"DRIVES"} type={"h4"} location={"info"} ></Heading>
-                                <HorizontalList>{renderIcons('drives', drives._numberInt)}</HorizontalList>
+                                <Heading content={"TRAVELS"} type={"h4"} location={"info"} ></Heading>
+                                <HorizontalList>{renderIcons('travels', travels)}</HorizontalList>
                             </div>
 
                             <div style={style.info}>
                                 <Heading content={"SLEEPS"} type={"h4"} location={"info"} ></Heading>
-                                <HorizontalList>{renderIcons('sleeps', sleeps._numberInt)}</HorizontalList>
+                                <HorizontalList>{renderIcons('sleeps', sleeps)}</HorizontalList>
                             </div>
                         </div>
 
@@ -110,12 +115,20 @@ CamperTemplate.propTypes = {
 
 const Camper = ({ data }) => {
     const { node: camper } = data;
+    const thumbnail = camper.images.filter(img => img.type == 'homepage')[0]
+    console.log(thumbnail);
+    /*console.log(data);
+    console.log(thumbnail);*/
+    /*const thumbnail = camper.images.filter(
+        img => img.type == 'homepage'
+    )
+    console.log(thumbnail[0]);*/
     return (
         <CamperTemplate
             name={camper.name}
-            thumbnail={camper.thumbnail}
+            thumbnail={thumbnail}
             description={camper.description}
-            drives={camper.drives}
+            travels={camper.travels}
             sleeps={camper.sleeps}
         />
     )
@@ -126,3 +139,22 @@ Camper.propTypes = {
 }
 
 export default Camper
+
+/*export default props => (
+    <StaticQuery
+        query={graphql`
+            {
+                allFile(filter: {extension: {in: ["jpeg", "jpg", "gif", "png"]}, relativePath: {regex: "/homepage/"}}) {
+                    edges {
+                        node {
+                            relativePath
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => (
+            <Camper data={props.data} key={props.key} thumbnail={data} />
+        )}
+    />
+)*/

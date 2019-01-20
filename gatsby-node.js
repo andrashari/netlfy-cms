@@ -62,7 +62,7 @@ exports.sourceNodes = async ({ actions }) => {
     const { createNode } = actions;
 
     // fetch raw data from the randomuser api
-    const fetchCampers = () => axios.get(`https://webhooks.mongodb-stitch.com/api/client/v2.0/app/alfreskobookingadmin-vwutk/service/CampersAPI/incoming_webhook/fetchCampers?secret=secret`);
+    const fetchCampers = () => axios.get(`http://localhost:8000/api/campers/resource/excerpts`);
 
     // await for results
     const res = await fetchCampers();
@@ -83,13 +83,12 @@ exports.sourceNodes = async ({ actions }) => {
 
             // Other fields that you want to query with graphQl
             name: camper.name,
-            thumbnail: camper.thumbnail,
-            images: camper.images,
             description: camper.description,
-            drives: camper.drives,
+            travels: camper.travels,
             sleeps: camper.sleeps,
-            basicSpecs: camper.basicSpecs,
-            included: camper.included,
+            images: camper.images,
+            specifications: camper.specifications,
+            includeds: camper.includeds,
             extras: camper.extras,
             // etc...
         }

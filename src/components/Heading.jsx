@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import fonts from '../assets/theme/fonts';
 
-const Heading = ({ content, type, location }) => {
+const Heading = ({ content, type, location, style }) => {
     const Tag = `${type}`
     let fontStyle = null;
 
@@ -34,7 +34,7 @@ const Heading = ({ content, type, location }) => {
     if (type == 'h1' || location == 'sectionTitle') {
         return (
             <div style={{ maxWidth: '30%', margin: 'auto', padding: '20px 0' }}>
-                <Tag style={fontStyle}>
+                <Tag style={{...fontStyle, ...style}}>
                     <hr className="hr-text" data-content={content}></hr>
                 </Tag >
             </div>
@@ -43,7 +43,7 @@ const Heading = ({ content, type, location }) => {
     else {
         return (
             <div style={location == "info" ? { textAlign: 'center' } : { textAlign: 'center', margin: 'auto', padding: '20px 0' }}>
-                <Tag style={fontStyle}>{content}</Tag >
+                <Tag style={{...fontStyle, ...style}}>{content}</Tag >
             </div>
         );
     }

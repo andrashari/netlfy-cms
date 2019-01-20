@@ -1,0 +1,111 @@
+@import ~bulma/sass/utilities/initial-variables
+
+// Config vars
+$kaldi-red: #FD461E
+$kaldi-red-invert: #fff
+
+$primary: $kaldi-red
+$primary-invert: $kaldi-red-invert
+
+$break-touch: 1024px
+
+.content .taglist
+    list-style: none
+    margin-bottom: 0
+    margin-left: 0
+    margin-right: 1.5rem
+    margin-top: 1.5rem
+    display: flex
+    flex-wrap: wrap
+    justify-content: left
+    align-items: center
+
+    li
+        padding: 0 2rem 1rem 0
+        margin-bottom: 1.5rem
+        margin-top: 0
+
+// Helper Classes
+.full-width-image-container
+    width: 100vw
+    height: 400px
+    position: relative
+    left: 50%
+    right: 50%
+    margin: 5em -50vw
+    background-size: cover
+    background-position: bottom
+    display: flex
+    justify-content: center
+    align-items: center
+
+.margin-top-0
+    margin-top: 0 !important
+
+.navbar-brand
+    justify-content: center
+
+.width--100
+    @media screen and (max-width: $break-touch)
+        max-width: 100% !important
+
+@import ~bulma
+
+// Custom Alfresko CSS
+.container:hover .overlay
+    opacity: 1
+
+b
+    color: #000000
+
+ul
+    padding-left: 40px
+    list-style: circle
+
+.ant-form-item-label
+
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700")
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat")
+
+body, p, ul, li, span, b
+    font-family: "Montserrat", sans-serif
+    font-size: 16px
+    color: #918e8f
+
+hr
+    background-color: #e2e0e1
+
+.content h4
+    font-weight: 500
+    font-size: 20px
+    color: rgb(181, 167, 80)
+
+.hr-text
+    line-height: 1em
+    position: relative
+    outline: 0
+    border: 0
+    color: #b5a750
+    text-align: center
+    height: 1.5em
+    margin: 0
+
+.hr-text:before
+    content: ""
+    background: #b5a750
+    position: absolute
+    left: 0
+    top: 50%
+    width: 100%
+    height: 3px
+
+.hr-text:after
+    content: attr(data-content)
+    position: relative
+    display: inline-block
+    color: black
+    padding: 0 0.5em
+    line-height: 1.5em
+    color: #b5a750
+    background-color: #e2e0e1

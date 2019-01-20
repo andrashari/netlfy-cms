@@ -28,6 +28,9 @@ c, location props: https://spectrum.chat/gatsby-js/general/this-props-location-i
 
 10.: Change double quotes to single quote in import expressions
 
+11.: https://medium.freecodecamp.org/how-to-structure-your-project-and-manage-static-resources-in-react-native-6f4cfc947d92
+Use package.json to avoid relative path
+
 /*{
             //TODO Typography.js
             resolve: `gatsby-plugin-typography`,

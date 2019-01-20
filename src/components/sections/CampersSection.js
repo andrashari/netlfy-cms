@@ -31,18 +31,13 @@ export default () => (
                     edges {
                         node {
                             name
-                            thumbnail
-                            images
-                            description
-                                drives {
-                                    _numberInt
-                                }
-                            sleeps {
-                                _numberInt
+                            images {
+                                folder
+                                type
+                                url
                             }
-                            basicSpecs
-                            included
-                            extras
+                            travels
+                            sleeps
                         }
                     }
                 }

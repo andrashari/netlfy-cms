@@ -63,7 +63,7 @@ export default class Gallery extends React.Component {
         });
 
         return (
-            <div style={{ width: '820px' }}>
+            <div className="container">
                 {gallery}
             </div>
         );
@@ -71,7 +71,7 @@ export default class Gallery extends React.Component {
 
     render() {
         return (
-            <div style={{ margin: '150px auto', width: '50%' }} >
+            <div>
                 {this.renderGallery()}
                 <Lightbox
                     currentImage={this.state.currentImage}

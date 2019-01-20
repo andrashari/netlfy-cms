@@ -6,7 +6,7 @@ class Hello extends Component {
 
     render() {
         return (
-            <div></div>
+            <div>Campers url</div>
         );
     }
 }
