@@ -1,18 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
 
-import { Button } from "antd";
 import colors from './../assets/theme/colors';
 
-import { isAuthenticated, logOut, currentUser } from "../components/utils/Auth";
-
-import BookingForm from "../components/forms/BookingForm";
-
-import { resetCampers } from "../components/utils/Db";
-
 import Layout from "../components/layout"
-import Heading from '../components/Heading'
 import Section from '../components/layout/Section'
 
 import HeroSection from "../components/sections/HeroSection";

@@ -84,6 +84,7 @@ exports.sourceNodes = async ({ actions }) => {
             // Other fields that you want to query with graphQl
             name: camper.name,
             description: camper.description,
+            shortDescription: camper.short_description,
             travels: camper.travels,
             sleeps: camper.sleeps,
             images: camper.images,

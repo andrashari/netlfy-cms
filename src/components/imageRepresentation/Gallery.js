@@ -49,21 +49,26 @@ export default class Gallery extends React.Component {
 
         if (!images) return;
 
+        console.log(images);
+
         const gallery = images.map((obj, i) => {
             return (
                 <a
                     href={obj.src}
                     key={i}
                     onClick={(e) => this.openLightbox(i, e)}
-                    style={{ float: 'left', padding: '5px' }}
+                    style={{ float: 'left' }}
                 >
-                    <img src={obj.src} />
+                    <img src={obj.src} style={{ height: '300px' }} />
                 </a>
             );
         });
 
         return (
-            <div className="container">
+            <div style={{
+                width: 1050,
+                margin: 'auto'
+            }}>
                 {gallery}
             </div>
         );

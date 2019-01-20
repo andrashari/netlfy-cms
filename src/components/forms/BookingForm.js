@@ -12,6 +12,8 @@ import 'antd/lib/button/style/css';
 
 import ui from "../../assets/theme/ui";
 
+import { TitleImageIcon } from '../svgs/images';
+
 const Option = Select.Option; 'antd';
 const FormItem = Form.Item;
 const RangePicker = DatePicker.RangePicker;
@@ -36,21 +38,9 @@ class BookingForm extends Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
-        const formItemLayout = {
-            labelCol: {
-                xs: { span: 24 },
-                sm: { span: 8 },
-            },
-            wrapperCol: {
-                xs: { span: 24 },
-                sm: { span: 16 },
-            },
-        };
         return (
             <Form onSubmit={this.handleSubmit}>
                 <FormItem
-                    {...formItemLayout}
-                    label="Booking dates"
                 >
                     {getFieldDecorator('interval', {
                         rules: [
@@ -83,12 +73,13 @@ class BookingForm extends Component {
                         */}
 
                 <FormItem
-                    wrapperCol={{
-                        xs: { span: 24, offset: 0 },
-                        sm: { span: 16, offset: 8 },
+                    style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        marginBottom: 0
                     }}
                 >
-                    <Button type="primary" htmlType="submit" style={ui.button}>Submit</Button>
+                    <Button type="primary" htmlType="submit" style={ui.button}><TitleImageIcon /></Button>
                 </FormItem>
             </Form>
         );

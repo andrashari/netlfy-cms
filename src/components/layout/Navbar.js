@@ -5,11 +5,8 @@ import logo from "../../assets/img/logo.png";
 
 import layout from "../../assets/theme/layout";
 
-import LoginMenu from "./LoginMenu";
 import HamburgerMenu from "./HamburgerMenu";
 import Menu from "./Menu";
-
-import Modal from "../login/Modal";
 
 export default class Navbar extends Component {
     render() {
@@ -17,11 +14,11 @@ export default class Navbar extends Component {
             <nav style={layout.center} className="is-flex-desktop" >
                 <div style={layout.container} className="is-flex-desktop width--100">
                     {
-                    /*
-                        <div className="is-hidden-desktop">
-                            <LoginMenu />
-                        </div>{" "}
-                    */
+                        /*
+                            <div className="is-hidden-desktop">
+                                <LoginMenu />
+                            </div>{" "}
+                        */
                     }
                     <div className="is-hidden-desktop">
                         <HamburgerMenu />
@@ -54,14 +51,6 @@ export default class Navbar extends Component {
                         }}
                     >
                         <Menu />
-                    </div>
-                    <div
-                        className="navbar-end is-hidden-touch"
-                        style={{
-                            width: "17%"
-                        }}
-                    >
-                        <Modal />
                     </div>
                 </div>{" "}
             </nav>

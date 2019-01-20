@@ -19,7 +19,6 @@ const style = {
     },
     image: {
         width: '100%',
-        maxHeight: '300px'
     },
     info: {
         justifyContent: 'space-between',
@@ -67,11 +66,10 @@ const renderIcons = (type, number) => {
 export const CamperTemplate = ({
     name,
     thumbnail,
-    description,
+    shortDescription,
     travels,
     sleeps,
 }) => {
-    //{`img/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
     return (
         <ListItem>
             <Heading content={name} type={"h2"} location={"sectionTitle"} />
@@ -83,8 +81,8 @@ export const CamperTemplate = ({
                     />
                     <div style={{ display: 'flex', padding: '20px 50px', justifyContent: 'space-between' }}>
                         <div style={{ ...style.info, ...{ width: '40%', maxWidth: '218px' } }} >
-                            <h4 style={style.camperName}>{name}</h4>
-                            <p style={style.description}>{description}</p>
+                            <Heading content={name} type={"h4"} location={"info"} ></Heading>
+                            <p style={style.description}>{shortDescription}</p>
                         </div>
 
                         <div style={style.iconContainer}>
@@ -100,7 +98,9 @@ export const CamperTemplate = ({
                         </div>
 
                         <div style={style.info}>
-                            <span><a href={`/campers/${convertToKebabCase(name)}`} style={style.readMore}>Read more</a></span>
+                            <span>
+                                <a href={`/campers/${convertToKebabCase(name)}`} style={style.readMore}>Read more</a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -110,13 +110,13 @@ export const CamperTemplate = ({
 }
 
 CamperTemplate.propTypes = {
-    camper: PropTypes.object
+    camper: PropTypes.object,
+    key: PropTypes.number
 }
 
-const Camper = ({ data }) => {
+const Camper = ({ data, key }) => {
     const { node: camper } = data;
     const thumbnail = camper.images.filter(img => img.type == 'homepage')[0]
-    console.log(thumbnail);
     /*console.log(data);
     console.log(thumbnail);*/
     /*const thumbnail = camper.images.filter(
@@ -127,9 +127,10 @@ const Camper = ({ data }) => {
         <CamperTemplate
             name={camper.name}
             thumbnail={thumbnail}
-            description={camper.description}
+            shortDescription={camper.shortDescription}
             travels={camper.travels}
             sleeps={camper.sleeps}
+            key={key}
         />
     )
 }

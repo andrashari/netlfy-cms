@@ -5,15 +5,17 @@ import Layout from "../../components/layout"
 import Heading from '../../components/Heading'
 import Section from '../../components/layout/Section'
 
+import colors from '../../assets/theme/colors'
+
 import ContactForm from "../../components/forms/ContactForm";
 //import InstagramSection from "../../components/sections/InstagramSection";
 
 export default class ContactPage extends Component {
     render() {
         return (
-            <Layout location={this.props.location} >
-                <Heading content={"Contact Us"} type={"h1"} />
-                <Section>
+            <Layout location={this.props.location}>
+                <Section style={{ background: colors.lightGrey }}>
+                    <Heading content={"Contact Us"} type={"h1"} />
                     <ContactForm />
                 </Section>
             </Layout>

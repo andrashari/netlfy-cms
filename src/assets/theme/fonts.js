@@ -1,10 +1,7 @@
 import colors from './colors'
 
-const fontFamilyAirbnb = '"LeagueSpartan", Lato, "Lucida Grande", Tahoma, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Sans-Serif !important';
 const baseFontSize = 14;
 const bigFontSize = 40;
-
-const fontFamilyCustom = '"LeagueSpartan", Lato, "Lucida Grande", Tahoma, Sans-Serif';
 
 const amaticSC = "'Amatic SC', cursive";
 const montserrat = "'Montserrat', cursive";

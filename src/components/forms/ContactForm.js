@@ -5,6 +5,7 @@ import {
 } from 'antd';
 
 import { sendMessage } from '../../mock'
+import colors from './../../assets/theme/colors';
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -72,7 +73,8 @@ class ContactForm extends Component {
                                     {getFieldDecorator('name', {
                                         rules: [{ required: true, message: 'Please tell us your name!' }],
                                     })(
-                                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="name" />
+                                        <Input
+                                            prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="name" />
                                     )}
                                 </Form.Item>
                                 <Form.Item

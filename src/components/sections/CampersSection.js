@@ -31,6 +31,7 @@ export default () => (
                     edges {
                         node {
                             name
+                            shortDescription
                             images {
                                 folder
                                 type

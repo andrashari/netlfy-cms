@@ -1,5 +1,6 @@
 //TODO
 
+0.: Delete svg icons, camperpage photos duplication
 !!!
 Check Migration
 https://www.gatsbyjs.org/docs/migrating-from-v1-to-v2/
@@ -23,6 +24,7 @@ c, location props: https://spectrum.chat/gatsby-js/general/this-props-location-i
 7.: Gatsby.node config
 
 8.: ne a full antd-t huzza be
+index.js:499 You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
 
 9.: Check dev dependencies meg production dependencies
 
@@ -30,6 +32,8 @@ c, location props: https://spectrum.chat/gatsby-js/general/this-props-location-i
 
 11.: https://medium.freecodecamp.org/how-to-structure-your-project-and-manage-static-resources-in-react-native-6f4cfc947d92
 Use package.json to avoid relative path
+
+12.: Image names to kebeb-case
 
 /*{
             //TODO Typography.js
