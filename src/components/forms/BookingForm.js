@@ -3,7 +3,7 @@ import moment from 'moment'
 
 import { insertOrder } from '../../mock'
 
-import { Form, DatePicker, Select, Button } from 'antd';
+import { Form, Input, DatePicker, Select, Button } from 'antd';
 // TODO index.js:499 You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
 import 'antd/lib/form/style/css';
 import 'antd/lib/date-picker/style/css';
@@ -20,7 +20,8 @@ const RangePicker = DatePicker.RangePicker;
 
 class BookingForm extends Component {
     state = {
-        today: [moment(new Date()), moment(new Date()).add(1, 'days')]
+        today: [moment(new Date()), moment(new Date()).add(1, 'days')],
+        isOpen: true
     }
     handleSubmit = (e) => {
         e.preventDefault();
@@ -38,6 +39,7 @@ class BookingForm extends Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
+        console.log(window);
         return (
             <Form onSubmit={this.handleSubmit}>
                 <FormItem
@@ -48,7 +50,20 @@ class BookingForm extends Component {
                         ],
                     })(
                         <RangePicker
+
                         />
+                    )}
+                </FormItem>
+
+                <FormItem
+                >
+                    {getFieldDecorator('camper', {
+                        rules: [
+                            { required: true },
+                        ],
+                        initialValue: this.props.camper.toLowerCase()
+                    })(
+                        <Input type="hidden" />
                     )}
                 </FormItem>
 

@@ -21,8 +21,7 @@ const style = {
         width: '100%',
     },
     info: {
-        justifyContent: 'space-between',
-
+        marginRight: '20px'
     },
     iconContainer: {
         width: '25%',
@@ -79,14 +78,14 @@ export const CamperTemplate = ({
                         src={`img/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
                         style={style.image}
                     />
-                    <div style={{ display: 'flex', padding: '20px 50px', justifyContent: 'space-between' }}>
-                        <div style={{ ...style.info, ...{ width: '40%', maxWidth: '218px' } }} >
+                    <div style={{ flexWrap: 'wrap', display: 'flex', padding: '20px 50px', justifyContent: 'space-between' }}>
+                        <div className="camper-heading-wrapper" style={{ ...style.info, ...{ width: '40%', maxWidth: '218px' } }} >
                             <Heading content={name} type={"h4"} location={"info"} ></Heading>
                             <p style={style.description}>{shortDescription}</p>
                         </div>
 
-                        <div style={style.iconContainer}>
-                            <div style={style.info}>
+                        <div className="camper-list-wrapper" style={style.iconContainer}>
+                            <div style={style.info} >
                                 <Heading content={"TRAVELS"} type={"h4"} location={"info"} ></Heading>
                                 <HorizontalList>{renderIcons('travels', travels)}</HorizontalList>
                             </div>
@@ -99,7 +98,7 @@ export const CamperTemplate = ({
 
                         <div style={style.info}>
                             <span>
-                                <a href={`/campers/${convertToKebabCase(name)}`} style={style.readMore}>Read more</a>
+                                <a href={`/${convertToKebabCase(name)}`} style={style.readMore}>Read more</a>
                             </span>
                         </div>
                     </div>

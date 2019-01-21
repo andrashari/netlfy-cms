@@ -63,7 +63,7 @@ class ContactForm extends Component {
             <div>
                 <Form onSubmit={this.handleSubmit} action="#">
                     <Row>
-                        <Col span={12}>
+                        <Col sm-offset={1} sm={16} md={22} lg={12} xl={12}>
                             <Row>
                                 <Form.Item
                                     label="Your Name"
@@ -101,7 +101,7 @@ class ContactForm extends Component {
                                 </Form.Item>
                             </Row>
                         </Col>
-                        <Col offset={1} span={11}>
+                        <Col offset={1} sm={22} md={22} lg={11} xl={11}>
                             <Form.Item
                                 label="Your idea"
                                 validateStatus={noteError ? 'error' : ''}

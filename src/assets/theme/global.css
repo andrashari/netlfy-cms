@@ -1,7 +1,150 @@
+/* General Alfresko style CSS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 3rem !important;
+}
+
+/* Form */
 .ant-input {
-    border-color: #b5a750 !important
+    border-color: #b5a750 !important;
 }
 
 .ant-form-item-label label {
-    font-family: 'Montserrat', cursive
+    font-family: "Montserrat", cursive;
+}
+
+/* Calendar */
+.ant-calendar-selected-date .ant-calendar-date:hover,
+.ant-calendar-selected-start-date .ant-calendar-date:hover,
+.ant-calendar-selected-end-date .ant-calendar-date:hover,
+.ant-calendar-selected-date .ant-calendar-date,
+.ant-calendar-selected-start-date .ant-calendar-date,
+.ant-calendar-selected-end-date .ant-calendar-date,
+.ant-calendar-date:active {
+    background-color: #b5a750 !important;
+}
+
+.ant-calendar-today .ant-calendar-date {
+    border-color: #b5a750 !important;
+    color: #b5a750 !important;
+}
+
+.ant-calendar-date:hover,
+.ant-calendar-range .ant-calendar-in-range-cell:before {
+    background-color: #e6dc9a !important;
+}
+
+/* mobile CSS */
+@media screen and (max-width: 767px) {
+    .camper-heading-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .camper-list-wrapper {
+        width: 100% !important;
+    }
+
+    .hero-background {
+        background-position-x: 50%;
+    }
+
+    ul {
+        padding: 0 !important;
+    }
+
+    .useful-apps-wrapper {
+        text-align: justify
+    }
+
+    .useful-apps-wrapper div {
+        float: none !important;
+    }
+
+    .useful-apps-wrapper img {
+        float: none !important;
+    }
+
+    .useful-apps-wrapper p {
+        padding-top: 0 !important;
+    }
+
+    .gallery-image {
+        display: block;
+    }
+
+    .features-wrapper ul {
+        width: 85% !important;
+        float: none !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    table {
+        width: 85% !important;
+    }
+
+    .heading-wrapper {
+        max-width: 100%;
+    }
+
+    .container {
+        max-width: 85%;
+    }
+
+    .useful-apps-wrapper img {
+        margin: 0 50px 35px 0 !important;
+    }
+
+    .gallery-image {
+        margin: 5px auto;
+        width: 85%;
+    }
+
+    .extras-wrapper {
+        justify-content: center !important;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    section {
+        padding-top: 2rem;
+    }
+
+    .camper-list-wrapper {
+        min-width: 260px;
+    }
+
+    .gallery-image {
+        float: left
+    }
+
+    .features-wrapper {
+        display: flex
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .gallery-wrapper {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .gallery-image {
+        height: 300px;
+    }
+
+    .extras-wrapper {
+        justify-content: space-between !important;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .heading-wrapper {
+        max-width: 30%;
+    }
 }

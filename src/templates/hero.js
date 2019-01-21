@@ -15,7 +15,7 @@ export const HeroTemplate = ({
 
     return (
         <div>
-            <section style={style.background} >
+            <section className="hero-background" style={style.background} >
             </section>
         </div>
     )

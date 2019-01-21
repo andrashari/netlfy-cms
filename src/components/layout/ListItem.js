@@ -1,7 +1,7 @@
 import React from "react";
 
 const ListItem = props => (
-    <section style={{ ...{ paddingTop: '2rem' }, ...props.style }} >
+    <section style={props.style } >
         <div className="container">
             {props.children}
         </div>

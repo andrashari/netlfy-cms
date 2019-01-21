@@ -33,7 +33,7 @@ const Heading = ({ content, type, location, style }) => {
 
     if (type == 'h1' || location == 'sectionTitle') {
         return (
-            <div style={{ maxWidth: '30%', margin: 'auto', padding: '20px 0' }}>
+            <div className="heading-wrapper" style={{margin: 'auto', padding: '20px 0' }}>
                 <Tag style={{...fontStyle, ...style}}>
                     <hr className="hr-text" data-content={content}></hr>
                 </Tag >

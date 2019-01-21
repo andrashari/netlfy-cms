@@ -8,8 +8,8 @@ import HeroImage from "../../components/imageRepresentation/HeroImage";
 import Section from "../../components/layout/Section";
 
 export default class AboutPage extends Component {
-
     render() {
+        console.log(this.props);
         return (
             <Layout>
                 <div style={{ background: colors.lightGrey }}>
@@ -23,7 +23,7 @@ export default class AboutPage extends Component {
                             We believe that we always have two choices in life; to do it or not. It is just up to us what we choose. We vote for dreaming big and to have faith in them. We believe simple things in life grant you the most outstanding and unforgettable moments.
                         </p>
                         <p style={{ float: 'right' }}>
-                            Lilla & Pablo
+                            <cite>Lilla & Pablo</cite>
                         </p>
                     </Section>
                 </div>

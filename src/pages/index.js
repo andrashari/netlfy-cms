@@ -25,7 +25,7 @@ export default class IndexPage extends Component {
                     <TitleImageIcon />
                 </Section>
 
-                <Section style={{ background: colors.lightGrey }}>
+                <Section style={{ ...{background: colors.lightGrey}, ...{paddingTop: 0} }}>
                     <CampersSection />
                 </Section>
 

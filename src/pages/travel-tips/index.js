@@ -59,9 +59,9 @@ export default class TravelTips extends Component {
                         <p>
                             Whether you chose to stay overnight in a camping or in the nature, please, follow the rules. Our basic rules are respect and common sense! Always respect the nature and others!
                 </p>
-                        <span>
+                        <p>
                             If you go wild, please consider the following unwritten rules for your own safety and comfort:
-                </span>
+                </p>
                         <ul>
                             <li>
                                 Check weather forecast in advance
@@ -143,7 +143,7 @@ export default class TravelTips extends Component {
                 </p>
 
                         <Heading content={"Choose local products!"} type={"h4"} />
-                        <span>Buying food from local farmers has only advantages</span>
+                        <p>Buying food from local farmers has only advantages</p>
                         <ul>
                             <li>
                                 Food will be fresh
@@ -171,11 +171,10 @@ export default class TravelTips extends Component {
                     </div>
 
                     <div style={{ background: '#fff' }}>
-                        <div style={{ ...layout.container, ...{ paddingTop: '50px' } }} >
+                        <div className="useful-apps-wrapper container" style={{ ...layout.container, ...{ paddingTop: '50px' } }} >
                             <ListWithImage
                                 brandName={'Park4night'}
-                                brandUrl={'https://play.google.com/store/apps/details?id=fr.tramb.park4night&hl=hu'}
-                                imageUrl={'https://scontent.fbud4-1.fna.fbcdn.net/v/t1.0-1/p200x200/23658500_1460634897387620_6004849811590195049_n.png?_nc_cat=103&_nc_ht=scontent.fbud4-1.fna&oh=ffef25ec19766bae361be69587eadadb&oe=5C428E2B'}
+                                imageUrl={'../img/images/park-4-night.jpg'}
                                 altText={'Park4night'}
                                 text={` is an application on your smartphone that helps you search for a parking or
                     camping where you can stay overnight. There is always a word explanation or review about
@@ -189,7 +188,7 @@ export default class TravelTips extends Component {
                             <ListWithImage
                                 brandName={'Maps.me'}
                                 brandUrl={'https://maps.me/'}
-                                imageUrl={'https://www.individualreisen-mexiko.de/wp-content/uploads/2017/07/mapsmelogo-150x150.png'}
+                                imageUrl={'../img/images/maps-me.png'}
                                 altText={'Maps.me'}
                                 text={` is a free and open-source mobile maps App for Android, iOS and BlackBerry. You
                     can select a certain area and download this map to your device. Once that process is finished
@@ -199,7 +198,7 @@ export default class TravelTips extends Component {
                             <ListWithImage
                                 brandName={'Google Maps'}
                                 brandUrl={'https://www.google.hu/maps'}
-                                imageUrl={'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/GoogleMaps_logo.svg/2000px-GoogleMaps_logo.svg.png'}
+                                imageUrl={'../img/images/google-maps.jpg'}
                                 altText={'Google Maps'}
                                 text={` is a web-based service that provides detailed information about geographical
                     regions and sites around the world. In addition to conventional road maps, Google Maps offers
@@ -210,7 +209,7 @@ export default class TravelTips extends Component {
                             <ListWithImage
                                 brandName={'Wikiloc'}
                                 brandUrl={'https://www.wikiloc.com/outdoor-navigation-app'}
-                                imageUrl={'https://pbs.twimg.com/profile_images/912622919959957511/f5tPUtGd_400x400.jpg'}
+                                imageUrl={'../img/images/wiki-loc.jpg'}
                                 altText={'Wikiloc'}
                                 text={` is a great App to plan your outdoor activities and see the surroundings when not
                     driving. You can choose between running, hiking, cycling, mountain biking, kayaking and up

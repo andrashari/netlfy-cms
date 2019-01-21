@@ -56,7 +56,7 @@ export const CamperPageTemplate = ({
                         <img src={`../img/photos/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`} style={style.image} />
                     </div>
                     <div className="column is-4" >
-                        <BookingForm />
+                        <BookingForm camper={name} />
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@ export const CamperPageTemplate = ({
             </div>
             <div className="content" style={{ background: colors.lightGrey }}>
                 <Heading content={"FEATURES"} type={"h3"} style={{ margin: '40px' }} />
-                <Section style={{ display: 'flex', justifyContent: 'center' }}>
+                <Section className="features-wrapper" style={{ justifyContent: 'center' }}>
                     <ul style={{ float: 'left', width: '30%' }}>
                         {features1.map((included, index) => included.name ? <li key={index}>{included.name}</li> : '')}
                     </ul>
@@ -88,7 +88,7 @@ export const CamperPageTemplate = ({
 
             <div className="content">
                 <Heading content={"EXTRAS"} type={"h2"} style={{ margin: '40px' }} />
-                <Section style={{
+                <Section className="extras-wrapper" style={{
                     display: 'flex',
                     flexWrap: 'wrap',
                     justifyContent: 'space-between'
