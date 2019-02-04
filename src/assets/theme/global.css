@@ -8,6 +8,10 @@ h6 {
     line-height: 3rem !important;
 }
 
+a {
+    color: #b5a750 !important;
+}
+
 /* Form */
 .ant-input {
     border-color: #b5a750 !important;
@@ -15,6 +19,12 @@ h6 {
 
 .ant-form-item-label label {
     font-family: "Montserrat", cursive;
+}
+
+.ant-btn {
+    background: none !important;
+    border: 0 !important;
+    padding: 0 !important;
 }
 
 /* Calendar */
@@ -58,7 +68,7 @@ h6 {
     }
 
     .useful-apps-wrapper {
-        text-align: justify
+        text-align: justify;
     }
 
     .useful-apps-wrapper div {
@@ -120,18 +130,21 @@ h6 {
     }
 
     .gallery-image {
-        float: left
+        float: left;
     }
 
     .features-wrapper {
-        display: flex
+        display: flex;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .gallery-wrapper {
-        width: 1000px;
+        width: 100%;
         margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .gallery-image {

@@ -4,8 +4,11 @@ import {
     Modal, Form, Icon, Select, Input, Button, Row, Col
 } from 'antd';
 
+import 'antd/lib/modal/style/css';
+
 import { sendMessage } from '../../mock'
 import colors from './../../assets/theme/colors';
+import { GetRequestImageIcon } from './../svgs/images';
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -39,9 +42,9 @@ class ContactForm extends Component {
                 sendMessage(values).then(response => {
                     this.setState({ success: response.note })
                     Modal.success({
-                        title: 'Your message is successfully sent!',
+                        title: 'Thank you! Your message has been sent successfully.',
                         //content: 'We are going to reply as soon as possible.',
-                        content: this.state.success
+                        content: `"${this.state.success}"`
                     });
                 }).catch()
             }
@@ -83,7 +86,10 @@ class ContactForm extends Component {
                                     help={emailError || ''}
                                 >
                                     {getFieldDecorator('email', {
-                                        rules: [{ required: true, message: 'Please tell us your email!' }],
+                                        rules: [{
+                                            type: 'email', message: 'The input is not valid E-mail!',
+                                        },
+                                        { required: true, message: 'Please tell us your email!' }],
                                     })(
                                         <Input prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="email" />
                                     )}
@@ -93,9 +99,7 @@ class ContactForm extends Component {
                                     validateStatus={phoneError ? 'error' : ''}
                                     help={phoneError || ''}
                                 >
-                                    {getFieldDecorator('phone', {
-                                        rules: [{ required: true, message: 'Please tell us your phone!' }],
-                                    })(
+                                    {getFieldDecorator('phone')(
                                         <Input prefix={<Icon type="phone" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="phone" />
                                     )}
                                 </Form.Item>
@@ -120,10 +124,9 @@ class ContactForm extends Component {
                             <Button
                                 type="primary"
                                 htmlType="submit"
-                                disabled={hasErrors(getFieldsError())}
                             >
-                                SEND MESSAGE
-                        </Button>
+                                <GetRequestImageIcon width="200" />
+                            </Button>
                         </Form.Item>
                     </Row>
                 </Form>

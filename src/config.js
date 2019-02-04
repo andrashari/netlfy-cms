@@ -1,20 +1,20 @@
 const menu = [
-    //'Campers',
-    'About Us',
+    'Campers',
     'Travel Tips',
+    'About Us',
     'Inspiration',
-    'Terms & Conditions',
     'Contact',
+    'T&C',
 ]
 
 const footerMenu = [
-    'Terms & Conditions',
+    'T&C',
     'Privacy Policy',
     'Cookie Policy',
     'Contact',
 ]
 
-const menuHelper = item => item.toLowerCase().split(' ').join('-').split('&').join('and');
+const menuHelper = item => item.toLowerCase().split(' ').join('-').split('&').join('-and-');
 
 export {
     menu,

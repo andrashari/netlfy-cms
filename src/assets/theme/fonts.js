@@ -12,7 +12,8 @@ const fonts = {
         fontSize: baseFontSize * 1.15,
         color: colors.secondary,
         padding: '0 2%',
-        lineHeight: '52px'
+        lineHeight: '52px',
+        textTransform: 'uppercase'
     },
     menuFontActive: {
         color: colors.primary

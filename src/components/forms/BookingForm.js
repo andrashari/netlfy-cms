@@ -12,7 +12,7 @@ import 'antd/lib/button/style/css';
 
 import ui from "../../assets/theme/ui";
 
-import { TitleImageIcon } from '../svgs/images';
+import { GetaQuoteImageIcon } from '../svgs/images';
 
 const Option = Select.Option; 'antd';
 const FormItem = Form.Item;
@@ -94,7 +94,7 @@ class BookingForm extends Component {
                         marginBottom: 0
                     }}
                 >
-                    <Button type="primary" htmlType="submit" style={ui.button}><TitleImageIcon /></Button>
+                    <Button type="primary" htmlType="submit" style={ui.button}><GetaQuoteImageIcon /></Button>
                 </FormItem>
             </Form>
         );

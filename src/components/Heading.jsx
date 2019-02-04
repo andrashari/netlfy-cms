@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import fonts from '../assets/theme/fonts';
 
-const Heading = ({ content, type, location, style }) => {
+const Heading = ({ content, type, location, style, maxWidth }) => {
     const Tag = `${type}`
     let fontStyle = null;
 
@@ -33,20 +33,20 @@ const Heading = ({ content, type, location, style }) => {
 
     if (type == 'h1' || location == 'sectionTitle') {
         return (
-            <div className="heading-wrapper" style={{margin: 'auto', padding: '20px 0' }}>
-                <Tag style={{...fontStyle, ...style}}>
+            <div className="heading-wrapper" style={{ ...maxWidth, ...{ margin: 'auto', padding: '20px 0' } }} >
+                <Tag style={{ ...fontStyle, ...style }}>
                     <hr className="hr-text" data-content={content}></hr>
                 </Tag >
-            </div>
+            </div >
         );
     }
     else {
-        return (
-            <div style={location == "info" ? { textAlign: 'center' } : { textAlign: 'center', margin: 'auto', padding: '20px 0' }}>
-                <Tag style={{...fontStyle, ...style}}>{content}</Tag >
-            </div>
-        );
-    }
+    return (
+        <div style={location == "info" ? { textAlign: 'center' } : { textAlign: 'center', margin: 'auto', padding: '20px 0' }}>
+            <Tag style={{ ...fontStyle, ...style }}>{content}</Tag >
+        </div>
+    );
+}
 }
 
 Heading.propTypes = {

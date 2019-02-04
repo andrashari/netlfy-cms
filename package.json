@@ -38,6 +38,7 @@
         "prop-types": "^15.6.2",
         "react": "^16.2.0",
         "react-burger-menu": "^2.5.2",
+        "react-cookie-consent": "^2.0.1",
         "react-dom": "^16.7.0",
         "react-helmet": "^5.2.0",
         "react-images": "^0.5.19",

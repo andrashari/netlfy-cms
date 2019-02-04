@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { StaticQuery, graphql } from 'gatsby'
+import { Link } from "gatsby"
 
 import Heading from '../components/Heading';
 import HorizontalList from './../components/layout/HorizontalList';
@@ -68,19 +69,28 @@ export const CamperTemplate = ({
     shortDescription,
     travels,
     sleeps,
+    key
 }) => {
     return (
-        <ListItem>
+        <ListItem key={key}>
             <Heading content={name} type={"h2"} location={"sectionTitle"} />
             <div className="columns">
                 <div className="column is-10 is-offset-1" style={style.card}>
-                    <img
-                        src={`img/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
-                        style={style.image}
-                    />
+                    <Link
+                        to={`/${convertToKebabCase(name)}`}
+                    >
+                        <img
+                            src={`img/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
+                            style={style.image}
+                        />
+                    </Link>
                     <div style={{ flexWrap: 'wrap', display: 'flex', padding: '20px 50px', justifyContent: 'space-between' }}>
                         <div className="camper-heading-wrapper" style={{ ...style.info, ...{ width: '40%', maxWidth: '218px' } }} >
-                            <Heading content={name} type={"h4"} location={"info"} ></Heading>
+                            <Link
+                                to={`/${convertToKebabCase(name)}`}
+                            >
+                                <Heading content={name} type={"h4"} location={"info"} ></Heading>
+                            </Link>
                             <p style={style.description}>{shortDescription}</p>
                         </div>
 
@@ -98,7 +108,12 @@ export const CamperTemplate = ({
 
                         <div style={style.info}>
                             <span>
-                                <a href={`/${convertToKebabCase(name)}`} style={style.readMore}>Read more</a>
+                                <Link
+                                    to={`/${convertToKebabCase(name)}`}
+                                    style={style.readMore}>
+                                    >
+                                    Read more
+                                </Link>
                             </span>
                         </div>
                     </div>
