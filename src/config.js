@@ -1,5 +1,6 @@
 const menu = [
-    'Campers',
+    'Bipper',
+    'Cielito Lindo',
     'Travel Tips',
     'About Us',
     'Inspiration',

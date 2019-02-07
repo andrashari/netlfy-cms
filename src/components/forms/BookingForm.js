@@ -39,7 +39,6 @@ class BookingForm extends Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
-        console.log(window);
         return (
             <Form onSubmit={this.handleSubmit}>
                 <FormItem

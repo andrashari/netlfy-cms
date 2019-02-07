@@ -25,7 +25,7 @@ export default class CookiePolicy extends Component {
                     <Section style={{ paddingBottom: 0 }}>
                         <Heading style={{ paddingBottom: '20px' }} content={"What are cookies?"} type={"h2"} />
                         <p style={{ marginBottom: 0 }}>
-                            Cookies are small file of letters and numbers, that web sites place to your browser or hard drive (if you agree) and that enable sites to recognise your browser and capture and remember certain information.
+                            Cookies are small file of letters and numbers, that web sites place to your browser or hard drive (if you agree) and that enable sites to recognize your browser and capture and remember certain information.
                         </p>
                         <p>
                             When you visit a site that uses cookies for the first time, a cookie is downloaded onto your computer, tablet or mobile device so that the next time you visit that site, your device will remember useful information such as visited pages, log-in options and items added in the shopping cart.

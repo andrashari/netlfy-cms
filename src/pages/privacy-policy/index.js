@@ -16,7 +16,7 @@ export default class PrivacyPolicy extends Component {
                     <Heading content={"Alfresko Campers Privacy Policy"} type={"h1"} maxWidth={{ maxWidth: '50%' }} />
                     <Section style={{ paddingBottom: 0 }}>
                         <p style={{ marginBottom: 0 }}>
-                            We respect your privacy; therefore, we are committed to ensuring that it is protected. We recognise your need for appropriate protection and management of your personal information that we learn about you while using our site. This policy provides you with the necessary information about your rights and our obligations, and explains how we collect your personal data. This policy refers to data that we collect from you as user of our web and that you provide us when completing a booking.
+                            We respect your privacy; therefore, we are committed to ensuring that it is protected. We recognize your need for appropriate protection and management of your personal information that we learn about you while using our site. This policy provides you with the necessary information about your rights and our obligations, and explains how we collect your personal data. This policy refers to data that we collect from you as user of our web and that you provide us when completing a booking.
                         </p>
                     </Section>
                     <Section style={{ paddingBottom: 0 }}>
@@ -121,7 +121,7 @@ export default class PrivacyPolicy extends Component {
                     <Section style={{ paddingBottom: 0 }}>
                         <Heading style={{ paddingBottom: '20px' }} content={"Use of Cookies"} type={"h3"} />
                         <p style={{ marginBottom: 0 }}>
-                            Cookies are small files web sites transfers to your hard drive (if you agree) that enables sites to recognise your browser and capture and remember certain information. We may use cookies to measure web traffic and site interaction, to offer you better experience on our site. Cookies cannot read any other information on your hard drive. The use of cookies is a common practice on many web sites. However, if you do not wish to receive cookies, or want to be notified of when they are placed, refer to your browser settings where you can turn off the cookie acceptance option. For more detailed information on cookies and the use of them, see our Cookie Policy.
+                            Cookies are small files web sites transfers to your hard drive (if you agree) that enables sites to recognize your browser and capture and remember certain information. We may use cookies to measure web traffic and site interaction, to offer you better experience on our site. Cookies cannot read any other information on your hard drive. The use of cookies is a common practice on many web sites. However, if you do not wish to receive cookies, or want to be notified of when they are placed, refer to your browser settings where you can turn off the cookie acceptance option. For more detailed information on cookies and the use of them, see our Cookie Policy.
                         </p>
                     </Section>
                     <Section>

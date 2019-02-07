@@ -91,7 +91,7 @@ export const CamperPageTemplate = ({
                 <Section className="extras-wrapper" style={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    justifyContent: 'space-between'
+                    justifyContent: 'center'
                 }}>
                     <ExtrasIcons data={extras} />
                 </Section>

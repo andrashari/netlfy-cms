@@ -62,7 +62,7 @@ exports.sourceNodes = async ({ actions }) => {
     const { createNode } = actions;
 
     // fetch raw data from the randomuser api
-    const fetchCampers = () => axios.get(`http://localhost:8000/api/campers/resource/excerpts`);
+    const fetchCampers = () => axios.get(`https://alfreskocampers.com/public/api/campers/resource/excerpts`);
 
     // await for results
     const res = await fetchCampers();

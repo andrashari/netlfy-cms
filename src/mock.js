@@ -2,7 +2,7 @@ import { objToParams } from './components/utils/utils'
 
 // Contacts
 export function sendMessage(message) {
-    return fetch(`http://localhost:8000/api/contacts/${objToParams(message)}`, {
+    return fetch(`https://alfreskocampers.com/public/api/contacts/${objToParams(message)}`, {
         method: 'POST',
     }).then(res => res.json());
 }
