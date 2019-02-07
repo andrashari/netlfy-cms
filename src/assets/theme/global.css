@@ -38,7 +38,11 @@ a {
     background-color: #b5a750 !important;
 }
 
-.ant-calendar-today .ant-calendar-date {
+.ant-calendar-today {
+    border-color: #b5a750 !important;
+}
+
+.ant-calendar-date {
     border-color: #b5a750 !important;
     color: #b5a750 !important;
 }
