@@ -80,7 +80,7 @@ export const CamperTemplate = ({
                         to={`/${convertToKebabCase(name)}`}
                     >
                         <img
-                            src={`img/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
+                            src={`img/photos/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`}
                             style={style.image}
                         />
                     </Link>

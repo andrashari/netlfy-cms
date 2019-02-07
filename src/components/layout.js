@@ -24,7 +24,7 @@ const Layout = ({ children, location }) => (
         <Footer />
         <CookieConsent
             location="bottom"
-            buttonText="Sure man!!"
+            buttonText="I accept"
             cookieName="cookie-consent"
             style={{ background: "#2B373B" }}
             buttonStyle={{

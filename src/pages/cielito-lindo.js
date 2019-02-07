@@ -134,7 +134,7 @@ const CamperPage = ({ data }) => {
     let images = camper.images
         .filter(img => img.type == 'mosaic')
         .map(img => ({
-            src: `../img/campers/${convertToKebabCase(img.folder)}/${img.type}/${img.url}`,
+            src: `../img/photos/campers/${convertToKebabCase(img.folder)}/${img.type}/${img.url}`,
             orientation: img.orientation
         }))
         .sort(function (a, b) {
