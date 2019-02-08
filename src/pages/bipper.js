@@ -38,13 +38,6 @@ export const CamperPageTemplate = ({
     features,
     extras
 }) => {
-    /*const images1 = [
-        { src: 'https://images.unsplash.com/photo-1470619549108-b85c56fe5be8?dpr=1&auto=format&crop=faces&fit=crop&w=310&h=310', orientation: 'square' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-    ]*/
     const features1 = chunkArray(features, 3)[0];
     const features2 = chunkArray(features, 3)[1];
     const features3 = chunkArray(features, 3)[2];
@@ -52,8 +45,12 @@ export const CamperPageTemplate = ({
         <Layout className="section">
             <div className="container content">
                 <div className="columns">
-                    <div className="column is-8">
-                        <img src={`../img/photos/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`} style={style.image} />
+                    <div className="column is-8" style={{
+                        background: "url(" + `'../img/photos/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}` + "')",
+                        backgroundSize: 'cover',
+                        height: '410px',
+                        backgroundPosition: '50% 50%',
+                    }}>
                     </div>
                     <div className="column is-4" >
                         <BookingForm camper={name} />

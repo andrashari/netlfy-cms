@@ -13,7 +13,7 @@ export default class PrivacyPolicy extends Component {
         return (
             <Layout>
                 <div style={{ background: colors.lightGrey }}>
-                    <Heading content={"Alfresko Campers Privacy Policy"} type={"h1"} maxWidth={{ maxWidth: '50%' }} />
+                    <Heading content={"Alfresko Campers Privacy Policy"} type={"h1"} maxWidth={{ maxWidth: '70%' }} />
                     <Section style={{ paddingBottom: 0 }}>
                         <p style={{ marginBottom: 0 }}>
                             We respect your privacy; therefore, we are committed to ensuring that it is protected. We recognize your need for appropriate protection and management of your personal information that we learn about you while using our site. This policy provides you with the necessary information about your rights and our obligations, and explains how we collect your personal data. This policy refers to data that we collect from you as user of our web and that you provide us when completing a booking.

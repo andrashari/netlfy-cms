@@ -47,7 +47,7 @@ export default class Navbar extends Component {
                     <div
                         className="is-hidden-touch"
                         style={{
-                            width: "63%"
+                            //width: "63%"
                         }}
                     >
                         <Menu />

@@ -1,11 +1,11 @@
 import React from "react";
 
 const ListItem = props => (
-    <section style={props.style } >
-        <div className="container">
-            {props.children}
-        </div>
-    </section >
+    <div className="container" style={{
+        paddingBottom: '2rem'
+    }}>
+        {props.children}
+    </div>
 )
 
 export default ListItem

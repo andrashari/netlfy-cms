@@ -13,7 +13,7 @@ export default class CookiePolicy extends Component {
         return (
             <Layout>
                 <div style={{ background: colors.lightGrey }}>
-                    <Heading content={"Alfresko Campers Cookie Policy"} type={"h1"} maxWidth={{ maxWidth: '50%' }} />
+                    <Heading content={"Alfresko Campers Cookie Policy"} type={"h1"} maxWidth={{ maxWidth: '70%' }} />
                     <Section style={{ paddingBottom: 0 }}>
                         <p style={{ marginBottom: 0 }}>
                             Alfresko Campers respects the privacy of all visitors of our website. This Cookie Policy describes our use of cookies on <a target="_blank" href="https://alfreskocampers.com">alfreskocampers.com</a>.

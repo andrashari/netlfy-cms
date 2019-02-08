@@ -13,7 +13,7 @@ export default class TermsAndConditions extends Component {
         return (
             <Layout>
                 <div style={{ background: colors.lightGrey }}>
-                    <Heading content={"Alfresko Campers Terms & Conditions"} type={"h1"} maxWidth={{ maxWidth: '50%' }} />
+                    <Heading content={"Alfresko Campers Terms & Conditions"} type={"h1"} maxWidth={{ maxWidth: '100%' }} />
                     <Section style={{ paddingBottom: 0 }}>
                         <p style={{ marginBottom: 0 }}>
                             The renter, hereinafter also referred to as ‘you’ or ‘hirer’ accepts Alfresko Campers’, also mentioned as ‘we’, ‘us’, Terms and Conditions expressed herein at the time of the online booking.

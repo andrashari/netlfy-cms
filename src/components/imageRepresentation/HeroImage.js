@@ -10,6 +10,8 @@ export const HeroImage = ({
             backgroundImage: `url(${heroUrl})`,
             backgroundSize: 'cover',
             height: '640px',
+            backgroundPositionX: '50%',
+            backgroundPositionY: '50%'
         }
     }
 

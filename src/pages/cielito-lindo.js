@@ -52,8 +52,12 @@ export const CamperPageTemplate = ({
         <Layout className="section">
             <div className="container content">
                 <div className="columns">
-                    <div className="column is-8">
-                        <img src={`../img/photos/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}`} style={style.image} />
+                    <div className="column is-8" style={{
+                        background: "url(" + `'../img/photos/campers/${convertToKebabCase(thumbnail.folder)}/${thumbnail.type}/${thumbnail.url}` + "')",
+                        backgroundSize: 'cover',
+                        height: '410px',
+                        backgroundPosition: '50% 50%',
+                    }}>
                     </div>
                     <div className="column is-4" >
                         <BookingForm camper={name} />
@@ -123,8 +127,8 @@ export const CamperPageTemplate = ({
 }
 
 /*CamperPageTemplate.propTypes = {
-    camper: PropTypes.object
-}*/
+                camper: PropTypes.object
+        }*/
 
 const CamperPage = ({ data }) => {
     const { edges } = data.allCamper;
@@ -166,30 +170,30 @@ const CamperPage = ({ data }) => {
     )
 }
 
-/*const CamperPage = ({ data }) => {
-    const { edges } = data.allCamper;
-    return (
+/*const CamperPage = ({data}) => {
+    const {edges} = data.allCamper;
+            return (
         <div>
-            <Location>
-                {({ navigate, location }) => {
-                    const id = parseInt(location.pathname.split('/').pop().trim());
-                    const camper = edges[1].node;
-                    console.log(camper);
-                    return <CamperPageWithoutLocation camper={camper} />
-                }}
-            </Location >
-        </div>
-    )
-}*/
+                <Location>
+                    {({ navigate, location }) => {
+                        const id = parseInt(location.pathname.split('/').pop().trim());
+                        const camper = edges[1].node;
+                        console.log(camper);
+                        return <CamperPageWithoutLocation camper={camper} />
+                    }}
+                </Location >
+            </div>
+            )
+        }*/
 
 /*CamperPage.propTypes = {
                 data: PropTypes.shape({
                 allCamper: PropTypes.shape({
                 edges: PropTypes.arrayOf(
-                PropTypes.object
-            )
-        }),
+            PropTypes.object
+        )
     }),
+}),
 }*/
 
 

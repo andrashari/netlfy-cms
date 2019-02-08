@@ -21,11 +21,14 @@ export default class IndexPage extends Component {
 
                 <HeroSection data={{ url: 'img/home-page-hero.jpg' }} />
 
-                <Section style={{ marginTop: '4rem', paddingBottom: '3rem' }} >
-                    <TitleImageIcon />
+                <Section style={{
+                    paddingTop: '2rem',
+                    paddingBottom: '1rem'
+                }}>
+                    <TitleImageIcon style={{ maxHeight: '50px' }} />
                 </Section>
 
-                <Section style={{ ...{background: colors.lightGrey}, ...{paddingTop: 0} }}>
+                <Section style={{ ...{ background: colors.lightGrey }, ...{ paddingTop: 0, paddingBottom: '3rem' } }}>
                     <CampersSection />
                 </Section>
 
