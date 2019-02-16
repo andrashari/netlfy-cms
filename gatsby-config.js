@@ -36,6 +36,12 @@ module.exports = {
                 name: 'photos',
             },
         },
+        {
+            resolve: `gatsby-source-instagram`,
+            options: {
+                username: `alfreskocampers`,
+            },
+        },
         'gatsby-plugin-sharp',
         'gatsby-transformer-sharp',
         {

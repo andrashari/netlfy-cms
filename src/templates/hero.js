@@ -9,7 +9,7 @@ export const HeroTemplate = ({
         background: {
             backgroundImage: `url(${heroUrl})`,
             backgroundSize: 'cover',
-            height: '410px',
+            height: '640px',
             backgroundPositionX: '50%',
             backgroundPositionY: '50%'
         }

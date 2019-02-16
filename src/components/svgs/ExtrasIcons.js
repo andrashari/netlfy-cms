@@ -5,7 +5,7 @@ export const ExtrasIcons = props =>
         (extra, index) => extra.name ?
             <img
                 key={index}
-                src={`../img/icons/${extra.name}.svg`}
+                src={`../img/icons/extras/${extra.name}.svg`}
                 alt={`${extra.name} icon`}
                 title={`${extra.name} icon`}
                 style={{ width: 200 }}

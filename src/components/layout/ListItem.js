@@ -1,8 +1,9 @@
 import React from "react";
 
 const ListItem = props => (
-    <div className="container" style={{
-        paddingBottom: '2rem'
+    <div key={props.key} className="container" style={{
+        paddingBottom: '2rem',
+        width: '50%'
     }}>
         {props.children}
     </div>

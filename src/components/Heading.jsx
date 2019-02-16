@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import fonts from '../assets/theme/fonts';
 
-const Heading = ({ content, type, location, style, maxWidth }) => {
+const Heading = ({ content, type, location, style, hrStyle, hrWhite, maxWidth }) => {
     const Tag = `${type}`
     let fontStyle = null;
 
@@ -25,6 +25,12 @@ const Heading = ({ content, type, location, style, maxWidth }) => {
             }
             break;
 
+        case 'h5':
+            fontStyle = {
+                ...fonts.menuFont, ...{ fontSize: '16px', textAlign: 'center', padding: 0 }
+            }
+            break;
+
         default:
             break;
     }
@@ -35,18 +41,18 @@ const Heading = ({ content, type, location, style, maxWidth }) => {
         return (
             <div className="heading-wrapper" style={{ ...maxWidth, ...{ margin: 'auto', padding: '20px 0' } }} >
                 <Tag style={{ ...fontStyle, ...style }}>
-                    <hr className="hr-text" data-content={content}></hr>
+                    <hr style={hrStyle} className={hrWhite ? 'hr-text hr-text-white' : 'hr-text'} data-content={content}></hr>
                 </Tag >
             </div >
         );
     }
     else {
-    return (
-        <div style={location == "info" ? { textAlign: 'center' } : { textAlign: 'center', margin: 'auto', padding: '20px 0' }}>
-            <Tag style={{ ...fontStyle, ...style }}>{content}</Tag >
-        </div>
-    );
-}
+        return (
+            <div style={location == "info" ? { textAlign: 'center' } : { textAlign: 'center', margin: 'auto', padding: '20px 0' }}>
+                <Tag style={{ ...fontStyle, ...style }}>{content}</Tag >
+            </div>
+        );
+    }
 }
 
 Heading.propTypes = {

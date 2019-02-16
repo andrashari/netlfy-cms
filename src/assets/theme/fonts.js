@@ -11,7 +11,7 @@ const fonts = {
         fontFamily: montserrat,
         fontSize: baseFontSize * 1.15,
         color: colors.secondary,
-        padding: '0 2%',
+        padding: '0 1%',
         lineHeight: '52px',
         textTransform: 'uppercase'
     },

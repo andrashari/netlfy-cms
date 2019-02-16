@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="fb" unicode="&#xe800;" d="M499 850a499 499 0 1 0-353-146 498 498 0 0 0 353 146z m327-174a462 462 0 1 1 135-325 461 461 0 0 1-135 325z m-288-224v41a22 22 0 0 0 23 25h57v87h-79c-88 0-107-65-107-107v-46h-51v-101h51v-256h103v256h75l3 40 6 62z" horiz-adv-x="1000" />
+
+<glyph glyph-name="ig" unicode="&#xe801;" d="M499 850a499 499 0 1 0-353-146 497 497 0 0 0 353 146z m327-174a462 462 0 1 1 135-325 461 461 0 0 1-135 325z m-454-325a128 128 0 1 0 127-129 128 128 0 0 0-127 129z m260 249h-264a119 119 0 0 1-118-118v-264a119 119 0 0 1 118-119h264a119 119 0 0 1 119 119v264a119 119 0 0 1-119 118z m-264-29h264a89 89 0 0 0 90-89v-264a89 89 0 0 0-90-90h-264a89 89 0 0 0-89 90v264a89 89 0 0 0 89 89z m291-37a26 26 0 1 1 26-26 26 26 0 0 1-26 26z m3-183a162 162 0 1 1-163-163 162 162 0 0 1 163 163z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

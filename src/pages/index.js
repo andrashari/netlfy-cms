@@ -6,10 +6,14 @@ import colors from './../assets/theme/colors';
 import Layout from "../components/layout"
 import Section from '../components/layout/Section'
 
-import HeroSection from "../components/sections/HeroSection";
-import { TitleImageIcon } from '../components/svgs/images';
+import HeroSection from "../components/sections/HeroSection"
+import { TitleImageIcon } from '../components/svgs/images'
 
-import CampersSection from "../components/sections/CampersSection";
+import CampersSection from "../components/sections/CampersSection"
+import Heading from './../components/Heading'
+import WhySection from "../components/sections/WhySection"
+import SocialSection from "../components/sections/SocialSection"
+import InstagramPhotos from "../components/imageRepresentation/InstagramPhotos"
 
 export default class IndexPage extends Component {
     render() {
@@ -21,6 +25,10 @@ export default class IndexPage extends Component {
 
                 <HeroSection data={{ url: 'img/home-page-hero.jpg' }} />
 
+                <Section style={{ paddingBottom: 0 }}>
+                    <img src="img/images/guarantee.jpg" alt="" />
+                </Section>
+
                 <Section style={{
                     paddingTop: '2rem',
                     paddingBottom: '1rem'
@@ -28,9 +36,26 @@ export default class IndexPage extends Component {
                     <TitleImageIcon style={{ maxHeight: '50px' }} />
                 </Section>
 
-                <Section style={{ ...{ background: colors.lightGrey }, ...{ paddingTop: 0, paddingBottom: '3rem' } }}>
+                <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ display: 'flex', paddingTop: 0, paddingBottom: '3rem' } }}>
                     <CampersSection />
                 </Section>
+
+                <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'center', display: 'flex', paddingTop: 0, paddingBottom: '1rem' } }}>
+                    <Heading style={{ fontWeight: 'bold', color: '#000'}} content={"WHY ALFRESKO CAMPERS"} type={"h2"} location={"info"} ></Heading>
+                </Section>
+
+                <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', paddingTop: 0, paddingBottom: '3rem' } }}>
+                    <WhySection />
+                </Section>
+
+                <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'center', display: 'flex', flexWrap: 'wrap', paddingTop: 0, paddingBottom: '1rem' } }}>
+                    <SocialSection />
+                </Section>
+
+                <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'center', display: 'flex', flexWrap: 'wrap', paddingTop: 0, paddingBottom: '1rem' } }}>
+                    <InstagramPhotos />
+                </Section>
+
 
                 {/*
                     <Section>

@@ -22,10 +22,10 @@ const style = {
         width: '100%',
     },
     info: {
-        marginRight: '20px'
+        marginRight: '2%',
     },
     iconContainer: {
-        width: '25%',
+        width: '37%',
         display: 'inherit',
         justifyContent: 'space-between'
     },
@@ -53,10 +53,10 @@ const renderIcons = (type, number) => {
 
     for (let i = 0; i < number; i++) {
         if (type == 'travels') {
-            html.push(<li style={{ display: 'inline', padding: '3px' }} ><AcIcon type={type} style={{ height: 40 }} /></li>)
+            html.push(<li style={{ display: 'inline', padding: '3px' }} ><AcIcon type={type} /></li>)
         }
         else if (type == 'sleeps') {
-            html.push(<li style={{ display: 'inline', padding: '3px' }} ><AcIcon type={type} size={40} /></li>)
+            html.push(<li style={{ display: 'inline', padding: '3px' }} ><AcIcon type={type} /></li>)
         }
     }
 
@@ -73,7 +73,7 @@ export const CamperTemplate = ({
 }) => {
     return (
         <ListItem key={key}>
-            <Heading content={name} type={"h2"} location={"sectionTitle"} />
+            <Heading content={name} type={"h2"} location={"sectionTitle"} hrWhite={true} hrStyle={{ background: '#fff' }} maxWidth={{ maxWidth: '85%' }} />
             <div className="columns">
                 <div className="column is-10 is-offset-1" style={style.card}>
                     <Link
@@ -84,8 +84,8 @@ export const CamperTemplate = ({
                             style={style.image}
                         />
                     </Link>
-                    <div style={{ flexWrap: 'wrap', display: 'flex', padding: '20px 50px', justifyContent: 'space-between' }}>
-                        <div className="camper-heading-wrapper" style={{ ...style.info, ...{ width: '40%', maxWidth: '218px' } }} >
+                    <div style={{ flexWrap: 'wrap', display: 'flex', justifyContent: 'space-between' }}>
+                        <div className="camper-heading-wrapper" style={{ ...style.info, ...{ width: '61%' } }} >
                             <Link
                                 to={`/${convertToKebabCase(name)}`}
                             >
@@ -96,17 +96,17 @@ export const CamperTemplate = ({
 
                         <div className="camper-list-wrapper" style={style.iconContainer}>
                             <div style={style.info} >
-                                <Heading content={"TRAVELS"} type={"h4"} location={"info"} ></Heading>
+                                <Heading content={"TRAVELS"} type={"h5"} location={"info"} ></Heading>
                                 <HorizontalList>{renderIcons('travels', travels)}</HorizontalList>
                             </div>
 
                             <div style={style.info}>
-                                <Heading content={"SLEEPS"} type={"h4"} location={"info"} ></Heading>
+                                <Heading content={"SLEEPS"} type={"h5"} location={"info"} ></Heading>
                                 <HorizontalList>{renderIcons('sleeps', sleeps)}</HorizontalList>
                             </div>
                         </div>
 
-                        <div style={style.info}>
+                        <div style={{ ...style.info, ...{ display: 'none' } }}>
                             <span>
                                 <Link
                                     to={`/${convertToKebabCase(name)}`}
@@ -123,10 +123,10 @@ export const CamperTemplate = ({
     )
 }
 
-CamperTemplate.propTypes = {
+/*CamperTemplate.propTypes = {
     camper: PropTypes.object,
     key: PropTypes.number
-}
+}*/
 
 const Camper = ({ data, key }) => {
     const { node: camper } = data;
@@ -149,9 +149,10 @@ const Camper = ({ data, key }) => {
     )
 }
 
-Camper.propTypes = {
-    camper: PropTypes.object
-}
+/*Camper.propTypes = {
+    camper: PropTypes.object,
+    key: PropTypes.Number
+}*/
 
 export default Camper
 
