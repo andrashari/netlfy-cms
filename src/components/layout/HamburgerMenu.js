@@ -73,7 +73,7 @@ export default class HamburgerMenu extends Component {
         this.setState({ menuOpen: false });
     }
     render() {
-        
+
         return (
             <Menu
                 styles={this.state.styles}
@@ -83,11 +83,11 @@ export default class HamburgerMenu extends Component {
             >
                 {menu.map((item, index) => <Link
                     className="menu-item"
-                    to={`/${menuHelper(item)}`}
+                    to={`/${menuHelper(item.content)}`}
                     onClick={() => this.closeMenu()}
                     key={index}
                 >
-                    {item}
+                    {item.content}
                 </Link>)}
             </Menu>
         );

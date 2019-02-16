@@ -1,11 +1,10 @@
 const menu = [
-    'Bipper',
-    'Cielito Lindo',
-    'Travel Tips',
-    'About Us',
-    'Inspiration',
-    'Contact',
-    'T&C',
+    { side: 'left', content: 'Bipper' },
+    { side: 'left', content: 'Cielito Lindo' },
+    { side: 'left', content: 'Travel Tips' },
+    { side: 'right', content: 'About Us' },
+    { side: 'right', content: 'Contact' },
+    { side: 'right', content: 'T&C' },
 ]
 
 const footerMenu = [

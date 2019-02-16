@@ -17,6 +17,15 @@ const layout = {
     spacing: {
         marginLeft: {
             marginLeft: '2vw'
+        },
+        paddingLeft: {
+            paddingLeft: '2vw'
+        },
+        marginRight: {
+            marginRight: '2vw'
+        },
+        paddingRight: {
+            paddingRight: '2vw'
         }
     },
     flexbox: {
