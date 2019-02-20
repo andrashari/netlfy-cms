@@ -59,7 +59,10 @@ export default class Gallery extends React.Component {
                     onClick={(e) => this.openLightbox(i, e)}
                     className="gallery-image"
                 >
-                    <img src={obj.src} className="gallery-image" />
+                    <img style={{
+                        margin: '1px',
+                        padding: '1px'
+                    }} src={obj.src} className="gallery-image" />
                 </a>
             );
         });

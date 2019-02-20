@@ -10,7 +10,7 @@ const ui = {
             background: 'none',
             textShadow: 'none',
             boxShadow: 'none',
-            width: '400px'
+            width: '240px'
         }, ...fonts.buttonFont
     }
 }

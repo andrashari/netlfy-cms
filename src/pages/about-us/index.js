@@ -12,9 +12,10 @@ export default class AboutPage extends Component {
         console.log(this.props);
         return (
             <Layout>
-                <div style={{ background: colors.lightGrey }}>
+                <div style={{ background: colors.white }}>
+                    <Heading content={"About Us"} type={"h1"} hrWhite={true} />
                     <HeroImage heroUrl={"/img/about-us.jpg"} />
-                    <Heading content={"About Us"} type={"h1"} />
+
                     <Section>
                         <p style={{ marginBottom: 0 }}>
                             Alfresko is much more than “outdoors” or “in the open air”. Alfresko is a choice to get nearer to the beauty of the surrounding nature, to our and other people’s souls, to slow down and appreciate who we are, to respect ourselves and others. Alfresko is a choice to freedom and enjoyment. Alfresko cheers simple values. Alfresko is a way of living!

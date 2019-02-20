@@ -43,6 +43,11 @@ export const CamperPageTemplate = ({
     const features3 = chunkArray(features, 3)[2];
     return (
         <Layout className="section">
+            <div className="content" style={{ background: colors.white }}>
+                <Section style={{ padding: 0 }}>
+                    <Heading content={name} type={"h1"} hrWhite={true} />
+                </Section>
+            </div>
             <div className="container content">
                 <div className="columns">
                     <div className="column is-8" style={{
@@ -52,14 +57,13 @@ export const CamperPageTemplate = ({
                         backgroundPosition: '50% 50%',
                     }}>
                     </div>
-                    <div className="column is-4" >
+                    <div className="column is-4" style={{ paddingTop: 0, textAlign: 'center' }} >
                         <BookingForm camper={name} />
                     </div>
                 </div>
             </div>
-            <div className="content" style={{ background: colors.lightGrey }}>
-                <Section>
-                    <Heading content={name} type={"h1"} />
+            <div className="content" style={{ background: colors.white }}>
+                <Section style={{ paddingBottom: 0 }}>
                     <p>{description}</p>
                 </Section>
             </div>
@@ -69,7 +73,7 @@ export const CamperPageTemplate = ({
                 </Section>
             </div>
             <div className="content" style={{ background: colors.lightGrey }}>
-                <Heading content={"FEATURES"} type={"h3"} style={{ margin: '40px' }} />
+                <Heading content={"FEATURES"} type={"h4"} style={{ margin: '40px' }} />
                 <Section className="features-wrapper" style={{ justifyContent: 'center' }}>
                     <ul style={{ float: 'left', width: '30%' }}>
                         {features1.map((included, index) => included.name ? <li key={index}>{included.name}</li> : '')}
@@ -94,7 +98,7 @@ export const CamperPageTemplate = ({
                 </Section>
             </div>
             <div className="content" style={{ background: colors.lightGrey }}>
-                <Heading content={"VEHICLE SPECIFICATIONS"} type={"h3"} style={{ margin: '40px' }} />
+                <Heading content={"VEHICLE SPECIFICATIONS"} type={"h4"} style={{ margin: '40px' }} />
                 <Section>
                     <table style={{
                         width: '800px',
@@ -194,7 +198,7 @@ const CamperPage = ({ data }) => {
 export default () => (
     <StaticQuery
         query={graphql`
-            query CamperQuery {
+            query CamperQuery1 {
                 allCamper {
                     edges {
                         node {

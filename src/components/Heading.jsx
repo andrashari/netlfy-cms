@@ -21,13 +21,13 @@ const Heading = ({ content, type, location, style, hrStyle, hrWhite, maxWidth })
 
         case 'h4':
             fontStyle = {
-                ...fonts.menuFont, ...{ fontSize: '20px', textAlign: 'left', padding: 0 }
+                ...fonts.menuFont, ...{ fontSize: '22px', textAlign: 'center', padding: 0 }
             }
             break;
 
         case 'h5':
             fontStyle = {
-                ...fonts.menuFont, ...{ fontSize: '16px', textAlign: 'center', padding: 0 }
+                ...fonts.menuFont, ...{ color: '#000', fontWeight: '700', textTransform: 'none', fontSize: '16px', textAlign: 'left', padding: 0 }
             }
             break;
 
@@ -41,7 +41,7 @@ const Heading = ({ content, type, location, style, hrStyle, hrWhite, maxWidth })
         return (
             <div className="heading-wrapper" style={{ ...maxWidth, ...{ margin: 'auto', padding: '20px 0' } }} >
                 <Tag style={{ ...fontStyle, ...style }}>
-                    <hr style={hrStyle} className={hrWhite ? 'hr-text hr-text-white' : 'hr-text'} data-content={content}></hr>
+                    <hr style={{ ...hrStyle, ...{ backgroundColor: '#fff' } }} className={hrWhite ? 'hr-text hr-text-white' : 'hr-text'} data-content={content}></hr>
                 </Tag >
             </div >
         );

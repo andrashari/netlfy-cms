@@ -41,21 +41,17 @@ class BookingForm extends Component {
         const { getFieldDecorator } = this.props.form;
         return (
             <Form onSubmit={this.handleSubmit}>
-                <FormItem
-                >
+                <FormItem>
                     {getFieldDecorator('interval', {
                         rules: [
                             { required: true, message: 'Please select your interval!' },
                         ],
                     })(
-                        <RangePicker
-
-                        />
+                        <RangePicker />
                     )}
                 </FormItem>
 
-                <FormItem
-                >
+                <FormItem>
                     {getFieldDecorator('camper', {
                         rules: [
                             { required: true },
@@ -90,7 +86,8 @@ class BookingForm extends Component {
                     style={{
                         position: 'absolute',
                         bottom: 0,
-                        marginBottom: 0
+                        marginBottom: 0,
+                        lineHeight: 0
                     }}
                 >
                     <Button type="primary" htmlType="submit" style={ui.button}><GetaQuoteImageIcon /></Button>

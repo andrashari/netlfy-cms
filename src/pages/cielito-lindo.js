@@ -38,18 +38,16 @@ export const CamperPageTemplate = ({
     features,
     extras
 }) => {
-    /*const images1 = [
-        { src: 'https://images.unsplash.com/photo-1470619549108-b85c56fe5be8?dpr=1&auto=format&crop=faces&fit=crop&w=310&h=310', orientation: 'square' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-        { src: 'https://images.unsplash.com/photo-1471079502516-250c19af6928?dpr=1&auto=format&crop=faces&fit=crop&w=240&h=150', orientation: 'landscape' },
-    ]*/
     const features1 = chunkArray(features, 3)[0];
     const features2 = chunkArray(features, 3)[1];
     const features3 = chunkArray(features, 3)[2];
     return (
         <Layout className="section">
+            <div className="content" style={{ background: colors.white }}>
+                <Section style={{ padding: 0 }}>
+                    <Heading content={name} type={"h1"} hrWhite={true} />
+                </Section>
+            </div>
             <div className="container content">
                 <div className="columns">
                     <div className="column is-8" style={{
@@ -59,14 +57,13 @@ export const CamperPageTemplate = ({
                         backgroundPosition: '50% 50%',
                     }}>
                     </div>
-                    <div className="column is-4" >
+                    <div className="column is-4" style={{ paddingTop: 0 }} >
                         <BookingForm camper={name} />
                     </div>
                 </div>
             </div>
-            <div className="content" style={{ background: colors.lightGrey }}>
-                <Section>
-                    <Heading content={name} type={"h1"} />
+            <div className="content" style={{ background: colors.white }}>
+                <Section style={{ paddingBottom: 0 }}>
                     <p>{description}</p>
                 </Section>
             </div>
@@ -76,7 +73,7 @@ export const CamperPageTemplate = ({
                 </Section>
             </div>
             <div className="content" style={{ background: colors.lightGrey }}>
-                <Heading content={"FEATURES"} type={"h3"} style={{ margin: '40px' }} />
+                <Heading content={"FEATURES"} type={"h4"} style={{ margin: '40px' }} />
                 <Section className="features-wrapper" style={{ justifyContent: 'center' }}>
                     <ul style={{ float: 'left', width: '30%' }}>
                         {features1.map((included, index) => included.name ? <li key={index}>{included.name}</li> : '')}
@@ -101,7 +98,7 @@ export const CamperPageTemplate = ({
                 </Section>
             </div>
             <div className="content" style={{ background: colors.lightGrey }}>
-                <Heading content={"VEHICLE SPECIFICATIONS"} type={"h3"} style={{ margin: '40px' }} />
+                <Heading content={"VEHICLE SPECIFICATIONS"} type={"h4"} style={{ margin: '40px' }} />
                 <Section>
                     <table style={{
                         width: '800px',
@@ -127,8 +124,8 @@ export const CamperPageTemplate = ({
 }
 
 /*CamperPageTemplate.propTypes = {
-                camper: PropTypes.object
-        }*/
+    camper: PropTypes.object
+}*/
 
 const CamperPage = ({ data }) => {
     const { edges } = data.allCamper;
@@ -170,30 +167,30 @@ const CamperPage = ({ data }) => {
     )
 }
 
-/*const CamperPage = ({data}) => {
-    const {edges} = data.allCamper;
-            return (
+/*const CamperPage = ({ data }) => {
+    const { edges } = data.allCamper;
+    return (
         <div>
-                <Location>
-                    {({ navigate, location }) => {
-                        const id = parseInt(location.pathname.split('/').pop().trim());
-                        const camper = edges[1].node;
-                        console.log(camper);
-                        return <CamperPageWithoutLocation camper={camper} />
-                    }}
-                </Location >
-            </div>
-            )
-        }*/
+            <Location>
+                {({ navigate, location }) => {
+                    const id = parseInt(location.pathname.split('/').pop().trim());
+                    const camper = edges[1].node;
+                    console.log(camper);
+                    return <CamperPageWithoutLocation camper={camper} />
+                }}
+            </Location >
+        </div>
+    )
+}*/
 
 /*CamperPage.propTypes = {
                 data: PropTypes.shape({
                 allCamper: PropTypes.shape({
                 edges: PropTypes.arrayOf(
-            PropTypes.object
-        )
+                PropTypes.object
+            )
+        }),
     }),
-}),
 }*/
 
 
@@ -201,7 +198,7 @@ const CamperPage = ({ data }) => {
 export default () => (
     <StaticQuery
         query={graphql`
-            query CamperQuery1 {
+            query CamperQuery {
                 allCamper {
                     edges {
                         node {

@@ -12,7 +12,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav style={layout.center} className="is-flex-desktop" >
-                <div style={{ ...layout.container, ...{ maxWidth:'95%', width: '95%' } }} className="is-flex-desktop width--100">
+                <div style={{ ...layout.container, ...{ maxWidth: '95%' } }} className="is-flex-desktop width--100">
                     {
                         /*
                             <div className="is-hidden-desktop">
@@ -30,10 +30,10 @@ export default class Navbar extends Component {
                         }}
                     >
 
-        <a target="_blank" href="https://www.instagram.com/alfreskocampers/"><i style={{fontSize: 35, float:'left', lineHeight: 0}} className="demo-icon icon-ig"></i></a>
-        <a target="_blank" href="https://www.facebook.com/alfreskocampers/"><i style={{fontSize: 35, float:'left', lineHeight: 0}} className="demo-icon icon-fb"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/alfreskocampers/"><i style={{ fontSize: 35, float: 'left', lineHeight: 0 }} className="demo-icon icon-ig"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/alfreskocampers/"><i style={{ fontSize: 35, float: 'left', lineHeight: 0 }} className="demo-icon icon-fb"></i></a>
 
-                        <Menu side='left' align="Right" style={{paddingRight:'2vw'}} />
+                        <Menu side='left' align="Right" style={{ paddingRight: '2vw' }} />
                     </div>
                     <div
                         className="navbar-brand"
@@ -42,7 +42,7 @@ export default class Navbar extends Component {
                             margin: "auto"
                         }}
                     >
-                        <Link to="/" className="navbar-item" style={{paddingTop: 0}}>
+                        <Link to="/" className="navbar-item" style={{ paddingTop: 0 }}>
                             <figure className="image">
                                 <img
                                     src={logo}
@@ -63,7 +63,7 @@ export default class Navbar extends Component {
                             width: "40%"
                         }}
                     >
-                        <Menu side='right' align="Left" style={{paddingLeft:'2vw'}} />
+                        <Menu side='right' align="Left" style={{ paddingLeft: '2vw' }} />
                     </div>
                 </div>{" "}
             </nav>

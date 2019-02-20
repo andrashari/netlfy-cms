@@ -16,6 +16,11 @@ export const ListWithImage = ({
         paragraph: {
             minHeight: '200px',
             padding: '50px 0',
+        },
+        link: {
+            color: '#000  !important',
+            fontWeight: '700',
+            fontSize: 20
         }
     }
 
@@ -23,7 +28,7 @@ export const ListWithImage = ({
         <div>
             <img src={imageUrl} alt={altText} style={style.image} />
             <p style={style.paragraph}>
-                <a target="_blank" href={brandUrl}>{brandName}</a>
+                <a target="_blank" href={brandUrl} style={style.link} className="brand-name" >{brandName}</a>
                 {text}
             </p>
 

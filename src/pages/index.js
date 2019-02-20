@@ -16,6 +16,14 @@ import SocialSection from "../components/sections/SocialSection"
 import InstagramPhotos from "../components/imageRepresentation/InstagramPhotos"
 
 export default class IndexPage extends Component {
+
+    componentDidMount() {
+        if (typeof window !== 'undefined') {
+            // Make scroll behavior of internal links smooth
+            //smoothscroll('a');
+        }
+    }
+
     render() {
         const { location } = this.props;
         //const { data } = this.props
@@ -33,15 +41,17 @@ export default class IndexPage extends Component {
                     paddingTop: '2rem',
                     paddingBottom: '1rem'
                 }}>
-                    <TitleImageIcon style={{ maxHeight: '50px' }} />
+                    <a href="#campers">
+                        <TitleImageIcon style={{ maxHeight: '50px' }} />
+                    </a>
                 </Section>
 
-                <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ display: 'flex', paddingTop: 0, paddingBottom: '3rem' } }}>
+                <Section id="campers" style={{ ...{ /*background: colors.lightGrey*/ }, ...{ display: 'flex', paddingTop: 0, paddingBottom: '3rem' } }}>
                     <CampersSection />
                 </Section>
 
                 <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'center', display: 'flex', paddingTop: 0, paddingBottom: '1rem' } }}>
-                    <Heading style={{ fontWeight: 'bold', color: '#000'}} content={"WHY ALFRESKO CAMPERS"} type={"h2"} location={"info"} ></Heading>
+                    <Heading style={{ fontWeight: 'bold', color: '#000' }} content={"WHY ALFRESKO CAMPERS"} type={"h2"} location={"info"} ></Heading>
                 </Section>
 
                 <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'space-between', display: 'flex', flexWrap: 'wrap', paddingTop: 0, paddingBottom: '3rem' } }}>
@@ -49,13 +59,12 @@ export default class IndexPage extends Component {
                 </Section>
 
                 <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'center', display: 'flex', flexWrap: 'wrap', paddingTop: 0, paddingBottom: '1rem' } }}>
-                    <SocialSection />
-                </Section>
-
-                <Section style={{ ...{ /*background: colors.lightGrey*/ }, ...{ justifyContent: 'center', display: 'flex', flexWrap: 'wrap', paddingTop: 0, paddingBottom: '1rem' } }}>
+                    <img style={{
+                        height: '100px',
+                        marginBottom: '30px'
+                    }} src="./img/instagram-logo.png" alt="" />
                     <InstagramPhotos />
                 </Section>
-
 
                 {/*
                     <Section>

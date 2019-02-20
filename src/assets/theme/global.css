@@ -13,6 +13,14 @@ a {
     color: #b5a750 !important;
 }
 
+a.brand-name {
+    color: #000 !important;
+}
+
+a.footer-menu-item {
+    color: #fff !important;
+}
+
 /* Form */
 .ant-input {
     border-color: #b5a750 !important;
@@ -37,6 +45,7 @@ a {
 .ant-calendar-selected-end-date .ant-calendar-date,
 .ant-calendar-date:active {
     background-color: #b5a750 !important;
+    color: #fff !important
 }
 
 .ant-calendar-today {
@@ -240,12 +249,12 @@ a {
 
 /* '' */
 
-i {
+.demo-icon {
     font-size: 60px;
     color: #262626;
     margin: 5px;
 }
 
-i:hover {
+.demo-icon:hover {
     color: rgb(181, 167, 80);
 }
