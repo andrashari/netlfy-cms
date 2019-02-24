@@ -11,9 +11,11 @@ export default class Footer extends Component {
     render() {
         return (
             <nav style={{
-                marginTop: 40,
                 backgroundColor: colors.secondary,
-                padding: '1rem 0'
+                padding: '1rem 0',
+                position: 'fixed',
+                bottom: 0,
+                width: '100%'
             }
             } className="navbar is-transparent" >
                 <div style={{ ...layout.container, ...{ width: '100%' } }} >

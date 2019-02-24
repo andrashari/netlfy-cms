@@ -8,7 +8,7 @@ import 'antd/lib/modal/style/css';
 
 import { sendMessage } from '../../mock'
 import colors from './../../assets/theme/colors';
-import { GetRequestImageIcon } from './../svgs/images';
+import { SendRequestImageIcon } from './../svgs/images';
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -114,7 +114,7 @@ class ContactForm extends Component {
                                 {getFieldDecorator('note', {
                                     rules: [{ required: true, message: 'Please tell us about your idea!' }],
                                 })(
-                                    <TextArea rows={12} prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Please tell us about your idea!" />
+                                    <TextArea rows={9} prefix={<Icon type="message" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Please tell us about your idea!" />
                                 )}
                             </Form.Item>
                         </Col>
@@ -124,8 +124,9 @@ class ContactForm extends Component {
                             <Button
                                 type="primary"
                                 htmlType="submit"
+                                style={{boxShadow: 'none', height: 100, width: 300}}
                             >
-                                <GetRequestImageIcon width="200" />
+                                <SendRequestImageIcon width="200" />
                             </Button>
                         </Form.Item>
                     </Row>

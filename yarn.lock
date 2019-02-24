@@ -5620,6 +5620,15 @@ gatsby-plugin-page-creator@^2.0.5:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
+gatsby-plugin-page-transitions@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-transitions/-/gatsby-plugin-page-transitions-1.0.7.tgz#e6c5a858d3c59fbccfefb19d0bd0834c36535d48"
+  integrity sha512-JyswnEWjyU7bikxndLYurMdu6nkPww2ncWMU22N9zhSnCf9G8ypqqbcK/XaTUeyvM1QlDYFRrsJLjeV2YWnqjA==
+  dependencies:
+    history "^4.7.2"
+    prop-types "^15.6.2"
+    react-transition-group "^2.4.0"
+
 gatsby-plugin-purgecss@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-purgecss/-/gatsby-plugin-purgecss-3.1.0.tgz#ecaf5266317ef3deba94478f341f2855f58a3a74"
@@ -5824,6 +5833,15 @@ gatsby-transformer-sharp@^2.1.10:
     potrace "^2.1.1"
     probe-image-size "^4.0.0"
     sharp "^0.21.0"
+
+gatsby-v2-plugin-page-transitions@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-v2-plugin-page-transitions/-/gatsby-v2-plugin-page-transitions-1.0.0.tgz#db4c2ae5dcbf3d795814be1ed3584af1ccaacd59"
+  integrity sha512-265tlLPRGOxFY85r8x8zIiIGRdX+8mRcQoCljQrcXf84Kp1WWwCu3V677Q+wcCwZl6zHfvpc/MdsM8C1K/6a3g==
+  dependencies:
+    history "^4.7.2"
+    prop-types "^15.6.2"
+    react-transition-group "^2.4.0"
 
 gatsby@^2.0.91:
   version "2.0.91"
@@ -11174,6 +11192,16 @@ react-transition-group@2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.5.2.tgz#9457166a9ba6ce697a3e1b076b3c049b9fb2c408"
   integrity sha512-vwHP++S+f6KL7rg8V1mfs62+MBKtbMeZDR8KiNmD7v98Gs3UPGsDZDahPJH2PVprFW5YHJfh6cbNim3zPndaSQ==
+  dependencies:
+    dom-helpers "^3.3.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
+    react-lifecycles-compat "^3.0.4"
+
+react-transition-group@^2.4.0:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.5.3.tgz#26de363cab19e5c88ae5dbae105c706cf953bb92"
+  integrity sha512-2DGFck6h99kLNr8pOFk+z4Soq3iISydwOFeeEVPjTN6+Y01CmvbWmnN02VuTWyFdnRtIDPe+wy2q6Ui8snBPZg==
   dependencies:
     dom-helpers "^3.3.1"
     loose-envify "^1.4.0"

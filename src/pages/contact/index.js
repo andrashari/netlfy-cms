@@ -13,9 +13,9 @@ import ContactForm from "../../components/forms/ContactForm";
 export default class ContactPage extends Component {
     render() {
         return (
-            <Layout location={this.props.location}>
-                <Section style={{ background: colors.lightGrey }}>
-                    <Heading content={"Contact Us"} type={"h1"} />
+            <Layout location={this.props.location} style={{paddingBottom: '120px'}}>
+                <Section style={{ background: colors.white }}>
+                    <Heading content={"Contact Us"} type={"h1"} hrWhite={true} />
                     <ContactForm />
                 </Section>
             </Layout>

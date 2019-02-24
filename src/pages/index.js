@@ -25,7 +25,6 @@ export default class IndexPage extends Component {
     }
 
     render() {
-        const { location } = this.props;
         //const { data } = this.props
         //const { edges: result } = data.allMarkdownRemark
         return (

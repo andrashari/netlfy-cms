@@ -8,6 +8,6 @@ export const ExtrasIcons = props =>
                 src={`../img/icons/extras/${extra.name}.svg`}
                 alt={`${extra.name} icon`}
                 title={`${extra.name} icon`}
-                style={{ width: 200 }}
+                style={{ height: 180, width: 180, margin: 15 }}
             />
             : '')

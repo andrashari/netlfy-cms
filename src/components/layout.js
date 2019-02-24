@@ -8,6 +8,8 @@ import Footer from '../components/layout/Footer'
 import CookieConsent from "react-cookie-consent";
 import Section from '../components/layout/Section'
 
+import PageTransition from 'gatsby-plugin-page-transitions'
+
 import { TypographyStyle } from 'react-typography'
 // Best practice is to have a typography module
 // where you define your theme.
@@ -17,11 +19,15 @@ import { TypographyStyle } from 'react-typography'
 //import { withRouter } from 'react-router'
 
 const Layout = ({ children, location }) => (
-    <div>
+    <div style={{paddingBottom: '120px'}}>
         <Helmet title="Home | Gatsby + Netlify CMS" />
         <Navbar />
-        {children}
+        <PageTransition>
+            {children}
+        </PageTransition>
+
         <Footer />
+
         <CookieConsent
             location="bottom"
             buttonText="I accept"
