@@ -19,7 +19,7 @@ import { TypographyStyle } from 'react-typography'
 //import { withRouter } from 'react-router'
 
 const Layout = ({ children, location }) => (
-    <div style={{paddingBottom: '120px'}}>
+    <div style={{ paddingBottom: '80px', position: 'relative' }}>
         <Helmet title="Home | Gatsby + Netlify CMS" />
         <Navbar />
         <PageTransition>

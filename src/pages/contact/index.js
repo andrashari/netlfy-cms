@@ -13,7 +13,7 @@ import ContactForm from "../../components/forms/ContactForm";
 export default class ContactPage extends Component {
     render() {
         return (
-            <Layout location={this.props.location} style={{paddingBottom: '120px'}}>
+            <Layout location={this.props.location} style={{ paddingBottom: '80px' }}>
                 <Section style={{ background: colors.white }}>
                     <Heading content={"Contact Us"} type={"h1"} hrWhite={true} />
                     <ContactForm />

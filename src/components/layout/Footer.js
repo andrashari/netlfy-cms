@@ -13,7 +13,7 @@ export default class Footer extends Component {
             <nav style={{
                 backgroundColor: colors.secondary,
                 padding: '1rem 0',
-                position: 'fixed',
+                position: 'absolute',
                 bottom: 0,
                 width: '100%'
             }

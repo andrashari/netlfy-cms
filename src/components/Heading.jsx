@@ -41,7 +41,7 @@ const Heading = ({ content, type, location, style, hrStyle, hrWhite, maxWidth })
         return (
             <div className="heading-wrapper" style={{ ...maxWidth, ...{ margin: 'auto', padding: '20px 0' } }} >
                 <Tag style={{ ...fontStyle, ...style }}>
-                    <hr style={{ ...hrStyle, ...{ backgroundColor: '#fff' } }} className={hrWhite ? 'hr-text hr-text-white' : 'hr-text'} data-content={content}></hr>
+                    <hr style={hrWhite ? { ...hrStyle, ...{ backgroundColor: '#fff' } } : { ...hrStyle }} className={hrWhite ? 'hr-text hr-text-white' : 'hr-text'} data-content={content}></hr>
                 </Tag >
             </div >
         );
